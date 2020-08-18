@@ -122,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pet-adoption-frontend"
+    }
+  },
+  "defaultProject": "pet-adoption-frontend",
+  "cli": {
+    "analytics": "031238ad-212d-4fac-9543-7c2f7d02b9fc"
+  }
 }
