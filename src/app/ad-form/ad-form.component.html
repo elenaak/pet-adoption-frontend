@@ -1,0 +1,9 @@
+<app-pet-form (petForm)="setPet($event)"></app-pet-form>
+
+<div *ngIf="petForm && !mrForm">
+    <app-medical-record-form (mrForm)="setMR($event)"></app-medical-record-form>
+</div>
+
+<div *ngIf="mrForm">
+    <app-contact-form  (contactForm)="setContact($event)"></app-contact-form>
+</div>

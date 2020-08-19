@@ -1,21 +1,21 @@
-<div class="container">
+<div *ngIf="!petFormSubmmited" class="container">
     <div class="form">
         <br>
         <h3 class="mb-3 forest-text text-center">Post an add</h3>
-        <form enctype="multipart/form-data" #petForm="ngForm">
+        <form #petForm="ngForm" enctype="multipart/form-data"  (ngSubmit)="onSubmitPetForm()">
             <div class="form-group">
                 <label for="type">Type of animal</label>
-                <select name="type" class="form-control" placeholder="type of animal" required autofocus>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="rabbit">Rabbit</option>
-                    <option value="parrot">Parrot</option>
-                    <option value="other">Other</option>
+                <select name="type" class="form-control"  [(ngModel)] = "pet && pet.type" placeholder="type of animal" required autofocus>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Rabbit">Rabbit</option>
+                    <option value="Parrot">Parrot</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="name">Pet name</label>
-                <input class="form-control" type="text" name="name" placeholder="pet name" required autofocus>
+                <input class="form-control" type="text" name="name" [(ngModel)] = "pet && pet.name" placeholder="pet name" required autofocus>
             </div>
             <label for="image">Image</label>
             <div class="input-group">
@@ -23,42 +23,43 @@
                     <span class="input-group-text">Upload</span>
                 </div>
                 <div class="custom-file">
-                    <input type="file" id="image" name="image" accept="image/*" >
+                    <input type="file" id="image" name="image" [(ngModel)] = "pet && pet.image" accept="image/*">
                     <label class="custom-file-label" for="image">Choose image</label>
                 </div>
             </div>
             <div class="form-group">
                 <label for="age">Age</label>
-                <input class="form-control" type="text" name="age" placeholder="age" required>
+                <input class="form-control" type="text" name="age" [(ngModel)] = "pet && pet.age" placeholder="age" required>
             </div>
             <div class="form-group">
                 <label for="breed">Breed</label>
-                <input class="form-control" type="text" name="breed" placeholder="breed" required>
+                <input class="form-control" type="text" name="breed" [(ngModel)] = "pet && pet.breed" placeholder="breed" required>
             </div>
             <div class="form-group">
                 <div>Sex</div>
-                <input type="radio" id="male" name="sex" value="male">
+                <input type="radio" id="male" name="sex" value="male" [(ngModel)] = "pet && pet.sex">
                 <label for="male">Male</label><br>
-                <input type="radio" id="female" name="sex" value="female">
+                <input type="radio" id="female" name="sex" value="female" [(ngModel)] = "pet && pet.sex">
                 <label for="female">Female</label><br>
             </div>
             <div class="form-group">
                 <label for="color">Color</label>
-                <input class="form-control" type="text" name="color" placeholder="color" required>
+                <input class="form-control" type="text" name="color" [(ngModel)] = "pet && pet.color" placeholder="color" required>
             </div>
             <div class="form-group">
                 <label for="good in home with">Good in home with</label>
-                <input class="form-control" type="text" name="good in home with" placeholder="good in home with"
-                    required>
+                <input class="form-control" type="text" name="good in home with" [(ngModel)] = "pet && pet.behaviour" 
+                placeholder="good in home with" required>
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="form-control" rows="5" type="text" name="description" placeholder="description"
-                    required></textarea>
+                <textarea class="form-control" rows="5" type="text" name="description"[(ngModel)] = "pet && pet.description"
+                 placeholder="description"   required></textarea>
             </div>
             <div class="form-group">
-                <button class="btn btn-lg btn-light btn-block" routerLink="/ads/new/medical-record">Next</button>
-           </div>
+                <button class="btn btn-lg btn-light btn-block" [disabled]="!petForm.form.valid" type="submit">Next</button>
+            </div>
         </form>
     </div>
 </div>
+

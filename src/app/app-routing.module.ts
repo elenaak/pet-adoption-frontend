@@ -1,18 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
-import { PetFormComponent } from './pet-form/pet-form.component'
-import { MedicalRecordFormComponent } from './medical-record-form/medical-record-form.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { AdFormComponent } from './ad-form/ad-form.component';
+import { PetCardComponent } from './pet-card/pet-card.component';
 
 const routes: Route[] = [{
   path: 'ads/new',
-  component: PetFormComponent
+  component: AdFormComponent
 },{
-  path:'ads/new/medical-record',
-  component: MedicalRecordFormComponent
-},{
-  path:'ads/new/contact',
-  component:ContactFormComponent
+  path: 'pets',
+  component: PetCardComponent
 }];
 
 @NgModule({

@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer/footer.component';
 import { PetFormComponent } from './pet-form/pet-form.component';
 import { MedicalRecordFormComponent } from './medical-record-form/medical-record-form.component'
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { AdFormComponent } from './ad-form/ad-form.component';
+import { PetCardComponent } from './pet-card/pet-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     FooterComponent,
     PetFormComponent,
     MedicalRecordFormComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    AdFormComponent,
+    PetCardComponent
   ],
   imports: [
     BrowserModule,

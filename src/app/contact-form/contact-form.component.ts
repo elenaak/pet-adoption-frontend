@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Contact } from '../../model/Contact';
+import { AdCreateService} from '../ad-create.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactFormComponent implements OnInit {
 
-  constructor() { }
+  contact: Contact = new Contact();
+
+  @Output() contactForm = new EventEmitter<boolean>();
+
+  constructor(private adCreateService: AdCreateService) { }
 
   ngOnInit(): void {
   }
 
+
+  onSubmit(): void {
+    this.adCreateService.setContact(this.contact);
+    this.contactForm.emit(true)
+  }
 }

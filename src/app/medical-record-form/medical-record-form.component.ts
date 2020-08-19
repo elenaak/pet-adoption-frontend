@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { MedicalRecord } from '../../model/MedicalRecord';
+import { AdCreateService} from '../ad-create.service';
 
 @Component({
   selector: 'app-medical-record-form',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicalRecordFormComponent implements OnInit {
 
-  constructor() { }
+  medicalR: MedicalRecord = new MedicalRecord();
+  @Output() mrForm = new EventEmitter<boolean>();
+
+  constructor(private adCreateService: AdCreateService) { }
 
   ngOnInit(): void {
   }
+
+  onSubmit(): void {
+    this.adCreateService.setMedicalR(this.medicalR);
+    this.mrForm.emit(true);
+  }
+
 
 }
