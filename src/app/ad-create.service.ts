@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Pet } from '../model/Pet';
 import { MedicalRecord } from '../model/MedicalRecord';
 import { Contact } from '../model/Contact';
+import { Ad } from '../model/Ad';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { Contact } from '../model/Contact';
 export class AdCreateService {
 
   constructor() { }
+  ad: Ad =new Ad();
 
   pet: Pet;
   medicalR: MedicalRecord;
@@ -22,12 +24,15 @@ export class AdCreateService {
     this.medicalR = medicalR;
   }
 
-  setContact(contact: Contact){
+  setContact(contact: Contact) {
     this.contact = contact;
   }
 
-  createAd(){
-    if(this.pet!=null && this.medicalR!=null && this.contact!=null)
+  createAd() {
+    if (this.pet != null && this.medicalR != null && this.contact != null)
       console.log("ad is created");
+        this.ad.contact=this.contact;
+        this.ad.medicalRecord=this.medicalR;
+        this.ad.pet=this.pet;
   }
 }

@@ -14,6 +14,7 @@ import { MedicalRecordFormComponent } from './medical-record-form/medical-record
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AdFormComponent } from './ad-form/ad-form.component';
 import { PetCardComponent } from './pet-card/pet-card.component';
+import { PetDetailsComponent } from './pet-details/pet-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PetCardComponent } from './pet-card/pet-card.component';
     MedicalRecordFormComponent,
     ContactFormComponent,
     AdFormComponent,
-    PetCardComponent
+    PetCardComponent,
+    PetDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+.container{
+    font-family: "Poppins", sans-serif;
+}
+h3,h4,h1{
+    color: cadetblue;
+}
+label{
+  color: cadetblue;
+  font-weight: bold;
+}
+.col{
+  margin-top: 10px;
+}
