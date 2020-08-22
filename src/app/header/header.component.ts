@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { far } from '@fortawesome/free-regular-svg-icons';
+
 
 @Component({
   selector: 'app-header',

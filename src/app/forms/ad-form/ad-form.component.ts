@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Pet } from 'src/model/Pet';
-import { AdCreateService} from '../ad-create.service';
+import { Pet } from '../../../model/Pet';
+import { AdCreateService} from '../../ad-create.service';
 
 @Component({
   selector: 'app-ad-form',
@@ -28,9 +28,9 @@ export class AdFormComponent implements OnInit {
 
   setContact(contact: any){
     this.contactForm = true;
-    this.createAdd();
+    this.createAd();
   }
-  createAdd(){
+  createAd(){
       this.adCreateService.createAd();
   }
 

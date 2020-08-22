@@ -5,27 +5,27 @@
         <form  #contactForm="ngForm" enctype="multipart/form-data"  (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="first name">First name</label>
-                <input class="form-control" type="text" name="first name" placeholder="first name" required autofocus>
+                <input class="form-control" type="text" [(ngModel)] = "contact && contact.name" name="first name" placeholder="first name" required autofocus>
             </div>
             <div class="form-group">
                 <label for="last name">Last name</label>
-                <input class="form-control" type="text" name="last name" placeholder="last name" required>
+                <input class="form-control" type="text" [(ngModel)] = "contact && contact.lastName" name="last name" placeholder="last name" required>
             </div>
             <div class="form-group">
                 <label for="telephone">Telephone</label>
-                <input class="form-control" type="text" name="telephone" placeholder="telephone">
+                <input class="form-control" type="text" [(ngModel)] = "contact && contact.telephone" name="telephone" placeholder="telephone">
             </div>
             <div class="form-group">
                 <label for="city">City</label>
-                <input class="form-control" type="text" name="city" placeholder="city" required>
+                <input class="form-control" type="text" name="city" [(ngModel)] = "contact && contact.city" placeholder="city" required>
             </div>
             <div class="form-group">
                 <label for="address">Address</label>
-                <input class="form-control" type="text" name="address" placeholder="address">
+                <input class="form-control" type="text" name="address" [(ngModel)] = "contact && contact.address" placeholder="address">
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input class="form-control" type="email" name="email" placeholder="email">
+                <input class="form-control" type="email" [(ngModel)] = "contact && contact.email" name="email" placeholder="email">
             </div>
             <div class="form-group">
                 <button class="btn btn-lg btn-light btn-block" type="submit" [disabled]="!contactForm.form.valid">Submit</button>

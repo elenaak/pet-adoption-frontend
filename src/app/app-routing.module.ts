@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
-import { AdFormComponent } from './ad-form/ad-form.component';
-import { PetCardComponent } from './pet-card/pet-card.component';
+import { AdFormComponent } from './forms/ad-form/ad-form.component';
+import { PetsComponent } from './pets/pets.component';
 import { PetDetailsComponent } from './pet-details/pet-details.component';
 
 const routes: Route[] = [{
@@ -9,7 +9,7 @@ const routes: Route[] = [{
   component: AdFormComponent
 },{
   path: 'pets',
-  component: PetCardComponent
+  component: PetsComponent
 },{
   path:'pet/:id',
   component: PetDetailsComponent

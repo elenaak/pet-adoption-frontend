@@ -1,7 +1,7 @@
 <div class="container" *ngIf="pet">
     <h1 class="my-4">
         {{pet.name}}
-        <small> from {{contact.city}}</small>
+        <small> from {{pet.contact.city}}</small>
     </h1>
     <div class="row">
         <div class="col-md-6">
@@ -33,11 +33,11 @@
                   <div class="row">
                     <div class="col">
                         <label for="height">Height</label>
-                        <input type="text" class="form-control" name ="height" value="{{medicalRecord.height}}" readonly >
+                        <input type="text" class="form-control" name ="height" value="{{pet.medicalRecord.height}}" readonly >
                       </div>
                     <div class="col">
                       <label for="color">Weight</label>
-                      <input type="text" class="form-control" name ="weight" value="{{medicalRecord.weight}}" readonly >
+                      <input type="text" class="form-control" name ="weight" value="{{pet.medicalRecord.weight}}" readonly >
                     </div>
                   </div>
               </form>
@@ -47,25 +47,25 @@
                     <span>
                         <fa-icon [icon]="phone"></fa-icon>
                     </span>
-                    <span class="ml-2">{{contact.telephone}}</span>
+                    <span class="ml-2">{{pet.contact.telephone}}</span>
                 </li>
                 <li>
                     <span>
                         <fa-icon [icon]="email"></fa-icon>
                     </span>
-                    <span class="ml-2">{{contact.email}}</span>
+                    <span class="ml-2">{{pet.contact.email}}</span>
                 </li>
                 <li>
                     <span>
                         <fa-icon [icon]="city"></fa-icon>
                     </span>
-                    <span class="ml-2">{{contact.city}}</span>
+                    <span class="ml-2">{{pet.contact.city}}</span>
                 </li>
                 <li>
                     <span>
                         <fa-icon [icon]="location"></fa-icon>
                     </span>
-                    <span class="ml-2">{{contact.address}}</span>
+                    <span class="ml-2">{{pet.contact.address}}</span>
                 </li>
             </ul> 
         </div>
@@ -74,9 +74,9 @@
     <div>{{pet.description}}</div>
     <h3>Allergies</h3>
     <div>
-        {{medicalRecord.allergies}}
+        {{pet.medicalRecord.allergies}}
     </div>
     <h3>Vaccines</h3>
-    {{medicalRecord.vaccines}}
+    {{pet.medicalRecord.vaccines}}
 
 </div>

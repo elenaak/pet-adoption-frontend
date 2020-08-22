@@ -1,5 +1,5 @@
 export class Contact {
-
+    constructor(){}
     name: String;
     lastName: String;
     telephone: String;

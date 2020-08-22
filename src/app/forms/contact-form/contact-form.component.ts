@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { Contact } from '../../model/Contact';
-import { AdCreateService} from '../ad-create.service';
+import { Contact } from '../../../model/Contact';
+import { AdCreateService} from '../../ad-create.service';
 
 @Component({
   selector: 'app-contact-form',

@@ -42,9 +42,9 @@
   right: 0;
   background: cadetblue;
   content: '';
-  background: -moz-linear-gradient(90deg, #0846b8 0%, #6ca7be 100%, #85ade2 100%);
-  background: -webkit-linear-gradient(90deg, #0846b8 #5583d6 0%, #6ca7be 100%, #85ade2 100%);
-  background: linear-gradient(90deg, #0846b8 0%, #6ca7be 100%, #85ade2 100%);
+  background: -moz-linear-gradient(90deg, cadetblue 0%, #0c6c92  100%, #85ade2 100%);
+  background: -webkit-linear-gradient(90deg, cadetblue, #0c6c92  0%, #6ca7be 100%, #85ade2 100%);
+  background: linear-gradient(90deg, cadetblue 0%, #0c6c92 100%, #85ade2 100%);
   opacity: 0.8;
   z-index: -1;
   width: 350px;

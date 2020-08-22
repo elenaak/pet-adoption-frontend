@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { MedicalRecord } from '../../model/MedicalRecord';
-import { AdCreateService} from '../ad-create.service';
+import { MedicalRecord } from '../../../model/MedicalRecord';
+import { AdCreateService} from '../../ad-create.service';
 
 @Component({
   selector: 'app-medical-record-form',
