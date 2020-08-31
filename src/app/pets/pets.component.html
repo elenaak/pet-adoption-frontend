@@ -1,37 +1,18 @@
-<div class="row">
+<div class="container">
+  <div class="row">
     <div class="col-md-3">
-        <p>Ovde filtri</p>
+      <pet-search-filters
+       [petName]="petName" [petType]="petType" [petBreed]="petBreed" [petAge]="petAge" [petSex]="petSex" [petColor]="petColor">
+      </pet-search-filters>
     </div>
-    <div class="col-md-3">
-        <figure class="snip1527">
-            <div class="image"><img src="https://static.toiimg.com/thumb/msid-67586673,width-800,height-600,resizemode-75,imgsize-3918697,pt-32,y_pad-40/67586673.jpg" alt="pr-sample23" /></div>
-            <figcaption>
-              <div class="heart" (click)="onClick"><span><fa-icon [icon]="heart"></fa-icon></span></div>
-              <h3>Name</h3>
-            </figcaption>
-            <a href="#" class="link"></a>
-          </figure>
+    <div class="col-md-9"> 
+      <div *ngIf="items && items.length>0; else noItemsFound">
+        <pet-search-list [items]="items"></pet-search-list>
+      </div>
+      <ng-template #noItemsFound>No items found</ng-template>
     </div>
-    <div class="col-md-3">
-        <figure class="snip1527">
-            <div class="image"><img src="https://img.alicdn.com/imgextra/i2/3913695354/TB2fid4rSBYBeNjy0FeXXbnmFXa_!!3913695354.jpg" alt="pr-sample23" /></div>
-            <figcaption>
-              <div class="heart"><span><fa-icon [icon]="heart"></fa-icon></span></div>
-              <h3>Name</h3>
-            </figcaption>
-            <a href="#" class="link"></a>
-          </figure>
-    </div>
-    <div class="col-md-3">
-        <figure class="snip1527">
-            <div class="image"><img src="https://i.pinimg.com/564x/37/5d/9e/375d9e22dcc0c854d14d5ab51c2008c7.jpg" alt="pr-sample23" /></div>
-            <figcaption>
-                <div class="heart"><span><fa-icon [icon]="heart"></fa-icon></span></div>
-              <h3>Name</h3>
-            </figcaption>
-            <a href="#"class="link"></a>
-          </figure>
-    </div>
+  </div>
+  <div *ngIf="totalItems>0" >
+    <app-pagination [totalItems]="totalItems" [currentPage]="currentPage" [pageSize]="pageSize"></app-pagination>
+  </div>
 </div>
-
-  
