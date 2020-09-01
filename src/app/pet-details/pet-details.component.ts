@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Pet } from 'src/model/Pet';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelopeSquare, faMapMarkerAlt, faCity } from '@fortawesome/free-solid-svg-icons';
-import { AdCreateService } from '../ad-create.service';
 import { MedicalRecord } from 'src/model/MedicalRecord';
 import { Contact } from 'src/model/Contact';
 

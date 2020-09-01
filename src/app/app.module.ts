@@ -4,7 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -21,7 +21,10 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { SearchFiltersComponent } from './pets/search-filters/search-filters.component';
 import { SearchListComponent } from './pets/search-list/search-list.component';
 import { SearchListItemComponent } from './pets/search-list-item/search-list-item.component';
-
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { AuthInterceptor} from './auth.interceptor';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { SearchListItemComponent } from './pets/search-list-item/search-list-ite
     PaginationComponent,
     SearchFiltersComponent,
     SearchListComponent,
-    SearchListItemComponent
+    SearchListItemComponent,
+    LoginComponent,
+    SignUpComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,7 @@ import { SearchListItemComponent } from './pets/search-list-item/search-list-ite
     FormsModule,
     NgbModule
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
