@@ -5,7 +5,8 @@ import { PetsComponent } from './pets/pets.component';
 import { PetDetailsComponent } from './pet-details/pet-details.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { ProfileComponent } from './profile/profile.component';
+import { AdFormEditComponent} from './forms/edit-forms/ad-form-edit/ad-form-edit.component';
+
 
 const routes: Route[] = [{
   path: 'ads/new',
@@ -22,6 +23,9 @@ const routes: Route[] = [{
 },{
   path:'sign-up',
   component: SignUpComponent
+},{
+  path:'edit/:id',
+  component:AdFormEditComponent
 }];
 
 @NgModule({

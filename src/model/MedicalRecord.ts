@@ -1,5 +1,4 @@
-export class MedicalRecord {
-    constructor() {}
+export class MedicalRecord{
     weight: Number;
     height: Number;
     neutered: Boolean;

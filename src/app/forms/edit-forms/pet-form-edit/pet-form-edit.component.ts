@@ -1,16 +1,15 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { Pet } from '../../../model/Pet';
-import { AdCreateService } from '../../ad-create.service';
-
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Pet } from 'src/model/Pet';
+import { AdCreateService } from 'src/app/ad-create.service';
 
 @Component({
-  selector: 'app-pet-form',
-  templateUrl: './pet-form.component.html',
-  styleUrls: ['./pet-form.component.css']
+  selector: 'app-pet-form-edit',
+  templateUrl: './pet-form-edit.component.html',
+  styleUrls: ['./pet-form-edit.component.css']
 })
-export class PetFormComponent implements OnInit {
+export class PetFormEditComponent implements OnInit {
 
-  pet: Pet = new Pet();
+  @Input() pet: Pet 
   petFormSubmmited = false;
   image = false;
   @Output() petForm = new EventEmitter<boolean>();
@@ -26,7 +25,6 @@ export class PetFormComponent implements OnInit {
   }
 
   handleInputChange(e) {
-    console.log("input change")
     var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
 
     var pattern = /image-*/;
@@ -40,10 +38,8 @@ export class PetFormComponent implements OnInit {
     reader.onload = this._handleReaderLoaded.bind(this);
   }
   _handleReaderLoaded(e) {
-    console.log("_handleReaderLoaded")
     var reader = e.target;
     this.pet.image = reader.result;
     this.image=true;
   }
-
 }
