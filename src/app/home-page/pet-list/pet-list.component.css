@@ -1,0 +1,29 @@
+.scrolling-wrapper{
+	overflow-x: auto;
+}
+
+body{
+	background-color: black;
+	color: #fff;
+	font-family: 'system-ui';
+}
+
+h1{
+	font-weight: 800;
+	font-size: 3em;
+}
+
+.subtitle{
+	font-size: 1.25em;
+	opacity: 0.65;
+}
+
+.card-block{
+	height: 250px;
+	background-color: #fff;
+	border: none;
+	background: linear-gradient(to right bottom, hsla(200, 90%, 70%, 0.8), hsla(270, 70%, 40%, 0.8)), url('https://source.unsplash.com/1024x1024?mountains');
+	background-position: center;
+	background-size: cover;
+	transition: all 0.2s ease-in-out !important;
+}

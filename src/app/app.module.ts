@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +22,12 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { SearchFiltersComponent } from './pets/search-filters/search-filters.component';
 import { SearchListComponent } from './pets/search-list/search-list.component';
 import { SearchListItemComponent } from './pets/search-list-item/search-list-item.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { JumbotronComponent } from './home-page/jumbotron/jumbotron.component';
+import { PetFinderQuizComponent } from './pet-finder-quiz/pet-finder-quiz.component';
+import { PetListComponent } from './home-page/pet-list/pet-list.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FaQuestionsComponent } from './fa-questions/fa-questions.component';
 
 
 @NgModule({
@@ -39,7 +46,13 @@ import { SearchListItemComponent } from './pets/search-list-item/search-list-ite
     PaginationComponent,
     SearchFiltersComponent,
     SearchListComponent,
-    SearchListItemComponent
+    SearchListItemComponent,
+    HomePageComponent,
+    JumbotronComponent,
+    PetFinderQuizComponent,
+    PetListComponent,
+    ContactUsComponent,
+    FaQuestionsComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +60,8 @@ import { SearchListItemComponent } from './pets/search-list-item/search-list-ite
     HttpClientModule,
     FontAwesomeModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

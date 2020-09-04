@@ -1,3 +1,4 @@
+<div class="mt-3">
 <form #petForm="ngForm" enctype="multipart/form-data" (ngSubmit)="onSearchFilter()" >
     <div class="form-group">
       <label for="name">Pet name</label>
@@ -5,12 +6,8 @@
     </div>
     <div class="form-group">
         <label for="type">Type of animal</label>
-        <select name="type" class="form-control" placeholder="type of animal"  [(ngModel)] = "petType"  required autofocus>
-            <option value="Dog">Dog</option>
-            <option value="Cat">Cat</option>
-            <option value="Rabbit">Rabbit</option>
-            <option value="Parrot">Parrot</option>
-            <option value="Other">Other</option>
+    <select name="type" class="form-control custom-select custom-select" placeholder="type of animal"  [(ngModel)] = "petType"  required autofocus>
+            <option *ngFor="let typeOfPet of petTypeValues" value="{{typeOfPet}}" >{{typeOfPet}}</option>
         </select>
     </div>
     <div class="form-group">
@@ -19,21 +16,27 @@
     </div>
     <div class="form-group">
         <label for="age">Age</label>
-        <input class="form-control" type="text" name="age" placeholder="age"  [(ngModel)] = "petAge" required>
+        <select name="age" class="form-control custom-select" placeholder="age of animal"  [(ngModel)] = "petAge"  required autofocus>
+                <option *ngFor="let petAge of petAgeValues" value="{{petAge}}" >{{petAge}}</option>
+            </select>
     </div>
     
     <div class="form-group">
-      <label for="type">Gender</label>
-      <select #petSexSelect name="type" class="form-control"   placeholder="sex"  [(ngModel)] = "petSex" required autofocus>
+      <label for="type">Sex</label>
+      <select #petSexSelect name="type" class="form-control custom-select"   placeholder="sex"  [(ngModel)] = "petSex" required autofocus>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
       </select>
     </div>
     <div class="form-group">
         <label for="color">Color</label>
-        <input class="form-control" type="text" name="color"  placeholder="color" [(ngModel)] = "petColor" required>
+        <select name="color" class="form-control custom-select" placeholder="color of animal"  [(ngModel)] = "petColor" required autofocus>
+            <option *ngFor="let petColor of petColorValues" value="{{petColor}}" >{{petColor}}</option>
+        </select>
     </div>
     <div class="form-group">
         <button class="btn btn-lg btn-light btn-block"  type="submit">Search</button>
     </div>
+    
 </form>
+</div>

@@ -43,7 +43,7 @@ export class PetsComponent implements OnInit {
         this.petBreed = params.get('breed');
         //replace age with calendar o
         this.petAge = params.get('age');
-        this.petSex = params.get('gender');
+        this.petSex = params.get('sex');
         this.petColor = params.get('color');
         this.currentPageParams= Number(params.get('page'));
         if (this.currentPageParams == 0) {
@@ -53,6 +53,7 @@ export class PetsComponent implements OnInit {
         if (this.pageSize == 0) {
           this.pageSize = 15;
         }
+        console.log(this.petName,this.petSex)
         return this.pagerService.getPageList(this.petName,this.petType,this.petBreed,this.petAge,this.petSex,this.petColor,this.currentPageParams,this.pageSize);
       }),
     ).subscribe(petSearchResult => {
