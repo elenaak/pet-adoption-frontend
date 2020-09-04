@@ -24,11 +24,14 @@ import { SearchListItemComponent } from './pets/search-list-item/search-list-ite
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthInterceptor} from './auth.interceptor';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './profile-details/profile/profile.component';
 import { PetFormEditComponent } from './forms/edit-forms/pet-form-edit/pet-form-edit.component';
 import { MrFormEditComponent } from './forms/edit-forms/mr-form-edit/mr-form-edit.component';
 import { ContactFormEditComponent } from './forms/edit-forms/contact-form-edit/contact-form-edit.component';
 import { AdFormEditComponent } from './forms/edit-forms/ad-form-edit/ad-form-edit.component';
+import { FavouritePetsComponent } from './favourite-pets/favourite-pets.component';
+
+
 
 
 @NgModule({
@@ -54,7 +57,8 @@ import { AdFormEditComponent } from './forms/edit-forms/ad-form-edit/ad-form-edi
     PetFormEditComponent,
     MrFormEditComponent,
     ContactFormEditComponent,
-    AdFormEditComponent
+    AdFormEditComponent,
+    FavouritePetsComponent
   ],
   imports: [
     BrowserModule,

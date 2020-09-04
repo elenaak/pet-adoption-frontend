@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pet } from '../../../model/Pet';
 import { AdCreateService } from '../../ad-create.service';
 import { Router } from '@angular/router';
+import { TokenStorageService } from 'src/app/token-storage.service';
 
 @Component({
   selector: 'app-ad-form',
@@ -13,11 +14,16 @@ export class AdFormComponent implements OnInit {
   petForm = false;
   mrForm = false;
   contactForm = false;
+  logged=false;
 
   constructor(private adCreateService: AdCreateService,
-    private route: Router) { }
+    private route: Router,
+    private tokenStorage: TokenStorageService) { }
 
   ngOnInit(): void {
+    if (this.tokenStorage.getToken()) {
+      this.logged = true;
+    }
   }
 
   setPet(petForm: any) {

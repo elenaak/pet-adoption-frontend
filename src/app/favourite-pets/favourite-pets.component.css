@@ -1,0 +1,111 @@
+.container{
+    width: 75%;
+    margin: auto;
+}
+.title{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: rgb(223, 28, 28);
+}
+.infinite-scroll-list{
+  list-style: none;
+}
+.more-btn{
+    display: block;
+    width: 240px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgb(222,84,74);
+    border: 2px solid rgb(222,84,74);
+    outline: none;
+    padding: 16px 8px;
+    margin: 32px auto 10px;
+}
+.card {
+  display: inline-block;
+  margin: 8px;
+  max-width: 300px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1;
+  color: rgb(223, 28, 28)
+}
+  img {
+    width: 300px;
+    height: 200px;
+  }
+  
+  .card__image-holder {
+    background: rgba(0,0,0,0.1);
+    height: 0;
+    padding-bottom: 75%;
+  }
+
+ .card-title{
+    padding: 6px 15px;
+    position: relative;
+    z-index: 0;
+    
+  }
+ .heart{
+    background-color:#6ca7be;
+    border-radius: 50%;
+    color: rgb(223, 28, 28);
+    font-weight: 700;
+    min-height: 50px;
+    min-width: 50px;
+    padding: 10px 0;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    top: -25px;
+ }
+
+ .caption{
+    background: cadetblue;
+    content: '';
+    background: -moz-linear-gradient(90deg, cadetblue 0%, #0c6c92  100%, #85ade2 100%);
+    background: -webkit-linear-gradient(90deg, cadetblue, #0c6c92  0%, #6ca7be 100%, #85ade2 100%);
+    background: linear-gradient(90deg, cadetblue 0%, #0c6c92 100%, #85ade2 100%);
+    opacity: 0.8;
+    z-index: -1;
+ }
+ 
+.message{
+    margin: auto;
+    width: 360px;
+    padding: 8% 0 0;
+    text-align: center;
+    height: 600px;
+    
+}
+
+.message button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: cadetblue;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.message button:hover,.form button:active,.form button:focus {
+    background-color: rgb(35, 127, 163);
+}
+
+
+
+
+

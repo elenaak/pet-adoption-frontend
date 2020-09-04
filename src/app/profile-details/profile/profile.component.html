@@ -1,0 +1,19 @@
+<div class="container" *ngIf="isLogged">
+  <div id="vcard">
+    <div id="card-content">
+      <div id="profile">
+        <span class="avatar">
+          <span class="typicons-user icon"></span>
+          <span class="info">
+           <h2>{{currentUser.username}}</h2>
+          </span>
+        </span>
+      </div>
+    </div>
+    <app-likedpets></app-likedpets>
+  </div>
+</div>
+
+<ng-template *ngIf="!isLogged">
+  Please login.
+</ng-template>

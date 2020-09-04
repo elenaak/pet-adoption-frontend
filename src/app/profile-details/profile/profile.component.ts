@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TokenStorageService } from '../token-storage.service';
+import { TokenStorageService } from '../../token-storage.service';
 import { Credentials } from 'src/model/Credentials';
 import { CurrentUser } from 'src/model/CurrentUser';
 
@@ -11,13 +11,15 @@ import { CurrentUser } from 'src/model/CurrentUser';
 export class ProfileComponent implements OnInit {
 
   currentUser: CurrentUser;
-  tokenString: string;
+  isLogged = false;
 
   constructor(private token: TokenStorageService) { }
 
   ngOnInit(): void {
-    this.currentUser = this.token.getUser();
-    this.tokenString = this.token.getToken()
+    if (this.token.getToken()) {
+      this.isLogged = true;
+      this.currentUser= this.token.getUser();
+    }
   }
 
 }

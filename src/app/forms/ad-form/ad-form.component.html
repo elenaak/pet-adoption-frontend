@@ -1,9 +1,18 @@
-<app-pet-form (petForm)="setPet($event)"></app-pet-form>
+<div *ngIf="logged">
+    <app-pet-form (petForm)="setPet($event)"></app-pet-form>
 
-<div *ngIf="petForm && !mrForm">
-    <app-medical-record-form (mrForm)="setMR($event)"></app-medical-record-form>
+    <div *ngIf="petForm && !mrForm">
+        <app-medical-record-form (mrForm)="setMR($event)"></app-medical-record-form>
+    </div>
+
+    <div *ngIf="mrForm">
+        <app-contact-form (contactForm)="setContact($event)"></app-contact-form>
+    </div>
 </div>
 
-<div *ngIf="mrForm">
-    <app-contact-form  (contactForm)="setContact($event)"></app-contact-form>
+<div *ngIf="!logged" class="notlogged">
+        <h2 style="margin-bottom: 20px;">Join PetFriends to post an add</h2>
+        <h3 style="margin-bottom: 15px;">Create an account:</h3>
+        <button [routerLink]="['/sign-up']">Sign up</button>
+        <p class="message">Already have an account? <a [routerLink]="['/login']">Log In</a>
 </div>

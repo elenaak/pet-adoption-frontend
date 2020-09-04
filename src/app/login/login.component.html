@@ -42,7 +42,7 @@
                 </div>
               </div>
              
-            <button type="submit">login</button>
+            <button type="submit">Log In</button>
             <div class="form-group">
                 <div
                   class="alert alert-danger"
@@ -58,6 +58,6 @@
     <div class="alert alert-success" *ngIf="isLoggedIn">
         <p>You are logged in as {{username}}</p>
         <button [routerLink]="['/']">Home</button>
-        <button (click)="onLogout()">Logout</button>
+        <button (click)="onLogout()">Log Out</button>
       </div>
 </div>

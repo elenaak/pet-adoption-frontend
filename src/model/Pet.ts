@@ -9,7 +9,7 @@ export class Pet {
     type: String;
     name: String;
     image: String;
-    age: Number;
+    age: String;
     breed: String;
     sex: String;
     color: String;
