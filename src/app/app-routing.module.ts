@@ -9,7 +9,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaQuestionsComponent } from './fa-questions/fa-questions.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import {ProfileComponent} from './profile-details/profile/profile.component';
 import { AdFormEditComponent} from './forms/edit-forms/ad-form-edit/ad-form-edit.component';
+import { FavouritePetsComponent } from './favourite-pets/favourite-pets.component';
+
 
 
 const routes: Route[] = [{
@@ -45,6 +48,12 @@ const routes: Route[] = [{
 },{
   path:'edit/:id',
   component:AdFormEditComponent
+},{
+  path:'profile',
+  component:ProfileComponent
+},{
+  path:'favourite',
+  component:FavouritePetsComponent
 }];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -13,4 +13,12 @@ export class PetsService {
   getPet(id:Number):Observable<Pet>{
       return this.http.get<Pet>(`http://localhost:8080/api/pets/${id}`);
   }
+
+  getLiked():Observable<Pet[]>{
+    return this.http.get<Pet[]>("http://localhost:8080/api/like");
+  }
+
+  likeOrDislike(petId:Number){
+    return this.http.get(`http://localhost:8080/api/like/${petId}`)
+  }
 }

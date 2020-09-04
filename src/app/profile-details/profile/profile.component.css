@@ -1,0 +1,45 @@
+@import url(https://weloveiconfonts.com/api/?family=typicons);
+@import url(https://fonts.googleapis.com/css?family=Exo:500,700);
+
+/* typicons */
+[class*="typicons-"]:before {
+  font-family: 'Typicons', sans-serif;
+}
+
+#vcard {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 4px;
+}
+#card-content {
+  height: 100%;
+}
+#profile {
+  height: 200px;
+ 
+}
+
+#profile {
+  padding-top: 50px;
+  text-align: center;
+}
+span.avatar span.icon{
+  display: inline-block;
+  color: #414141;
+  font-size: 72px;
+  line-height: 100px;
+  background: cadetblue;
+  border: solid 3px rgba(255,255,255, .2);
+  overflow: hidden;
+  padding-top: 1px;
+  width: 90px;
+  height: 90px;
+  border-radius: 46px;
+}
+span.info {
+  padding-top: 10px;
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  color: cadetblue;
+}

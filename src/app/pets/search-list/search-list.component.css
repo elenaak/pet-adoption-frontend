@@ -28,10 +28,11 @@
 }
 
 .snip1527 figcaption {
-  padding: 25px 20px 25px;
   position: absolute;
   bottom: 0;
   z-index: 1;
+  width: 300px;
+  height: 10px;
 }
 
 .snip1527 figcaption:before {
@@ -47,7 +48,7 @@
   background: linear-gradient(90deg, cadetblue 0%, #0c6c92 100%, #85ade2 100%);
   opacity: 0.8;
   z-index: -1;
-  width: 300px;
+
 }
 
 .snip1527 .heart {

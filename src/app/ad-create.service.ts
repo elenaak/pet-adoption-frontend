@@ -17,6 +17,7 @@ export class AdCreateService {
   
   setPet(pet: Pet) {
     this.pet = pet;
+    this.pet.name=pet.name;
   }
 
   setMedicalR(medicalR: MedicalRecord) {
@@ -29,6 +30,7 @@ export class AdCreateService {
 
   setContact(contact: Contact) {
     this.pet.contact = contact;
+    this.pet.contact.firstName=contact.firstName;
   }
 
   createAd(){
@@ -47,7 +49,6 @@ export class AdCreateService {
       allergies:this.pet.allergies,
       vaccines:this.pet.vaccination,
       contact:this.pet.contact
-
     });
   }
 

@@ -10,24 +10,6 @@ import {faHeart} from '@fortawesome/free-solid-svg-icons';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
-
-  user = faUser;
-  heart=faHeart;
-  currentUser: CurrentUser;
-
-  constructor(private tokenService: TokenStorageService) {
-    tokenService.getLoggedInName.subscribe(user => this.changeUser(user))
-   }
-  
-  changeUser(user: CurrentUser){
-    this.currentUser = user
-  }
-  
-  ngOnInit(): void {
-    this.currentUser = this.tokenService.getUser();
-  }
-  
-
+export class HeaderComponent {
 
 }

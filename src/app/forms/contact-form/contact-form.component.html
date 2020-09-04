@@ -4,9 +4,9 @@
         <h3 class="mb-3 forest-text text-center">Contact Information</h3>
         <form  #contactForm="ngForm" enctype="multipart/form-data"  (ngSubmit)="contactForm.form.valid && onSubmit()">
             <div class="form-group">
-                <label for="first name">First name</label>
+                <label for="firstname">First name</label>
                 <input class="form-control" type="text" [(ngModel)] = "contact && contact.firstName" 
-                name="first name" placeholder="first name" required autofocus #firstName="ngModel" >
+                name="firstname" placeholder="first name" required autofocus #firstName="ngModel" >
                 <div class="alert-danger" *ngIf="contactForm.submitted && firstName.invalid">
                     <div>
                        Name is required

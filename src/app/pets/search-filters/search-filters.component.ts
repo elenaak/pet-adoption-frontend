@@ -10,23 +10,37 @@ export class SearchFiltersComponent implements OnInit {
   @Input()
   petName: String;
   @Input()
-  petType: String;
+  petType: String ='Doesn\'t Matter';
   @Input()
   petBreed: String;
   @Input()
-  petAge: String;
+  petAge: String='Doesn\'t Matter';
   @Input()
-  petSex: String;
+  petSex: String='Doesn\'t Matter';
   @Input()
-  petColor: String;
-  petTypeValues=new Array('Doesn\'t Matter','Dog','Cat','Rabbit','Parrot','Other')
-  petAgeValues=new Array('Doesn\'t Matter','Baby','Young','Adult','Senior')
+  petColor: String='Doesn\'t Matter';
+  petTypeValues=new Array('Doesn\'t Matter','Dog','Cat','Rabbit','Parrot','Other');
+  petAgeValues=new Array('Doesn\'t Matter','Baby','Young','Adult','Senior');
+  petSexValues=new Array('Doesn\'t Matter','Male','Female');
   petColorValues=new Array('Doesn\'t Matter','Red','Orange','Yellow','Green','Blue','Purple','Brown',
                            'Cyan','Silver','Violet','Pink','Black','White','Gray');
+  
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    if(this.petType==null){
+      this.petType ='Doesn\'t Matter';
+    }
+    if(this.petAge==null){
+      this.petAge ='Doesn\'t Matter';
+    }
+    if(this.petSex==null){
+      this.petSex ='Doesn\'t Matter';
+    }
+    if(this.petColor==null){
+      this.petColor ='Doesn\'t Matter';
+    }
   }
 
   onSearchFilter(): void {
