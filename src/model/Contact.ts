@@ -1,6 +1,7 @@
 export class Contact {
     constructor(){}
-    name: String;
+    id:Number = 0;
+    firstName: String;
     lastName: String;
     telephone: String;
     city: String;

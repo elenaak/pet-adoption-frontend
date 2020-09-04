@@ -1,7 +1,7 @@
 <div *ngIf="!petFormSubmmited" class="container">
     <div class="form">
         <br>
-        <h3 class="mb-3 forest-text text-center">Post an add</h3>
+        <h3 class="mb-3 forest-text text-center">Edit your add</h3>
         <form #petForm="ngForm" enctype="multipart/form-data"  (ngSubmit)="petForm.form.valid && onSubmitPetForm()">
             <div class="form-group">
                 <label for="type">Type of animal</label>
@@ -33,8 +33,11 @@
             </div>
             <label for="image">Image</label>
             <div class="input-group">
+                <div *ngIf="pet.image">
+                    <img src="{{pet.image}}" style="width: 250px; height: 150px;"/>
+                </div>
                 <div class="custom-file">
-                    <input type="file" id="image" name="image" accept="image/*"  (change)="handleInputChange($event)">
+                    <input type="file" id="image" name="image" accept="image/*" (change)="handleInputChange($event)">
                 </div>
             </div>
             <div class="form-group">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pet } from '../../../model/Pet';
-import { AdCreateService} from '../../ad-create.service';
+import { AdCreateService } from '../../ad-create.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ad-form',
@@ -13,25 +14,31 @@ export class AdFormComponent implements OnInit {
   mrForm = false;
   contactForm = false;
 
-  constructor(private adCreateService: AdCreateService) { }
+  constructor(private adCreateService: AdCreateService,
+    private route: Router) { }
 
   ngOnInit(): void {
   }
 
-  setPet(petForm: any){
+  setPet(petForm: any) {
     this.petForm = petForm;
   }
 
-  setMR(mrForm: any){
+  setMR(mrForm: any) {
     this.mrForm = mrForm;
   }
 
-  setContact(contact: any){
+  setContact(contact: any) {
     this.contactForm = true;
     this.createAd();
   }
-  createAd(){
-      this.adCreateService.createAd();
-  }
+  createAd() {
+    this.adCreateService.createAd().subscribe(
+      pet => {
+        console.log(pet.name)
+        this.route.navigate(['/pets']);
 
+      }
+    );
+  }
 }

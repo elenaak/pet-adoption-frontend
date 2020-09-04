@@ -11,7 +11,7 @@
           <a class="nav-link" [routerLink]="['/pets']" [queryParams]="{page: '1'}">Find a pet</a>
         </li>
         <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-          <a class="nav-link" href="#">Publish ad</a>
+          <a class="nav-link" [routerLink]="['/ads/new']">Publish ad</a>
         </li>
         <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link" href="#">About</a>

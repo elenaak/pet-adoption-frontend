@@ -1,0 +1,14 @@
+<div *ngIf="!error">
+    <app-pet-form-edit *ngIf="!petForm" [pet]="pet" (petForm)="setPet($event)"></app-pet-form-edit>
+
+    <div *ngIf="petForm && !mrForm">
+        <app-mr-form-edit [pet]="pet" (mrForm)="setMR($event)"></app-mr-form-edit>
+    </div>
+
+    <div *ngIf="mrForm">
+        <app-contact-form-edit [contact]="pet.contact" (contactForm)="setContact($event)"></app-contact-form-edit>
+    </div>
+</div>
+<div *ngIf="error" class="alert-danger" >
+    <p>{{errorText.error}}</p>
+</div>

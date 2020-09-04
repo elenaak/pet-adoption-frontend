@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectModule } from '@ng-select/ng-select';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -28,6 +28,14 @@ import { PetFinderQuizComponent } from './pet-finder-quiz/pet-finder-quiz.compon
 import { PetListComponent } from './home-page/pet-list/pet-list.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaQuestionsComponent } from './fa-questions/fa-questions.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { AuthInterceptor} from './auth.interceptor';
+import { ProfileComponent } from './profile/profile.component';
+import { PetFormEditComponent } from './forms/edit-forms/pet-form-edit/pet-form-edit.component';
+import { MrFormEditComponent } from './forms/edit-forms/mr-form-edit/mr-form-edit.component';
+import { ContactFormEditComponent } from './forms/edit-forms/contact-form-edit/contact-form-edit.component';
+import { AdFormEditComponent } from './forms/edit-forms/ad-form-edit/ad-form-edit.component';
 
 
 @NgModule({
@@ -52,7 +60,14 @@ import { FaQuestionsComponent } from './fa-questions/fa-questions.component';
     PetFinderQuizComponent,
     PetListComponent,
     ContactUsComponent,
-    FaQuestionsComponent
+    FaQuestionsComponent,
+    LoginComponent,
+    SignUpComponent,
+    ProfileComponent,
+    PetFormEditComponent,
+    MrFormEditComponent,
+    ContactFormEditComponent,
+    AdFormEditComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +78,7 @@ import { FaQuestionsComponent } from './fa-questions/fa-questions.component';
     NgbModule,
     NgSelectModule
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

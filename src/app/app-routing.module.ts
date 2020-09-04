@@ -7,6 +7,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PetFinderQuizComponent } from './pet-finder-quiz/pet-finder-quiz.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaQuestionsComponent } from './fa-questions/fa-questions.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { AdFormEditComponent} from './forms/edit-forms/ad-form-edit/ad-form-edit.component';
+
 
 const routes: Route[] = [{
   path: '',
@@ -32,6 +36,15 @@ const routes: Route[] = [{
 },{
   path:'faqs',
   component: FaQuestionsComponent
+},{
+  path:'login',
+  component: LoginComponent
+},{
+  path:'sign-up',
+  component: SignUpComponent
+},{
+  path:'edit/:id',
+  component:AdFormEditComponent
 }];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
