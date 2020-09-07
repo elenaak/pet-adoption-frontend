@@ -1,7 +1,7 @@
 <footer class="page-footer shadow" style="background-color: #8CC6F7;">
-  <div class="container text-center text-md-left">
+  <div class="container text-left">
     <div class="row mx-auto">
-      <div class="col-md-2 mx-auto">
+      <div class="col-md-3 col-6 mx-auto">
         <h6 class="font-weight-bold mt-3 mb-3">Pets</h6>
         <ul class="list-unstyled ml-20">
           <li class="mb-1">
@@ -14,26 +14,15 @@
             <a href="#!" class="text-dark">Pet Alert</a>
           </li>
           <li class="mb-1">
-            <a href="https://www.amazon.com/dp/1616289554?pldnSite=1" class="text-dark" target="blank">Total Dog Manual</a>
+            <a href="https://www.amazon.com/dp/1616289554?pldnSite=1" class="text-dark" target="blank">Dog Manual</a>
           </li>
           <li>
-            <a href="https://www.amazon.com/dp/1681881551?pldnSite=1" class="text-dark" target="_blank">Total Cat Manual</a>
+            <a href="https://www.amazon.com/dp/1681881551?pldnSite=1" class="text-dark" target="_blank">Cat Manual</a>
           </li>
         </ul>
       </div>
-      <div class="col-md-2 mx-auto">
-        <h6 class="font-weight-bold mt-3 mb-3">Shelter/Rescue</h6>
-        <ul class="list-unstyled">
-          <li class="mb-1">
-            <a [routerLink]="['/login']" class="text-dark">Log In</a>
-          </li>
-          <li>
-            <a [routerLink]="['/sign-up']" class="text-dark">Sign Up</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-2 mx-auto">
-        <h6 class="font-weight-bold mt-3 mb-3">Our Organization</h6>
+      <div class="col-md-3 col-6 mx-auto">
+        <h6 class="font-weight-bold mt-3 mb-3">Organization</h6>
         <ul class="list-unstyled">
           <li class="mb-1">
             <a href="#!" class="text-dark">About Us</a>
@@ -41,15 +30,15 @@
           <li class="mb-1">
             <a href="#!" class="text-dark">Blog</a>
           </li>
-          <li>
+          <li class="mb-1">
             <a class="text-dark" [routerLink]="['/contact']">Contact Us</a>
           </li>
-          <li class="mb-1">
+          <li>
             <a class="text-dark" [routerLink]="['/faqs']">FAQs</a>
           </li>
         </ul>
       </div>
-      <div class="col-md-2 mx-auto">
+      <div class="col-md-3 col-6 mx-auto">
         <h6 class="font-weight-bold mt-3 mb-3">Information</h6>
         <ul class="list-unstyled">
           <li class="mb-1">
@@ -63,20 +52,28 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-4">
-        <form>
-          <h4 class="font-weight-bold mt-3 mb-3">Sign up for Our Newsletter</h4>
-          <input class="form-control form-control-sm w-75 rounded d-inline" type="text" placeholder="Enter Email"
-            aria-label="Enter Email">
-          <button type="button" class="btn btn-primary d-inline">Send</button>
-          <!-- <i class="fas fa-search" aria-hidden="true"></i> -->
-        </form>
+      <div class="col-md-3 col-6 mx-auto">
+        <h6 class="font-weight-bold mt-3 mb-3">Shelter/Rescue</h6>
+        <ul class="list-unstyled">
+          <li class="mb-1">
+            <a [routerLink]="['/login']" class="text-dark">Log In</a>
+          </li>
+          <li>
+            <a [routerLink]="['/sign-up']" class="text-dark">Sign Up</a>
+          </li>
+        </ul>
       </div>
     </div>
     <hr class="divider">
-    <h5 class="text-center mb-3">
-      text text text text text text text text text text text text text text text text text text text text text text text
-    </h5>
+    <div class="mx-auto text-center pb-3">
+      <form>
+        <h4 class="font-weight-bold mt-3 mb-3">Sign up for Our Newsletter</h4>
+        <input class="form-control form-control-sm w-50 rounded d-inline" type="text" placeholder="Enter Email"
+          aria-label="Enter Email">
+        <button type="button" class="btn btn-primary d-inline">Send</button>
+        <!-- <i class="fas fa-search" aria-hidden="true"></i> -->
+      </form>
+    </div>
   </div>
   <div class="footer-copyright text-center py-3 " style="background-color: #72a7d4;">
     © 2020 - 2020 PetFriends.com - All Rights Reserved
