@@ -12,7 +12,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import {ProfileComponent} from './profile-details/profile/profile.component';
 import { AdFormEditComponent} from './forms/edit-forms/ad-form-edit/ad-form-edit.component';
 import { FavouritePetsComponent } from './favourite-pets/favourite-pets.component';
-
+import {DeletePetComponent} from './delete-pet/delete-pet.component';
+import { AdoptRequestsComponent } from './profile-details/adopt-requests/adopt-requests.component';
+import { EditUserComponent } from './profile-details/edit-user/edit-user.component';
 
 
 const routes: Route[] = [{
@@ -49,11 +51,20 @@ const routes: Route[] = [{
   path:'edit/:id',
   component:AdFormEditComponent
 },{
+  path:'delete/:id',
+  component: DeletePetComponent
+},{
+  path:'requests/:id',
+  component: AdoptRequestsComponent
+},{
   path:'profile',
   component:ProfileComponent
 },{
   path:'favourite',
   component:FavouritePetsComponent
+},{
+  path:'edit-profile',
+  component:EditUserComponent
 }];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

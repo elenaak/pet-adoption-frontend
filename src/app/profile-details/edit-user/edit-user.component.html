@@ -1,0 +1,41 @@
+<div  class="container" *ngIf="currentUser">
+    <div class="form">
+        <br>
+        <h3 class="mb-3 forest-text text-center">Edit your info</h3>
+        <form #f="ngForm"  (ngSubmit)="f.form.valid &&  onEditUser()">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" type="email" name="email"
+                 [(ngModel)] = "currentUser.email"  placeholder="email" #email="ngModel" required >
+                 <div class="alert-danger" *ngIf="f.submitted && email.invalid">
+                    <div *ngIf="email.errors.required">Email is required</div>
+                    <div *ngIf="email.errors.email">
+                      Email must be a valid email address
+                    </div>
+                  </div>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" rows="5" type="text" name="description"[(ngModel)] = "currentUser.description"
+                 placeholder="No description"   required #description="ngModel"></textarea>
+                 <div class="alert-danger" *ngIf="f.submitted && description.invalid">
+                    <div>
+                        Description is required
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-light btn-block"  type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="notlogged" *ngIf="!currentUser">
+    <h2 style="margin-bottom: 20px;">Join PetFriends to Favorite Pets</h2>
+    <h3 style="margin-bottom: 15px;">Create an account:</h3>
+    <button [routerLink]="['/sign-up']">Sign up</button>
+    <p class="message">Already have an account? <a [routerLink]="['/login']">Log In</a>
+</div>
+<div *ngIf="error">
+    {{error}}
+</div>

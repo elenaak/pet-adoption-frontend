@@ -1,9 +1,11 @@
-class Authority{
-    authority: String;
+class UserRole {
+    name: String;
 }
 
 export class CurrentUser {
     username: String;
     password: String;
-    authorities: Authority[];
+    userRole: UserRole;
+    email: String;
+    description: String;
 }

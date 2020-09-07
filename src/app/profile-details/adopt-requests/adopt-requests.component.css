@@ -1,0 +1,25 @@
+@import url(https://weloveiconfonts.com/api/?family=typicons);
+.container{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+.list{
+    list-style: none;
+}
+.card {
+    height: 320px;
+    display: inline-block;
+    margin: 8px;
+    background-color: #ffffff;
+    border-top: #386C74 solid 5px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+.team-headshot
+{
+    margin:10px;
+    width: 35%;
+    align-content: center;
+    border-radius: 50%;
+}
+

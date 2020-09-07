@@ -34,7 +34,7 @@ export class PagerService {
       if(color!=null){
         parametars=parametars.concat(`&color=${color}`);
       }
-      parametars=parametars.concat(`&page=${page}`);
+      parametars=parametars.concat(`&page=${page-1}`);
       if(size==0){
         size=15;
       }

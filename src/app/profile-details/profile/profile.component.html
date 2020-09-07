@@ -1,19 +1,27 @@
 <div class="container" *ngIf="isLogged">
   <div id="vcard">
     <div id="card-content">
-      <div id="profile">
-        <span class="avatar">
-          <span class="typicons-user icon"></span>
-          <span class="info">
-           <h2>{{currentUser.username}}</h2>
+        <div id="profile">
+          <span class="avatar">
+            <span class="typicons-user icon"></span>
+            <span class="info">
+              <h2>{{currentUser.username}}</h2>
+            </span>
           </span>
-        </span>
+        <div style="align-content:center; margin: 10px;">
+          <p *ngIf="currentUser.description" style="font-style: italic;">{{currentUser.description}}</p>
+          <p *ngIf="!currentUser.description" style="font-style: italic;">No bio</p>
+          <a class="edit" routerLink="/edit-profile"><fa-icon [icon]="edit" class="icon">Edit</fa-icon> Edit Profile</a>
+        </div>
       </div>
     </div>
-    <app-likedpets></app-likedpets>
   </div>
+  <app-my-ads></app-my-ads>
 </div>
 
-<ng-template *ngIf="!isLogged">
-  Please login.
-</ng-template>
+<div class="notlogged" *ngIf="!isLogged">
+  <h2 style="margin-bottom: 20px;">Join PetFriends</h2>
+  <h3 style="margin-bottom: 15px;">Create an account:</h3>
+  <button [routerLink]="['/sign-up']">Sign up</button>
+  <p class="message">Already have an account? <a [routerLink]="['/login']">Log In</a>
+</div>

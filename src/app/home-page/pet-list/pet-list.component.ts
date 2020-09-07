@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PetsSearchResult } from 'src/model/PetsSearchResult';
+import { Pet } from 'src/model/Pet';
 
 @Component({
   selector: 'home-pet-list',
@@ -8,8 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class PetListComponent implements OnInit {
 
   constructor() { }
-  //replace with real data
-  items=new Array('','','','','');
+
+  @Input()
+  pets:Array<Pet>;
   ngOnInit(): void {
   }
 
