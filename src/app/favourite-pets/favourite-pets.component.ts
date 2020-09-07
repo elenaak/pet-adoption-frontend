@@ -15,34 +15,34 @@ export class FavouritePetsComponent implements OnInit {
   constructor(private petService: PetsService,
     private tokenStorage: TokenStorageService) { }
 
+  loading = false;
   all: Pet[];
   sublist: Pet[];
   heart = faHeart;
   limit = 3;
   stop = false;
   logged = false;
-  empty = true;
-  size=0;
+  empty = false;
+  size = 0;
 
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.logged = true;
+      this.loading=true;
       this.petService.getLiked().subscribe(
         pets => {
+          this.loading=false;
           this.all = pets;
           this.sublist = this.all.slice(0, this.limit);
           this.size = this.all.length;
-          if (this.size > 0)
-            this.empty = false;
+          if (this.size == 0)
+            this.empty = true;
         }
       );
-
     }
-
   }
 
   onClick() {
-    console.log("more")
     this.limit += 3;
     if (this.limit >= this.all.length) {
       this.stop = true;

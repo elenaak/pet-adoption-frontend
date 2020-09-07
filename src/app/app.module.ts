@@ -37,6 +37,10 @@ import { MrFormEditComponent } from './forms/edit-forms/mr-form-edit/mr-form-edi
 import { ContactFormEditComponent } from './forms/edit-forms/contact-form-edit/contact-form-edit.component';
 import { AdFormEditComponent } from './forms/edit-forms/ad-form-edit/ad-form-edit.component';
 import { FavouritePetsComponent } from './favourite-pets/favourite-pets.component';
+import { MyAdsComponent } from './profile-details/my-ads/my-ads.component';
+import { DeletePetComponent } from './delete-pet/delete-pet.component';
+import { AdoptRequestsComponent } from './profile-details/adopt-requests/adopt-requests.component';
+import { EditUserComponent } from './profile-details/edit-user/edit-user.component';
 
 
 
@@ -71,7 +75,11 @@ import { FavouritePetsComponent } from './favourite-pets/favourite-pets.componen
     MrFormEditComponent,
     ContactFormEditComponent,
     AdFormEditComponent,
-    FavouritePetsComponent
+    FavouritePetsComponent,
+    MyAdsComponent,
+    DeletePetComponent,
+    AdoptRequestsComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

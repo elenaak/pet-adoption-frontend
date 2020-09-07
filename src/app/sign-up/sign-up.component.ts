@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/model/User';
-import {AuthService} from '../auth.service';
+import { AuthService } from '../auth.service';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sign-up',
@@ -14,21 +15,21 @@ export class SignUpComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
 
-  constructor(private authService:AuthService) { }
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
-  onSubmit(){
-    console.log("onsubmit")
+  onSubmit() {
+
     this.authService.signUp(this.user).subscribe(
       data => {
-        console.log(data)
         this.isSuccessful = true;
         this.isSignUpFailed = false;
       },
-      err =>{
+      err => {
         this.errorMessage = err.error.error;
-        this.isSignUpFailed = true 
+        this.isSignUpFailed = true
       }
     )
   }

@@ -22,7 +22,8 @@ export class AuthService {
       {
         username: user.username,
         password: user.password,
-        email: user.email
+        email: user.email,
+        description: user.description
       });
   }
 
@@ -32,6 +33,13 @@ export class AuthService {
       password: credentials.password
     }, { responseType: 'text' });
 
+  }
+
+  editProfile(user: CurrentUser){
+    return this.http.post('http://localhost:8080/edit/profile',{
+      email: user.email,
+      description:user.description
+    });
   }
 
   getCurrentUser():Observable<CurrentUser>{

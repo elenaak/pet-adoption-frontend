@@ -1,6 +1,6 @@
 <h2 *ngIf="loading" style="text-align: center; color: cadetblue; margin: 20px;"> Loading...</h2>
-<div class="container" *ngIf="!loading && logged && !empty">
-    <h2 class="title">Liked by you ({{size}})</h2>
+<div class="container" *ngIf="!loading && !empty">
+    <h2 class="title">Your ads ({{size}})</h2>
     <div class="infinite-scroll-area">
         <ul id="infinite-scroll-list" class="infinite-scroll-list">
             <div class="row">
@@ -12,15 +12,21 @@
                         <div class="caption" style="margin-bottom: 0px;">
                             <div class="card-title">
                                 <div class="row">
-                                    <div class="md-9">
+                                    <div class="col-md-7">
                                         <h2>
                                             {{p.name}}
                                         </h2>
                                     </div>
-                                    <div class="md-3">
-                                        <button (click)="onLike(p.id)" class="heart"><span>
-                                                <fa-icon [icon]="heart"></fa-icon>
-                                            </span></button>
+                                    <div class="buttons" class="col-md-5">
+                                        <a  routerLink='/edit/{{p.id}}'>
+                                            <fa-icon [icon]="edit" class="icon">Edit</fa-icon>
+                                        </a>
+                                        <a (click)="onDelete(p.id)">
+                                            <fa-icon [icon]="trash" class="icon"></fa-icon>
+                                        </a>
+                                        <a routerLink="/requests/{{p.id}}">
+                                            <fa-icon [icon]="users" class="icon">Edit</fa-icon>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -34,19 +40,10 @@
         </div>
     </div>
 </div>
-<div class="message">
-    <div class="empty" *ngIf="!loading && empty && logged">
-        <h2 style="margin-bottom: 20px;">No favorites here yet</h2>
-        <p>When you find a pet you love add it to your favorites list by tapping
-            <fa-icon [icon]="heart" style="color: crimson;"></fa-icon>
-        </p>
-        <button [routerLink]="['/pets']">Find a pet</button>
-    </div>
-
-    <div class="notlogged" *ngIf="!logged">
-        <h2 style="margin-bottom: 20px;">Join PetFriends to Favorite Pets</h2>
-        <h3 style="margin-bottom: 15px;">Create an account:</h3>
-        <button [routerLink]="['/sign-up']">Sign up</button>
-        <p class="message">Already have an account? <a [routerLink]="['/login']">Log In</a>
-    </div>
+<div *ngIf="empty" class="!loading && empty">
+    <h2 style="margin-bottom: 20px;">You haven't published any ads yet</h2>
+    <p>
+        Publish your first ad
+    </p>
+    <button [routerLink]="['/ads/new']">Publish ad</button>
 </div>

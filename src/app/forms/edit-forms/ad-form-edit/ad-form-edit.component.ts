@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PetsService } from 'src/app/pets.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Pet } from 'src/model/Pet';
 import { AdCreateService } from 'src/app/ad-create.service';
 import { map, switchMap } from 'rxjs/operators';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-ad-form-edit',
@@ -17,24 +18,26 @@ export class AdFormEditComponent implements OnInit {
   contactForm = false;
   pet: Pet;
   error: Boolean = false;
-  errorText =""
-  
-  
+  errorText = ""
+  petId: Number;
+
 
   constructor(private petsService: PetsService,
-    private router: Router,
+    private location:Location,
     private adCreateService: AdCreateService,
-    private route: ActivatedRoute,) { }
+    private route: ActivatedRoute) { }
 
- 
+
   ngOnInit(): void {
     this.route.paramMap.pipe(
       map(paramMap => paramMap.get('id')!),
-      switchMap(id => this.petsService.getPet(+id))
-    ).subscribe( pet => { this.pet=pet;},
-      error =>{
-        console.log("eror subs",error)
-        this.error=error.statusText;
+      switchMap(id => {
+        this.petId = (+id)
+        return this.petsService.getPet(+id)
+      })
+    ).subscribe(pet => { this.pet = pet; },
+      error => {
+        this.error = error.statusText;
       });
   }
 
@@ -50,14 +53,14 @@ export class AdFormEditComponent implements OnInit {
     this.contactForm = true;
     this.editAd();
   }
-  editAd(){
-    this.adCreateService.editAd(4).subscribe(
+  editAd() {
+    this.adCreateService.editAd(this.petId).subscribe(
       pet => {
-        this.router.navigate(['/pets']);
+        this.location.back();
       },
       err => {
-       this.error=true;
-       this.errorText = err.error;
+        this.error = true;
+        this.errorText = err.error;
       }
     );
   }

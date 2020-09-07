@@ -53,7 +53,7 @@ export class AdCreateService {
   }
 
   editAd(id: Number){
-    return this.http.post<Pet>(`http://localhost:8080/api/pets/edit/${id}`,{
+    return this.http.put<Pet>(`http://localhost:8080/api/pets/edit/${id}`,{
       type:this.pet.type,
       name:this.pet.name,
       breed:this.pet.breed,

@@ -1,0 +1,47 @@
+body {
+    color: #5a5a5a;
+  }
+  
+  .forest-text{
+      color: #015249;
+  }
+  
+  .btn-light{
+    background-color: #77c9d4;
+    color: #fff;
+    border: none;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .notlogged{
+    margin: auto;
+    width: 360px;
+    padding: 8% 0 0;
+    text-align: center;
+    height: 600px;
+    
+}
+
+.notlogged button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: cadetblue;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.notlogged button:hover,.notlogged button:active,.notlogged button:focus {
+    background-color: rgb(35, 127, 163);
+}
