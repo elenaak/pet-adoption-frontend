@@ -9,11 +9,13 @@ export class FaQuestionsComponent implements OnInit {
   listOfQuestions=new Array<Question>();
   answer:string='sd';
   constructor() { }
-
+  view_tab='tab1';
   ngOnInit(): void {
     this.fillQuestionList();
   }
-
+  changeTab(tab:string){
+this.view_tab=tab;
+  }
   fillQuestionList(){
     this.listOfQuestions.push(new Question(
     'How Do I Search For a Pet?',

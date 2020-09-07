@@ -44,18 +44,34 @@ export class SearchFiltersComponent implements OnInit {
   }
 
   onSearchFilter(): void {
+    
     if(this.petName==''){
       this.petName=null;
     }
     if(this.petBreed==''){
       this.petBreed=null;
     }
-
+    let queryParamPetType=this.petType;
+    if(queryParamPetType=='Doesn\'t Matter'){
+      queryParamPetType = null;
+    }
+    let queryParamPetAge=this.petAge;
+    if(queryParamPetAge=='Doesn\'t Matter'){
+      queryParamPetAge = null;
+    }
+    let queryParamPetSex=this.petSex;
+    if(queryParamPetSex=='Doesn\'t Matter'){
+      queryParamPetSex = null;
+    }
+    let queryParamPetColor=this.petColor;
+    if(queryParamPetColor=='Doesn\'t Matter'){
+      queryParamPetColor = null;
+    }
     this.router.navigate(['/pets'],
       {
         queryParams: {
-          name: this.petName, type: this.petType, breed: this.petBreed
-          , age: this.petAge, sex: this.petSex, color: this.petColor, page: 1
+          name: this.petName, type: queryParamPetType, breed: this.petBreed
+          , age: queryParamPetAge, sex: queryParamPetSex, color: queryParamPetColor, page: 1
         }
       });
   }

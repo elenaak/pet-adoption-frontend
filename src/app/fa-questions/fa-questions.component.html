@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row py-5">
         <div class="col">
             <h2 id="top">Top of page!</h2>
@@ -13,10 +13,10 @@
    <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home"
-        role="tab" aria-controls="home" target="_self">Home</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile"
-        role="tab" aria-controls="profile" target="_self">Profile</a>
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="tab" href="http://localhost:4200/faqs#list-home"
+        role="tab" aria-controls="home">Home</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="tab" href="http://localhost:4200/faqs#list-profile"
+        role="tab" aria-controls="profile">Profile</a>
     </div>
   </div>
   <div class="col-8">
@@ -38,4 +38,29 @@
     </div>
   </div>
 </div>
+</div> -->
+<div class="container">
+  <div  class="row">
+    
+    <div class="col-xs-3"> <!-- required for floating -->
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs tabs-left sideways">
+        <li class="active"><a href="/faqs#home-v" data-toggle="tab">Home</a></li>
+        <li><a href="/faqs#profile-v" data-toggle="tab">Profile</a></li>
+        <li><a href="/faqs#messages-v" data-toggle="tab">Messages</a></li>
+        <li><a href="http://localhost:4200/faqs#settings-v" data-toggle="tab">Settings</a></li>
+      </ul>
+    </div>
+
+    <div class="col-xs-9">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="home-v">Home Tab.</div>
+        <div class="tab-pane" id="profile-v">Profile Tab.</div>
+        <div class="tab-pane" id="messages-v">Messages Tab.</div>
+        <div class="tab-pane" id="settings-v">Settings Tab.</div>
+      </div>
+    </div>
+
+  </div>
 </div>
