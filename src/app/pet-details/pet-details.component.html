@@ -41,7 +41,7 @@
                     </div>
                   </div>
               </form>
-              <button routerLink='/adopt/{{pet.id}}'>Adopt {{pet.name}}</button>
+              <button routerLink='/adopt/{{pet.id}}' *ngIf="!isOwner">Adopt {{pet.name}}</button>
         </div>
     </div>
     <h3 class="my-3">Meet {{pet.name}}</h3>

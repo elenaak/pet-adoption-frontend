@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from '../../token-storage.service';
 import { CurrentUser } from 'src/model/CurrentUser';
-import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faLock } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-profile',
@@ -13,6 +13,7 @@ export class ProfileComponent implements OnInit {
   currentUser: CurrentUser;
   isLogged = false;
   edit = faEdit;
+  lock = faLock;
 
   constructor(private token: TokenStorageService) { }
 

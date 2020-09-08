@@ -1,6 +1,7 @@
 import { MedicalRecord } from './MedicalRecord';
 import { Contact } from './Contact';
 import { LoginComponent } from 'src/app/login/login.component';
+import { User } from './User';
 
 export class Pet {
     constructor() { }
@@ -20,4 +21,5 @@ export class Pet {
     neutered: Boolean;
     allergies: String;
     vaccination: String;
+    owner: User;
 }

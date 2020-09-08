@@ -28,6 +28,7 @@ export class PetsComponent implements OnInit {
   petSex:string;
   petColor:string;
   items: Array<Pet>;
+  loading = false;
 
   constructor(private pagerService: PagerService, private route: ActivatedRoute) {
 
@@ -54,10 +55,12 @@ export class PetsComponent implements OnInit {
           this.pageSize = 15;
         }
         console.log(this.petName,this.petSex)
+        this.loading=true;
         return this.pagerService.getPageList(this.petName,this.petType,this.petBreed,this.petAge,this.petSex,this.petColor,this.currentPageParams,this.pageSize);
       }),
     ).subscribe(petSearchResult => {
       console.log(petSearchResult)
+      this.loading=false;
       this.items = petSearchResult.content;
       this.totalItems = petSearchResult.totalElements;
       this.currentPage = this.currentPageParams;
