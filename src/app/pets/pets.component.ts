@@ -29,15 +29,10 @@ export class PetsComponent implements OnInit {
   petColor:string;
   items: Array<Pet>;
 
-  constructor(private pagerService: PagerService, private route: ActivatedRoute) {
-
-  }
-
+  constructor(private pagerService: PagerService, private route: ActivatedRoute) {}
   ngOnInit(): void {
     this.route.queryParamMap.pipe(
       switchMap(params => {
-        //params for api
-        //maybe -> bind theese params to search filter
          this.petName = params.get('name');
          this.petType = params.get('type');
         this.petBreed = params.get('breed');
@@ -61,15 +56,6 @@ export class PetsComponent implements OnInit {
       this.items = petSearchResult.content;
       this.totalItems = petSearchResult.totalElements;
       this.currentPage = this.currentPageParams;
-
-      //testing purposes
-      if(this.items.length==0){
-        this.items.push(new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet());
-      }
-      if(this.totalItems==0){
-        this.totalItems=15;
-      }
-      
       
     }, error => {
       console.log('Error: ', error);

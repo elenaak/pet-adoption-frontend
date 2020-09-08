@@ -1,17 +1,16 @@
 .card {
   display: inline-block;
-  margin: 8px;
-  max-width: 300px;
+  margin: 5px;
+  max-width: 260px;
   perspective: 1000;
   position: relative;
   text-align: left;
   transition: all 0.3s 0s ease-in;
-  width: 300px;
   z-index: 1;
   color: rgb(223, 28, 28)
 }
   img {
-    width: 300px;
+    width: 255px;
     height: 200px;
   }
   

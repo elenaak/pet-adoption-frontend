@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { fromEvent, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'pet-search-filters',
@@ -29,8 +27,8 @@ export class SearchFiltersComponent implements OnInit {
     'Cyan', 'Silver', 'Violet', 'Pink', 'Black', 'White', 'Gray');
 
 
-  constructor(private router: Router) { }
-
+  constructor(private router: Router) {
+  }
   ngOnInit(): void {
     if (this.petType == null) {
       this.petType = 'Doesn\'t Matter';
@@ -44,8 +42,8 @@ export class SearchFiltersComponent implements OnInit {
     if (this.petColor == null) {
       this.petColor = 'Doesn\'t Matter';
     }
-    
-    if (window.screen.width < 768) { 
+
+    if (window.screen.width < 768) {
       this.collapse = true;
     }
     else {

@@ -15,6 +15,7 @@ import { FavouritePetsComponent } from './favourite-pets/favourite-pets.componen
 import {DeletePetComponent} from './delete-pet/delete-pet.component';
 import { AdoptRequestsComponent } from './profile-details/adopt-requests/adopt-requests.component';
 import { EditUserComponent } from './profile-details/edit-user/edit-user.component';
+import { AdoptRequestCreateComponent } from './adopt-request-create/adopt-request-create.component';
 
 
 const routes: Route[] = [{
@@ -30,7 +31,7 @@ const routes: Route[] = [{
   path: 'pets',
   component: PetsComponent
 },{
-  path:'pet/:id',
+  path:'pets/:id',
   component: PetDetailsComponent
 },{
   path:'pet/finder/quiz',
@@ -65,6 +66,9 @@ const routes: Route[] = [{
 },{
   path:'edit-profile',
   component:EditUserComponent
+},{
+  path:'adopt/:id',
+  component:AdoptRequestCreateComponent
 }];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

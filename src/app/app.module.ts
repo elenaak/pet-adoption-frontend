@@ -41,6 +41,7 @@ import { MyAdsComponent } from './profile-details/my-ads/my-ads.component';
 import { DeletePetComponent } from './delete-pet/delete-pet.component';
 import { AdoptRequestsComponent } from './profile-details/adopt-requests/adopt-requests.component';
 import { EditUserComponent } from './profile-details/edit-user/edit-user.component';
+import { AdoptRequestCreateComponent } from './adopt-request-create/adopt-request-create.component';
 
 
 
@@ -79,7 +80,8 @@ import { EditUserComponent } from './profile-details/edit-user/edit-user.compone
     MyAdsComponent,
     DeletePetComponent,
     AdoptRequestsComponent,
-    EditUserComponent
+    EditUserComponent,
+    AdoptRequestCreateComponent
   ],
   imports: [
     BrowserModule,

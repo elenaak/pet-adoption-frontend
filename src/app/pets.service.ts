@@ -34,4 +34,8 @@ export class PetsService {
   getAdoptRequests(id:Number):Observable<User[]>{
     return this.http.get<User[]>(`http://localhost:8080/api/adopt/requests/${id}`)
   }
+
+  createAdoptRequest(id:Number){
+    return this.http.post(`http://localhost:8080/api/adopt/${id}`,{})
+  }
 }

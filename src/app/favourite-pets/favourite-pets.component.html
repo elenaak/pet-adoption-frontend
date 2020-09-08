@@ -4,17 +4,18 @@
     <div class="infinite-scroll-area">
         <ul id="infinite-scroll-list" class="infinite-scroll-list">
             <div class="row">
-                <li *ngFor="let p of sublist" class="col-md-4">
+                <li *ngFor="let p of sublist" class="col-md-6 col-lg-4 col-sm-12">
                     <div class="card">
                         <div class="card__image-holder">
-                            <img class="card__image" src="{{p.image}}" alt="pet image" />
+                           <a [routerLink]="['/pets',p.id]"><img class="card__image" src="{{p.image}}" alt="pet image" /></a> 
                         </div>
                         <div class="caption" style="margin-bottom: 0px;">
                             <div class="card-title">
                                 <div class="row">
                                     <div class="md-9">
                                         <h2>
-                                            {{p.name}}
+                                           <a  [routerLink]="['/pets',p.id]" style="color: crimson;"> 
+                                            {{p.name}}</a>
                                         </h2>
                                     </div>
                                     <div class="md-3">
