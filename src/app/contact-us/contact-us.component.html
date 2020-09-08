@@ -1,37 +1,36 @@
 <div class="container my-3">
-<h1 class="text-muted pb-3 text-center">Contact us</h1>
-<img src="../../assets/DOG-BARK-ABOUT.jpg" class="img-fluid rounded mx-auto d-block pb-5" alt="photo_contact">
-<hr class="solid">
-<h2 class="text-muted pt-3 pb-1 text-center" >First Things First</h2>
-<h4 class="font-weight-light pb-5 text-center">If you have a question about PetFriends.com or a pet ad you see on the site,
+<h1 class="contact-info-h1 text-muted pb-3 text-center">Contact us</h1>
+<img src="../../assets/DOG-BARK-ABOUT.jpg" class="img-fluid rounded mx-auto d-block pb-3" alt="photo_contact">
+<h2 class="contact-info-h2 text-muted pt-1 pb-1 text-center" >First Things First</h2>
+<h4 class="contact-info-content font-weight-light pb-3 text-center">If you have a question about PetFriends.com or a pet ad you see on the site,
      you may find the answer you're looking for in the list of
     <a  [routerLink]="['/faqs']">Frequently Asked Questions</a>.
       If you have any other questions or feedback, feel free to contact us via email or telephone.
        All our contact information is listed below.
 </h4>
 <hr class="solid">
-<h2 class="text-muted pt-3 pb-3 text-center">Contact Info</h2>
+<h2 class="contact-info-h2 text-muted pt-1 pb-3 text-center">Contact Info</h2>
 <div class="row text-center pb-5">
-    <div class="col">
+    <div class="col-md-4 col-6">
         <div>
-        <fa-icon [icon]="imgPhone" size="3x"></fa-icon>
-        <h4 class="pt-2 pb-2">Phone</h4>
-        <h5 class="font-weight-light">(+389) 78-888-888</h5>
+        <fa-icon class="glyphicon" [icon]="imgPhone" ></fa-icon>
+        <h4 class="contact-info-title pt-2 pb-2">Phone</h4>
+        <h5 class="contact-info-text font-weight-light">(+389) 78-888-888</h5>
         </div>
     </div>
-    <div class="col">
+    <div class="col-md-4 col-6">
         <div>
-        <fa-icon [icon]="imgEnvelope" size="3x"></fa-icon>
-        <h4 class="pt-2 pb-2">Email</h4>
-        <h5 class="font-weight-light">info@petFriends.com</h5>
+        <fa-icon class="glyphicon" [icon]="imgEnvelope" ></fa-icon>
+        <h4 class="contact-info-title pt-2 pb-2">Email</h4>
+        <h5 class="contact-info-text font-weight-light">info@petFriends.com</h5>
         </div>
     </div>
-    <div class="col">
+    <div class="col-md-4 col-12">
         <div>
-        <fa-icon [icon]="imgLocation" size="3x" ></fa-icon>
-        <h4 class="pt-2 pb-2">Address</h4>
-        <h5 class="font-weight-light">PetFriends.com</h5>
-        <h5 class="font-weight-light">North Macedonia, Skopje 1000</h5>
+        <fa-icon class="glyphicon" [icon]="imgLocation" ></fa-icon>
+        <h4 class="contact-info-title pt-2 pb-2">Address</h4>
+        <h5 class="contact-info-text font-weight-light">PetFriends.com</h5>
+        <h5 class="contact-info-text font-weight-light">North Macedonia, Skopje 1000</h5>
         </div>
     </div>
 </div>

@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { PagerService } from 'src/app/pager.service';
 
 @Component({
   selector: 'pet-search-filters',
@@ -8,64 +7,72 @@ import { PagerService } from 'src/app/pager.service';
   styleUrls: ['./search-filters.component.css']
 })
 export class SearchFiltersComponent implements OnInit {
+  collapse: boolean;
   @Input()
   petName: String;
   @Input()
-  petType: String ='Doesn\'t Matter';
+  petType: String;
   @Input()
   petBreed: String;
   @Input()
-  petAge: String='Doesn\'t Matter';
+  petAge: String;
   @Input()
-  petSex: String='Doesn\'t Matter';
+  petSex: String;
   @Input()
-  petColor: String='Doesn\'t Matter';
-  petTypeValues=new Array('Doesn\'t Matter','Dog','Cat','Rabbit','Parrot','Other');
-  petAgeValues=new Array('Doesn\'t Matter','Baby','Young','Adult','Senior');
-  petSexValues=new Array('Doesn\'t Matter','Male','Female');
-  petColorValues=new Array('Doesn\'t Matter','Red','Orange','Yellow','Green','Blue','Purple','Brown',
-                           'Cyan','Silver','Violet','Pink','Black','White','Gray');
-  
+  petColor: String;
+  petTypeValues = new Array('Doesn\'t Matter', 'Dog', 'Cat', 'Rabbit', 'Parrot', 'Other');
+  petAgeValues = new Array('Doesn\'t Matter', 'Baby', 'Young', 'Adult', 'Senior');
+  petSexValues = new Array('Doesn\'t Matter', 'Male', 'Female');
+  petColorValues = new Array('Doesn\'t Matter', 'Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Brown',
+    'Cyan', 'Silver', 'Violet', 'Pink', 'Black', 'White', 'Gray');
 
-  constructor(private router: Router,private pageService:PagerService) { }
 
+  constructor(private router: Router) {
+  }
   ngOnInit(): void {
-    if(this.petType==null){
-      this.petType ='Doesn\'t Matter';
+    if (this.petType == null) {
+      this.petType = 'Doesn\'t Matter';
     }
-    if(this.petAge==null){
-      this.petAge ='Doesn\'t Matter';
+    if (this.petAge == null) {
+      this.petAge = 'Doesn\'t Matter';
     }
-    if(this.petSex==null){
-      this.petSex ='Doesn\'t Matter';
+    if (this.petSex == null) {
+      this.petSex = 'Doesn\'t Matter';
     }
-    if(this.petColor==null){
-      this.petColor ='Doesn\'t Matter';
+    if (this.petColor == null) {
+      this.petColor = 'Doesn\'t Matter';
+    }
+
+    if (window.screen.width < 768) {
+      this.collapse = true;
+    }
+    else {
+      this.collapse = false;
     }
   }
 
   onSearchFilter(): void {
-    
-    if(this.petName==''){
-      this.petName=null;
+
+    if (this.petName == '') {
+      this.petName = null;
     }
-    if(this.petBreed==''){
-      this.petBreed=null;
+    if (this.petBreed == '') {
+      this.petBreed = null;
     }
-    let queryParamPetType=this.petType;
-    if(queryParamPetType=='Doesn\'t Matter'){
+    let queryParamPetType = this.petType;
+    if (queryParamPetType == 'Doesn\'t Matter') {
       queryParamPetType = null;
     }
-    let queryParamPetAge=this.petAge;
-    if(queryParamPetAge=='Doesn\'t Matter'){
+    let queryParamPetAge = this.petAge;
+    if (queryParamPetAge == 'Doesn\'t Matter') {
       queryParamPetAge = null;
     }
-    let queryParamPetSex=this.petSex;
-    if(queryParamPetSex=='Doesn\'t Matter'){
+    let queryParamPetSex = this.petSex;
+    if (queryParamPetSex == 'Doesn\'t Matter') {
       queryParamPetSex = null;
     }
-    let queryParamPetColor=this.petColor;
-    if(queryParamPetColor=='Doesn\'t Matter'){
+    let queryParamPetColor = this.petColor;
+    if (queryParamPetColor == 'Doesn\'t Matter') {
       queryParamPetColor = null;
     }
     this.router.navigate(['/pets'],
@@ -75,6 +82,16 @@ export class SearchFiltersComponent implements OnInit {
           , age: queryParamPetAge, sex: queryParamPetSex, color: queryParamPetColor, page: 1
         }
       });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: { target: { innerWidth: number; }; }) {
+    if (event.target.innerWidth < 768) { // 768px portrait
+      this.collapse = true;
+    }
+    else {
+      this.collapse = false;
+    }
   }
 
 }

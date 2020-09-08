@@ -1,5 +1,9 @@
 <div class="mt-3">
-<form #petForm="ngForm" enctype="multipart/form-data" (ngSubmit)="onSearchFilter()" >
+    <button class="btn btn-lg btn-light btn-block d-sm-none"  (click)="collapse=!collapse" type="button" 
+  aria-expanded="false" aria-label="Toggle Filters">
+    Filters
+  </button>
+<form  [hidden]="collapse" #petForm="ngForm" enctype="multipart/form-data" (ngSubmit)="onSearchFilter()" >
     <div class="form-group text-center">
       <label for="name">Name</label>
       <input class="form-control" type="text" name="name" placeholder="Pet Name"  [(ngModel)] = "petName" required autofocus>
