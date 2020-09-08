@@ -63,12 +63,12 @@ export class PetsComponent implements OnInit {
       this.currentPage = this.currentPageParams;
 
       //testing purposes
-      if(this.items.length==0){
-        this.items.push(new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet());
-      }
-      if(this.totalItems==0){
-        this.totalItems=15;
-      }
+      // if(this.items.length==0){
+      //   this.items.push(new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet(),new Pet());
+      // }
+      // if(this.totalItems==0){
+      //   this.totalItems=15;
+      // }
       
       
     }, error => {

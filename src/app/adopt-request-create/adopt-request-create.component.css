@@ -1,18 +1,13 @@
-.container{
-    font-family: "Poppins", sans-serif;
+.notlogged{
+    margin: auto;
+    width: 360px;
+    padding: 8% 0 0;
+    text-align: center;
+    height: 600px;
+    
 }
-h3,h4,h1{
-    color: cadetblue;
-}
-label{
-  color: cadetblue;
-  font-weight: bold;
-}
-.col{
-  margin-top: 10px;
-}
-button {
-  margin-top: 10px;
+
+.notlogged button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -27,6 +22,6 @@ button {
   cursor: pointer;
   border-radius: 15px;
 }
- button:hover,button:active, button:focus {
+.notlogged button:hover,.notlogged button:active,.notlogged button:focus {
     background-color: rgb(35, 127, 163);
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { PagerService } from 'src/app/pager.service';
 
 @Component({
   selector: 'pet-search-filters',
@@ -26,7 +27,7 @@ export class SearchFiltersComponent implements OnInit {
                            'Cyan','Silver','Violet','Pink','Black','White','Gray');
   
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private pageService:PagerService) { }
 
   ngOnInit(): void {
     if(this.petType==null){

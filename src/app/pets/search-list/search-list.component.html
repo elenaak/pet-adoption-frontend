@@ -1,3 +1,9 @@
 <div class="justify-content-center">
-<pet-search-list-item *ngFor="let item of items"></pet-search-list-item>
+    <ul style="list-style: none;">
+        <div class="row">
+            <li *ngFor="let i of items" class="col-md-6 col-lg-4 col-sm-12">
+                <pet-search-list-item [pet]=i></pet-search-list-item>
+            </li>
+        </div>
+    </ul>
 </div>
