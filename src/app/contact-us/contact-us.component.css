@@ -9,3 +9,35 @@
   vertical-align: middle !important;
   align-items: center;
   }
+@media screen and (max-width: 767px) {
+    .glyphicon {
+        font-size: 2em;
+    }
+    .contact-info-title{
+        font-size: 20px;
+    }
+    .contact-info-text{
+        font-size: 15px;
+    }
+    .contact-info-content{
+      font-size:20px;
+    }
+    .contact-info-h1{
+      font-size:30px;
+    }
+    .contact-info-h2{
+      font-size:25px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .glyphicon {
+        font-size: 3em;
+    }
+    /* .contact-info-title{
+      font-size: 10px;
+  }
+    .contact-info-text{
+      font-size: 5px;
+  } */
+}
