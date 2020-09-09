@@ -35,14 +35,21 @@ export class AuthService {
 
   }
 
-  editProfile(user: CurrentUser){
-    return this.http.post('http://localhost:8080/edit/profile',{
+  editProfile(user: CurrentUser) {
+    return this.http.post('http://localhost:8080/edit/profile', {
       email: user.email,
-      description:user.description
+      description: user.description
     });
   }
 
-  getCurrentUser():Observable<CurrentUser>{
+  changePassword(oldPsw: String, newPsw: String) {
+    return this.http.post('http://localhost:8080/edit/profile/password', {
+      oldPassword: oldPsw,
+      newPassword: newPsw
+    });
+  }
+
+  getCurrentUser(): Observable<CurrentUser> {
     return this.http.get<CurrentUser>('http://localhost:8080/authenticate');
   }
 }

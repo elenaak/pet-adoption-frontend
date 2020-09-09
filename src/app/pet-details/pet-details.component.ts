@@ -6,6 +6,8 @@ import { PetsService } from '../pets.service';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { Location } from '@angular/common';
+import { TokenStorageService } from '../token-storage.service';
+import { CurrentUser } from 'src/model/CurrentUser';
 
 @Component({
   selector: 'app-pet-details',
@@ -16,18 +18,22 @@ export class PetDetailsComponent implements OnInit {
 
   constructor(private petsService: PetsService,
     private route: ActivatedRoute,
-    private locatin: Location) { }
+    private locatin: Location,
+    private tokenService: TokenStorageService) { }
 
+  @Input() id: Number;
   phone = faPhone;
   email = faEnvelopeSquare;
   location = faMapMarkerAlt;
   city = faCity;
-  @Input() id: Number;
   pet: Pet = new Pet();
   error: String;
-
+  isOwner = true;
+  currentUser: CurrentUser;
 
   ngOnInit(): void {
+    if (this.tokenService.getToken())
+      this.currentUser = this.tokenService.getUser();
     this.route.paramMap.pipe(
       map(paramMap => paramMap.get('id')!),
       switchMap(id => {
@@ -35,6 +41,9 @@ export class PetDetailsComponent implements OnInit {
       })
     ).subscribe(pet => {
       this.pet = pet;
+      if (this.currentUser) {
+        this.isOwner = this.currentUser.username == this.pet.owner.username;
+      }
     },
       error => {
         this.error = error.statusText;

@@ -11,7 +11,8 @@
         <div style="align-content:center; margin: 10px;">
           <p *ngIf="currentUser.description" style="font-style: italic;">{{currentUser.description}}</p>
           <p *ngIf="!currentUser.description" style="font-style: italic;">No bio</p>
-          <a class="edit" routerLink="/edit-profile"><fa-icon [icon]="edit" class="icon">Edit</fa-icon> Edit Profile</a>
+            <a class="edit" routerLink="/edit-profile"><fa-icon [icon]="edit" class="icon">Edit</fa-icon> Edit Profile</a>  
+            <a class="edit" routerLink="/edit-profile/password" style="margin-left:10px;"><fa-icon [icon]="lock" class="icon"></fa-icon>Change Password</a> 
         </div>
       </div>
     </div>

@@ -42,6 +42,7 @@ import { DeletePetComponent } from './delete-pet/delete-pet.component';
 import { AdoptRequestsComponent } from './profile-details/adopt-requests/adopt-requests.component';
 import { EditUserComponent } from './profile-details/edit-user/edit-user.component';
 import { AdoptRequestCreateComponent } from './adopt-request-create/adopt-request-create.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 
@@ -81,7 +82,8 @@ import { AdoptRequestCreateComponent } from './adopt-request-create/adopt-reques
     DeletePetComponent,
     AdoptRequestsComponent,
     EditUserComponent,
-    AdoptRequestCreateComponent
+    AdoptRequestCreateComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
