@@ -42,7 +42,7 @@ export class PetDetailsComponent implements OnInit {
     ).subscribe(pet => {
       this.pet = pet;
       if (this.currentUser) {
-        this.isOwner = this.currentUser.username != this.pet.owner.username;
+        this.isOwner = this.currentUser.username == this.pet.owner.username;
       }
     },
       error => {
