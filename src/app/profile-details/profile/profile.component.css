@@ -6,10 +6,7 @@
   font-family: 'Typicons', sans-serif;
 }
 
-.container{
-  width: 75%;
-  margin: auto;
-}
+
 #card-content {
   height: 100%;
 }
@@ -41,11 +38,9 @@ span.info {
 
 .notlogged{
   margin: auto;
-  width: 360px;
-  padding: 8% 0 0;
+  padding: 10% 0 0;
   text-align: center;
   height: 600px;
-  
 }
 
 .notlogged button {
@@ -69,4 +64,16 @@ border-radius: 15px;
 }
 .edit:hover{
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+ .notlogged{
+   width: 100%;
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+}
+@media screen and (min-width: 768px) {
+  .notlogged{
+    width: 360px;
+  }
 }

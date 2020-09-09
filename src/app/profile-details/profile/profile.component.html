@@ -1,4 +1,4 @@
-<div class="container" *ngIf="isLogged">
+<div class="container w-75 mx-auto" *ngIf="isLogged">
   <div id="vcard">
     <div id="card-content">
         <div id="profile">
@@ -19,9 +19,13 @@
   <app-my-ads></app-my-ads>
 </div>
 
+<div class="container">
 <div class="notlogged" *ngIf="!isLogged">
-  <h2 style="margin-bottom: 20px;">Join PetFriends</h2>
+  <h2 style="margin-bottom: 15px;">Join PetFriends</h2>
   <h3 style="margin-bottom: 15px;">Create an account:</h3>
-  <button [routerLink]="['/sign-up']">Sign up</button>
+  <div class="buttonSignUp mx-auto pb-1">
+    <button [routerLink]="['/sign-up']">Sign up</button>
+  </div>
   <p class="message">Already have an account? <a [routerLink]="['/login']">Log In</a>
+</div>
 </div>

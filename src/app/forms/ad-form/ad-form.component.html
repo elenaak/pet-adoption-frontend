@@ -11,8 +11,10 @@
 </div>
 
 <div *ngIf="!logged" class="notlogged">
-        <h2 style="margin-bottom: 20px;">Join PetFriends to post an add</h2>
-        <h3 style="margin-bottom: 15px;">Create an account:</h3>
+    <h2 style="margin-bottom: 20px;">Join PetFriends to post an add</h2>
+    <h3 style="margin-bottom: 15px;">Create an account:</h3>
+    <div class="buttonSignUp">
         <button [routerLink]="['/sign-up']">Sign up</button>
-        <p class="message">Already have an account? <a [routerLink]="['/login']">Log In</a>
+    </div>
+    <p class="message">Already have an account? <a [routerLink]="['/login']">Log In</a>
 </div>
