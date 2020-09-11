@@ -49,6 +49,8 @@ import { ArticleCreateComponent } from './article-create/article-create.componen
 import { ArticleListComponent } from './article-list/article-list.component';
 import { CatDogArticlesComponent } from './cat-dog-articles/cat-dog-articles.component';
 import { PetsHomePageComponent } from './home-page/pets-home-page/pets-home-page.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './forgot-password/reset-password/reset-password.component';
 
 
 
@@ -94,7 +96,9 @@ import { PetsHomePageComponent } from './home-page/pets-home-page/pets-home-page
     ArticleCreateComponent,
     ArticleListComponent,
     CatDogArticlesComponent,
-    PetsHomePageComponent
+    PetsHomePageComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

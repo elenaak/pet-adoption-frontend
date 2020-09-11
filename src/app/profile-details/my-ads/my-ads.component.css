@@ -1,72 +1,71 @@
-
 .title{
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    color: rgb(223, 28, 28);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: rgb(223, 28, 28);
 }
 .infinite-scroll-list{
-  list-style: none;
+list-style: none;
 }
 .more-btn{
-    display: block;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    background: rgb(222,84,74);
-    border: 2px solid rgb(222,84,74);
-    outline: none;
-    padding: 16px 8px;
-    margin: 32px auto 10px;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  background: rgb(222,84,74);
+  border: 2px solid rgb(222,84,74);
+  outline: none;
+  padding: 16px 8px;
+  margin: 32px auto 10px;
 }
 .card {
-  display: inline-block;
-  perspective: 1000;
-  position: relative;
-  text-align: left;
-  transition: all 0.3s 0s ease-in;
-  z-index: 1;
-  color: rgb(223, 28, 28)
+display: inline-block;
+perspective: 1000;
+position: relative;
+text-align: left;
+transition: all 0.3s 0s ease-in;
+z-index: 1;
+color: rgb(223, 28, 28)
 }
-  
-  .card__image-holder {
-    background: rgba(0,0,0,0.1);
-    height: 0;
-  }
 
- .card-title{
-    padding: 6px 15px;
-    position: relative;
-    z-index: 0;
-    
-  }
-  .icon{
-    padding: 3px;
-    font-size: 22px;
-  }
-  .icon:hover{
-    cursor: pointer;
-  }
- a{
-   color:crimson;
- }
- .caption{
-    background: cadetblue;
-    content: '';
-    background: -moz-linear-gradient(90deg, cadetblue 0%, #0c6c92  100%, #85ade2 100%);
-    background: -webkit-linear-gradient(90deg, cadetblue, #0c6c92  0%, #6ca7be 100%, #85ade2 100%);
-    background: linear-gradient(90deg, cadetblue 0%, #0c6c92 100%, #85ade2 100%);
-    opacity: 0.8;
-    z-index: -1;
- }
+.card__image-holder {
+  background: rgba(0,0,0,0.1);
+  height: 0;
+}
 
- .empty{
-  margin: auto;
-  width: 360px;
-  padding: 8% 0 0;
-  text-align: center;
-  height: 600px;
+.card-title{
+  padding: 6px 15px;
+  position: relative;
+  z-index: 0;
   
+}
+.icon{
+  padding: 3px;
+  font-size: 22px;
+}
+.icon:hover{
+  cursor: pointer;
+}
+a{
+ color:crimson;
+}
+.caption{
+  background: cadetblue;
+  content: '';
+  background: -moz-linear-gradient(90deg, cadetblue 0%, #0c6c92  100%, #85ade2 100%);
+  background: -webkit-linear-gradient(90deg, cadetblue, #0c6c92  0%, #6ca7be 100%, #85ade2 100%);
+  background: linear-gradient(90deg, cadetblue 0%, #0c6c92 100%, #85ade2 100%);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.empty{
+margin: auto;
+width: 360px;
+padding: 8% 0 0;
+text-align: center;
+height: 600px;
+
 }
 
 .empty button {
@@ -86,39 +85,39 @@ border-radius: 15px;
 }
 
 .empty button:hover,.empty button:active,.empty button:focus {
-  background-color: rgb(35, 127, 163);
+background-color: rgb(35, 127, 163);
 }
 @media screen and (max-width: 767px) {
-  img {
-    width: 100%;
-    height: 150px;
-  }
-  .item{
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-  .card__image-holder {
-    padding-bottom: 75%;
-  }
-  .more-btn{
-    width: 70%;
-  }
-  .infinite-scroll-list{
-    padding-inline-start: 0px;
-  }
+img {
+  width: 100%;
+  height: 150px;
+}
+.item{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.card__image-holder {
+  padding-bottom: 75%;
+}
+.more-btn{
+  width: 70%;
+}
+.infinite-scroll-list{
+  padding-inline-start: 0px;
+}
 }
 @media screen and (min-width: 768px) {
-  .card{
-    max-width: 300px;
-  }
-  img {
-    width: 300px;
-    height: 200px;
-  }
-  .card__image-holder {
-    padding-bottom: 75%;
-  }
-  .more-btn{
-    width: 240px;
-  }
+.card{
+  max-width: 300px;
+}
+img {
+  width: 300px;
+  height: 200px;
+}
+.card__image-holder {
+  padding-bottom: 75%;
+}
+.more-btn{
+  width: 240px;
+}
 }

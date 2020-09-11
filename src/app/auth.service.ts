@@ -15,6 +15,7 @@ const httpOptions = {
 
 export class AuthService {
 
+
   constructor(private http: HttpClient) { }
 
   signUp(user: User) {
@@ -48,6 +49,27 @@ export class AuthService {
       newPassword: newPsw
     });
   }
+
+  sendEmailResetPass(user_email: String) {
+    return this.http.post('http://localhost:8080/login/forgot-password',{
+      email:user_email
+    });
+  }
+
+  validateTokenResetPass(token: String){
+    return this.http.post('http://localhost:8080/login/forgot-password/validate',{
+      token:token
+    });
+  }
+
+  resetPass(pass: String, token: String){
+    return this.http.post('http://localhost:8080/login/forgot-password/reset',{
+      token:token,
+      password:pass
+    });
+  }
+
+
 
   getCurrentUser(): Observable<CurrentUser> {
     return this.http.get<CurrentUser>('http://localhost:8080/authenticate');

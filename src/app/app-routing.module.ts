@@ -21,6 +21,9 @@ import { ArticleCreateComponent } from './article-create/article-create.componen
 import { ArticleComponent } from './article/article.component';
 import { RouteGuardService } from './route-guard.service';
 import { ArticleListComponent } from './article-list/article-list.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './forgot-password/reset-password/reset-password.component';
+
 
 const routes: Route[] = [{
   path: 'home',
@@ -86,7 +89,14 @@ const routes: Route[] = [{
 },{
   path:"articles/:theme/page/:page",
   component:ArticleListComponent
+},{
+  path:'login/forgot-password',
+  component: ForgotPasswordComponent
+},{
+  path:'login/forgot-password/reset',
+  component: ResetPasswordComponent
 }];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
