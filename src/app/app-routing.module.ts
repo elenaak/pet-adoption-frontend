@@ -17,6 +17,8 @@ import { AdoptRequestsComponent } from './profile-details/adopt-requests/adopt-r
 import { EditUserComponent } from './profile-details/edit-user/edit-user.component';
 import { AdoptRequestCreateComponent } from './adopt-request-create/adopt-request-create.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './forgot-password/reset-password/reset-password.component';
 
 
 const routes: Route[] = [{
@@ -73,7 +75,14 @@ const routes: Route[] = [{
 },{
   path:'edit-profile/password',
   component: ChangePasswordComponent
+},{
+  path:'login/forgot-password',
+  component: ForgotPasswordComponent
+},{
+  path:'login/forgot-password/reset',
+  component: ResetPasswordComponent
 }];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
