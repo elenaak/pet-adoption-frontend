@@ -4,6 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { CKEditorModule } from 'ng2-ckeditor'; 
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -43,6 +44,11 @@ import { AdoptRequestsComponent } from './profile-details/adopt-requests/adopt-r
 import { EditUserComponent } from './profile-details/edit-user/edit-user.component';
 import { AdoptRequestCreateComponent } from './adopt-request-create/adopt-request-create.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ArticleComponent } from './article/article.component';
+import { ArticleCreateComponent } from './article-create/article-create.component';
+import { ArticleListComponent } from './article-list/article-list.component';
+import { CatDogArticlesComponent } from './cat-dog-articles/cat-dog-articles.component';
+import { PetsHomePageComponent } from './home-page/pets-home-page/pets-home-page.component';
 
 
 
@@ -83,7 +89,12 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     AdoptRequestsComponent,
     EditUserComponent,
     AdoptRequestCreateComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    ArticleComponent,
+    ArticleCreateComponent,
+    ArticleListComponent,
+    CatDogArticlesComponent,
+    PetsHomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +103,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     FontAwesomeModule,
     FormsModule,
     NgbModule,
-    NgSelectModule
+    NgSelectModule,
+    CKEditorModule
   ],
   providers: [ { provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]

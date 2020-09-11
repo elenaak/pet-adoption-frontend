@@ -16,6 +16,7 @@ export class NavigationComponent implements OnInit {
   signOut= faSignOutAlt;
   currentUser: CurrentUser;
   collapse: boolean = true;
+  role = "ROLE_ADMIN";
   
   constructor(private tokenService: TokenStorageService,
     private router:Router) {

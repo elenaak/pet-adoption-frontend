@@ -28,15 +28,17 @@ export class FavouritePetsComponent implements OnInit {
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.logged = true;
-      this.loading=true;
+      this.loading = true;
       this.petService.getLiked().subscribe(
         pets => {
-          this.loading=false;
+          this.loading = false;
           this.all = pets;
           this.sublist = this.all.slice(0, this.limit);
           this.size = this.all.length;
           if (this.size == 0)
             this.empty = true;
+          if (this.limit >= this.all.length)
+            this.stop = true;
         }
       );
     }

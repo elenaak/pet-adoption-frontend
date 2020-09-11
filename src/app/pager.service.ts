@@ -43,5 +43,12 @@ export class PagerService {
       return this.http.get(`http://localhost:8080/api/pets/search?${parametars}`);
   }
 
+  getAll(page:Number,size:Number):Observable<PetsSearchResult>{
+    var param = ""
+    param=param.concat(`page=${page}`);
+    param=param.concat(`&size=${size}`);
+    return this.http.get<PetsSearchResult>(`http://localhost:8080/api/pets?${param}`);
+  }
+
   
 }
