@@ -1,66 +1,40 @@
 <div class="login-page">
-    <div class="form" *ngIf="!isLoggedIn">
-        <form class="login-form"  #f="ngForm" novalidate name="form" (ngSubmit)="f.form.valid && onSubmit()">
-            <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="username"
-                  placeholder="username"
-                  [(ngModel)]="creds && creds.username"
-                  required
-                  #username="ngModel"
-                />
-                <div
-                  class="alert alert-danger"
-                  role="alert"
-                  *ngIf="f.submitted && username.invalid"
-                >
-                  Username is required!
-                </div>
-              </div>
-              <div class="form-group">
-                <input
-                  type="password"
-                  class="form-control"
-                  name="password"
-                  [(ngModel)]="creds && creds.password"
-                  placeholder="password"
-                  required
-                  minlength="6"
-                  #password="ngModel"
-                />
-                <div
-                  class="alert alert-danger"
-                  role="alert"
-                  *ngIf="f.submitted && password.invalid"
-                >
-                  <div *ngIf="password.errors.required">Password is required</div>
-                  <div *ngIf="password.errors.minlength">
-                    Password must be at least 6 characters
-                  </div>
-                </div>
-              </div>
-              <div>
-                <a [routerLink]="['/login/forgot-password']" class="text-primary">Forgot Your Password?</a>
-              </div>
-             
-            <button type="submit">Log In</button>
-            <div class="form-group">
-                <div
-                  class="alert alert-danger"
-                  role="alert"
-                  *ngIf="f.submitted && isLoginFailed"
-                >
-                  Invalid username or password
-                </div>
-              </div>
-            <p class="message">Not registered? <a [routerLink]="['/sign-up']">Create an account</a></p>
-        </form>
-    </div>
-    <div class="alert alert-success" *ngIf="isLoggedIn">
-        <p>You are logged in as {{username}}</p>
-        <button [routerLink]="['/']">Home</button>
-        <button (click)="onLogout()">Log Out</button>
+  <div class="form" *ngIf="!isLoggedIn">
+    <form class="login-form" #f="ngForm" novalidate name="form" (ngSubmit)="f.form.valid && onSubmit()">
+      <div class="form-group">
+        <input type="text" class="form-control" name="username" placeholder="username"
+          [(ngModel)]="creds && creds.username" required #username="ngModel" />
+        <div class="alert alert-danger" role="alert" *ngIf="f.submitted && username.invalid">
+          Username is required!
+        </div>
       </div>
+      <div class="form-group">
+        <input type="password" class="form-control" name="password" [(ngModel)]="creds && creds.password"
+          placeholder="password" required minlength="6" #password="ngModel" />
+        <div class="alert alert-danger" role="alert" *ngIf="f.submitted && password.invalid">
+          <div *ngIf="password.errors.required">Password is required</div>
+          <div *ngIf="password.errors.minlength">
+            Password must be at least 6 characters
+          </div>
+        </div>
+      </div>
+      <div>
+        <a [routerLink]="['/login/forgot-password']" class="text-primary" *ngIf="!loading">Forgot Your Password?</a>
+      </div>
+
+      <button type="submit">Log In</button>
+      <div class="form-group">
+        <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+          Invalid username or password
+        </div>
+      </div>
+      <div style="margin-top: 10px; color: cadetblue;" *ngIf="loading" class="spinner-border text-primary"></div>
+      <p class="message">Not registered? <a [routerLink]="['/sign-up']">Create an account</a></p>
+    </form>
+  </div>
+  <div class="alert alert-success" *ngIf="isLoggedIn">
+    <p>You are logged in as {{username}}</p>
+    <button [routerLink]="['/']">Home</button>
+    <button (click)="onLogout()">Log Out</button>
+  </div>
 </div>

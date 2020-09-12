@@ -1,4 +1,7 @@
-<h2 *ngIf="loading" style="text-align: center; color: cadetblue; margin: 20px;"> Loading...</h2>
+<div class="d-flex justify-content-center" *ngIf="loading" style="margin-top: 20px;">
+    <div class="spinner-border" role="status" style=" color: cadetblue;">
+    </div>
+</div>
 <div class="container w-75 mx-auto" *ngIf="!loading && logged && !empty">
     <h2 class="title">Liked by you ({{size}})</h2>
     <div class="infinite-scroll-area">

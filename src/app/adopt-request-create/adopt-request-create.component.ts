@@ -15,6 +15,7 @@ export class AdoptRequestCreateComponent implements OnInit {
   error: String;
   logged = false;
   succ: Boolean;
+  loading = false;
 
   constructor(private petsService: PetsService,
     private route: ActivatedRoute,
@@ -24,13 +25,18 @@ export class AdoptRequestCreateComponent implements OnInit {
   ngOnInit(): void {
     if (this.token.getUser) {
       this.logged = true;
+      this.loading = true;
       this.route.paramMap.pipe(
         map(paramMap => paramMap.get('id')!),
         switchMap(id => {
           return this.petsService.createAdoptRequest(+id);
         })
-      ).subscribe(pet => { this.succ = true },
+      ).subscribe(pet => {
+        this.loading = false;
+        this.succ = true
+      },
         error => {
+          this.loading = false;
           this.error = error.statusText;
         });
     }

@@ -15,17 +15,21 @@ export class ArticleCreateComponent implements OnInit {
 
   article: Article = new Article();
   error:String;
+  loading = false;
   
 
   ngOnInit(): void {
   }
 
   onSubmit() {
+    this.loading=true;
     this.articleService.createArticle(this.article).subscribe(
-      succ => { 
+      succ => {
+        this.loading=false; 
         this.router.navigate([`/articles/${this.article.theme}/page/1`])
       },
       error => {
+        this.loading=false; 
         this.error = error.error;
       });
   }

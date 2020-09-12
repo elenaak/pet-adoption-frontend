@@ -15,6 +15,7 @@ export class AdFormComponent implements OnInit {
   mrForm = false;
   contactForm = false;
   logged=false;
+  loading=false;
 
   constructor(private adCreateService: AdCreateService,
     private route: Router,
@@ -36,12 +37,13 @@ export class AdFormComponent implements OnInit {
 
   setContact(contact: any) {
     this.contactForm = true;
+    this.loading=true;
     this.createAd();
   }
   createAd() {
     this.adCreateService.createAd().subscribe(
       pet => {
-        console.log(pet.name)
+        this.loading=false;
         this.route.navigate(['/pets']);
 
       }

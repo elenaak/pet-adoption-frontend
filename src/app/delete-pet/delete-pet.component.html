@@ -4,6 +4,10 @@
         <button class="col-md-5" id="yes" (click)="onYes()">Yes</button>
         <button class="col-md-5" (click)="onCancel()">Cancel</button>
     </div>
+    <div class="d-flex justify-content-center" *ngIf="loading">
+        <div class="spinner-border" role="status" style=" color: cadetblue;">
+        </div>
+    </div>
     <div>
         <p>{{error}}</p>
     </div>

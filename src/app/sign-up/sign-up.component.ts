@@ -14,6 +14,7 @@ export class SignUpComponent implements OnInit {
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
+  loading=false;
 
 
   constructor(private authService: AuthService) { }
@@ -21,13 +22,15 @@ export class SignUpComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit() {
-
+    this.loading=true;
     this.authService.signUp(this.user).subscribe(
       data => {
+        this.loading=false;
         this.isSuccessful = true;
         this.isSignUpFailed = false;
       },
       err => {
+        this.loading=false;
         this.errorMessage = err.error.error;
         this.isSignUpFailed = true
       }

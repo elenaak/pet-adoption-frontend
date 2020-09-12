@@ -1,4 +1,7 @@
-<h2 *ngIf="loading" style="text-align: center; color: cadetblue; margin: 20px;"> Loading...</h2>
+<div class="d-flex justify-content-center" *ngIf="loading" style="margin-top: 20px;">
+    <div class="spinner-border" role="status" style=" color: cadetblue;">
+    </div>
+</div>
 <div *ngIf="articles" style="width: 75%; margin: auto;">
     <ul style="list-style: none; margin-top: 30px;">
         <li *ngFor="let a of articles.content">

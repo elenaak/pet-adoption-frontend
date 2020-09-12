@@ -8,6 +8,10 @@
     <div *ngIf="mrForm">
         <app-contact-form-edit [contact]="pet.contact" (contactForm)="setContact($event)"></app-contact-form-edit>
     </div>
+    <div class="d-flex justify-content-center" *ngIf="loading" style="margin-top: 20px;">
+        <div class="spinner-border" role="status" style=" color: cadetblue;">
+        </div>
+    </div>
 </div>
 <div *ngIf="error" class="alert-danger" >
     <p>{{errorText.error}}</p>

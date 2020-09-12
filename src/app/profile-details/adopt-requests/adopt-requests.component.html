@@ -1,6 +1,10 @@
 <div class="container">
     <h3 style="margin: 30px;">User who are interesting in adopting this pet</h3>
-    <ul class="list">
+    <div class="d-flex justify-content-center" *ngIf="loading" style="margin-top: 20px;">
+        <div class="spinner-border" role="status" style=" color: cadetblue;">
+        </div>
+    </div>
+    <ul class="list" *ngIf="users">
         <div class="row">
             <li *ngFor="let u of users" class="col-md-4">
                 <div class="card">

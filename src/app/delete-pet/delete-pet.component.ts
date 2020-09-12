@@ -16,25 +16,28 @@ export class DeletePetComponent implements OnInit {
 
   error: String;
   id: Number;
+  loading = false;
 
-  ngOnInit(): void {//this.activatedRoute.params.subscribe(paramsId => {
+  ngOnInit(): void {
     this.route.params.subscribe(
       paramsId => this.id = (+paramsId.id)
     );
-    console.log(this.id);
   }
 
   onYes() {
-    console.log(this.id);
+    this.loading = true;
     this.petsService.deletePet(this.id).subscribe(
-      succ => { this.location.back() },
+      succ => {
+        this.loading = false;
+        this.location.back();
+      },
       error => {
+        this.loading = true;
         this.error = error.error;
-        ;
       });
   }
 
-  onCancel(){
+  onCancel() {
     this.location.back();
   }
 

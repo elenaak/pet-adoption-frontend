@@ -19,15 +19,20 @@ export class AdoptRequestsComponent implements OnInit {
   empty: true;
   petId: Number;
   email=faEnvelopeSquare;
+  loading=false;
 
   ngOnInit(): void {
+    this.loading=true;
     this.route.paramMap.pipe(
       map(paramMap => paramMap.get('id')!),
       switchMap(id => {
         this.petId = (+id)
         return this.petsService.getAdoptRequests(this.petId);
       })
-    ).subscribe(users => { this.users = users; });
+    ).subscribe(users => { 
+      this.loading=false;
+      this.users = users; 
+    });
   }
 
 }

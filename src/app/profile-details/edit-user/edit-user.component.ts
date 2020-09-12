@@ -16,6 +16,7 @@ export class EditUserComponent implements OnInit {
   currentUser: CurrentUser;
   error: String;
   token: string
+  loading = false;
 
   constructor(private tokenService: TokenStorageService,
     private authService: AuthService,
@@ -30,12 +31,15 @@ export class EditUserComponent implements OnInit {
   }
 
   onEditUser() {
+    this.loading=true;
     this.authService.editProfile(this.currentUser)
       .subscribe(
         succ => {
+          this.loading=false;
           this.tokenService.saveToken(this.token);
           this.router.navigate(['/profile']);
         }, error => {
+          this.loading=false;
           this.error = error.error;
         });
   }

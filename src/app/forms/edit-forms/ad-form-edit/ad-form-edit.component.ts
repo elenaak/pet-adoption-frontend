@@ -20,6 +20,7 @@ export class AdFormEditComponent implements OnInit {
   error: Boolean = false;
   errorText = ""
   petId: Number;
+  loading=false;
 
 
   constructor(private petsService: PetsService,
@@ -51,14 +52,17 @@ export class AdFormEditComponent implements OnInit {
 
   setContact(contact: any) {
     this.contactForm = true;
+    this.loading=true;
     this.editAd();
   }
   editAd() {
     this.adCreateService.editAd(this.petId).subscribe(
       pet => {
+        this.loading=false;
         this.location.back();
       },
       err => {
+        this.loading=false;
         this.error = true;
         this.errorText = err.error;
       }

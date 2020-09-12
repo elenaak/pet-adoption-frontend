@@ -26,27 +26,31 @@ export class PetDetailsComponent implements OnInit {
   email = faEnvelopeSquare;
   location = faMapMarkerAlt;
   city = faCity;
-  pet: Pet = new Pet();
+  pet: Pet;
   error: String;
   isOwner = true;
   currentUser: CurrentUser;
+  loading=false;
 
   ngOnInit(): void {
     if (this.tokenService.getToken())
       this.currentUser = this.tokenService.getUser();
+    this.loading=true;
     this.route.paramMap.pipe(
       map(paramMap => paramMap.get('id')!),
       switchMap(id => {
         return this.petsService.getPet(+id)
       })
     ).subscribe(pet => {
+      this.loading=false;
       this.pet = pet;
       if (this.currentUser) {
         this.isOwner = this.currentUser.username == this.pet.owner.username;
       }
     },
       error => {
-        this.error = error.statusText;
+        this.loading=false;
+        this.error = error;
       });
   }
 }

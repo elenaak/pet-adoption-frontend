@@ -1,3 +1,7 @@
+<div class="d-flex justify-content-center" *ngIf="loading" style="margin-top: 20px;">
+  <div class="spinner-border" role="status" style=" color: cadetblue;">
+  </div>
+</div>
 <div class="container" *ngIf="pet">
     <h1 class="my-4">
         {{pet.name}}
@@ -82,5 +86,5 @@
 
 </div>
 <div *ngIf="error">
-  {{error}}
+  {{error.error}}
 </div>
