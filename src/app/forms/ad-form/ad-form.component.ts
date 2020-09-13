@@ -45,7 +45,6 @@ export class AdFormComponent implements OnInit {
       pet => {
         this.loading=false;
         this.route.navigate(['/pets']);
-
       }
     );
   }
