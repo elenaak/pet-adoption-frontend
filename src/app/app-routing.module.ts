@@ -86,14 +86,15 @@ const routes: Route[] = [{
 }, {
   path: '',
   redirectTo: 'home', pathMatch: 'full'
-},{
-  path:"articles/:theme/page/:page",
-  component:ArticleListComponent
-},{
-  path:'login/forgot-password',
+}, {
+  path: "articles/:theme/page/:page",
+  component: ArticleListComponent
+},
+{
+  path: 'login/forgot-password',
   component: ForgotPasswordComponent
-},{
-  path:'login/forgot-password/reset',
+}, {
+  path: 'login/forgot-password/reset',
   component: ResetPasswordComponent
 }];
 

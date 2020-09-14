@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-center" *ngIf="loading" style="margin-top: 20px;">
+    <div class="spinner-border" role="status" style=" color: cadetblue;">
+    </div>
+</div>
+<div class="container" *ngIf="!loading && !empty" style="width: 75%; margin: auto;">
+    <h2 style="align-content: center; color: cadetblue;  text-align: center;margin-top: 30px;margin-bottom: 50px;">Your
+        articles ({{size}})</h2>
+    <ul style="list-style: none; margin-top: 30px;">
+        <li *ngFor="let a of sublist">
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-4 text-center p-3 mr-0 pr-0">
+                        <a [routerLink]="['/article',a.id]"><img src="{{a.image}}" alt="Article image"
+                                class="img-thumbnail show_img">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <a [routerLink]="['/article',a.id]">
+                                <h3 class="card-title" style="color: cadetblue;">{{ a.title}}
+                                </h3>
+                            </a>
+                            <p class="card-text" [innerHtml]="a.description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div *ngIf="!stop">
+        <button id="more-btn" class="more-btn" (click)="onClick()">SHOW MORE</button>
+    </div>
+</div>
+
+<div *ngIf="empty" class="!loading && empty">
+    <h2 style="margin-bottom: 20px;">You haven't published any ads yet</h2>
+    <p>
+        Publish your first ad
+    </p>
+    <button [routerLink]="['/ads/new']">Publish ad</button>
+</div>

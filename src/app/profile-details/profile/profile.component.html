@@ -17,7 +17,8 @@
       </div>
     </div>
   </div>
-  <app-my-ads></app-my-ads>
+  <app-my-ads *ngIf="!admin"></app-my-ads>
+  <app-my-articles *ngIf="admin"></app-my-articles>
 </div>
 
 <div class="container">

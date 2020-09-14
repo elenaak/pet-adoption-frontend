@@ -14,6 +14,7 @@ export class ProfileComponent implements OnInit {
   isLogged = false;
   edit = faEdit;
   lock = faLock;
+  admin = false;
 
   constructor(private token: TokenStorageService) { }
 
@@ -21,6 +22,7 @@ export class ProfileComponent implements OnInit {
     if (this.token.getToken()) {
       this.isLogged = true;
       this.currentUser=this.token.getUser();
+      this.admin=this.currentUser.userRole.name=="ROLE_ADMIN";
     }
     this.token.getLoggedInName.subscribe(user => this.currentUser=user)
   }

@@ -18,6 +18,7 @@ export class AdCreateService {
   setPet(pet: Pet) {
     this.pet = pet;
     this.pet.name=pet.name;
+    console.log(pet.name)
   }
 
   setMedicalR(medicalR: MedicalRecord) {
@@ -29,12 +30,18 @@ export class AdCreateService {
   }
 
   setContact(contact: Contact) {
-    this.pet.contact = contact;
+    this.pet.contact=new Contact();
     this.pet.contact.firstName=contact.firstName;
+    this.pet.contact.lastName=contact.lastName;
+    this.pet.contact.address=contact.address;
+    this.pet.contact.city=contact.city;
+    this.pet.contact.email=contact.email;
+    this.pet.contact.telephone=contact.telephone;
   }
 
   createAd(){
-    return this.http.post<Pet>('http://localhost:8080/api/pets/create',{
+    console.log(this.pet.name)
+    return this.http.post<Pet>('http://localhost:8080/api/pets/create',{     
       type:this.pet.type,
       name:this.pet.name,
       breed:this.pet.breed,
