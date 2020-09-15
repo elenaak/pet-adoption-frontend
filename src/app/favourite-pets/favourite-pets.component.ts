@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PetsService } from '../pets.service';
+import { PetsService } from '../z-service/pets.service';
 import { Pet } from 'src/model/Pet';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { TokenStorageService } from '../token-storage.service';

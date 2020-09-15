@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CurrentUser } from '../../../model/CurrentUser';
 import { TokenStorageService } from '../../token-storage.service';
-import { AuthService } from 'src/app/auth.service';
+import { AuthService } from 'src/app/z-service/auth.service';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { finalize } from 'rxjs/operators';

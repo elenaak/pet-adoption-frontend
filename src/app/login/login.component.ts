@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../z-service/auth.service';
 import { TokenStorageService } from '../token-storage.service';
 import { Credentials } from 'src/model/Credentials';
 import { Location } from '@angular/common';

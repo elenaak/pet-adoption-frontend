@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Pet } from 'src/model/Pet';
-import { PetsService } from 'src/app/pets.service';
+import { PetsService } from '../../z-service/pets.service';
 import { finalize } from 'rxjs/operators';
 
 @Component({

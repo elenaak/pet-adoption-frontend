@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faHeart, faStream } from '@fortawesome/free-solid-svg-icons';
 import { Pet } from 'src/model/Pet';
-import { PetsService } from 'src/app/pets.service';
+import { PetsService } from '../../z-service/pets.service';
 
 @Component({
   selector: 'pet-search-list-item',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from '../../model/Article';
-import {ArticleService} from '../article.service';
+import {ArticleService} from '../z-service/article.service';
 import { Router } from '@angular/router';
 
 @Component({

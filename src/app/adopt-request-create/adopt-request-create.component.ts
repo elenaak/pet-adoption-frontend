@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PetsService } from '../pets.service';
+import { PetsService } from '../z-service/pets.service';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { TokenStorageService } from '../token-storage.service';

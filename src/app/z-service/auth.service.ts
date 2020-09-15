@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User } from '../model/User';
-import { CurrentUser } from '../model/CurrentUser';
-import { Credentials } from '../model/Credentials';
+import { User } from '../../model/User';
+import { CurrentUser } from '../../model/CurrentUser';
+import { Credentials } from '../../model/Credentials';
 import { Observable, from } from 'rxjs';
 
 const httpOptions = {

@@ -1,7 +1,7 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { Credentials } from 'src/model/Credentials';
 import { CurrentUser } from 'src/model/CurrentUser';
-import { AuthService } from './auth.service';
+import { AuthService } from '../app/z-service/auth.service';
 
 const TOKEN_KEY = 'auth-token';
 const USER_KEY = 'auth-user';

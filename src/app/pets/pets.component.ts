@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pet } from '../../model/Pet'
-import { PagerService } from '../pager.service';
+import { PagerService } from '../z-service/pager.service';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap, map } from 'rxjs/operators';
 

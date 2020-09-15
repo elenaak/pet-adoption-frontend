@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Pet } from '../model/Pet';
+import { Pet } from '../../model/Pet';
 import { Observable, VirtualTimeScheduler } from 'rxjs';
-import { User } from 'src/model/User';
+import { User } from '../../model/User';
 
 @Injectable({
   providedIn: 'root'

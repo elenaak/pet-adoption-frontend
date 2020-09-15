@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/model/User';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../z-service/auth.service';
 import { finalize } from 'rxjs/operators';
 
 @Component({

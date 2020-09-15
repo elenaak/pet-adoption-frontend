@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Article } from 'src/model/Article';
-import { ArticleService } from '../article.service';
+import { ArticleService } from '../z-service/article.service';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';

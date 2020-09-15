@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
-import { AuthService } from 'src/app/auth.service';
+import { AuthService } from '../../z-service/auth.service';
 
 @Component({
   selector: 'app-reset-password',

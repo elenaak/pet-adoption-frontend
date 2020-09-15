@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Pet } from 'src/model/Pet';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelopeSquare, faMapMarkerAlt, faCity } from '@fortawesome/free-solid-svg-icons';
-import { PetsService } from '../pets.service';
+import { PetsService } from '../z-service/pets.service';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { Location } from '@angular/common';

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {ArticleSearchResult} from '../model/ArticleSearchResult';
-import {Article} from '../model/Article';
+import {ArticleSearchResult} from '../../model/ArticleSearchResult';
+import {Article} from '../../model/Article';
 import { Observable } from 'rxjs';
 
 @Injectable({

@@ -1,66 +1,17 @@
-<!-- <div class="container">
-    <div class="row py-5">
-        <div class="col">
-            <h2 id="top">Top of page!</h2>
-            <a href="#top">Go to top</a>
-            <div *ngFor="let question of listOfQuestions">{{question.question}}</div>
-        </div>
-        <div class="col">
-            {{answer}}
-        </div>
-
-    </div>
-   <div class="row">
-  <div class="col-4">
-    <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="tab" href="http://localhost:4200/faqs#list-home"
-        role="tab" aria-controls="home">Home</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="tab" href="http://localhost:4200/faqs#list-profile"
-        role="tab" aria-controls="profile">Profile</a>
-    </div>
+<div class="container py-5">
+  <h1 class="contact-info-h1 text-muted pb-3 text-center">Pet-Friends FAQs</h1>
+  <h4 class="contact-info-content font-weight-light pb-3 text-center">Thank you for using Pet-friends! We’re here to help you every step of the way from “just looking” at adoptable pets, to bringing your pet home, to living a long and happy life with your new family member.
+    The following links will take you to some of the most frequently asked questions about adopting a pet that you see on Pet-Friends. If you can’t find the answer below, please contact us with any additional questions you have.</h4>
+  <div class="row">
+    <div class="col">
+  <div class="list-group list-question" *ngFor="let item of listOfQuestions"  (click)="openQuestion(item)" >
+    <a class="list-group-item list-group-item-action" >
+      {{item.question}}
+    </a>
   </div>
-  <div class="col-8">
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-        Velit aute mollit ipsum ad dolor consectetur nulla officia culpa adipisicing exercitation fugiat
-        tempor. Voluptate deserunt sit sunt nisi aliqua fugiat proident ea ut. Mollit voluptate reprehenderit
-        occaecat nisi ad non minim tempor sunt voluptate consectetur exercitation id ut nulla. Ea et fugiat
-        aliquip nostrud sunt incididunt consectetur culpa aliquip eiusmod dolor. Anim ad Lorem aliqua in
-        cupidatat nisi enim eu nostrud do aliquip veniam minim.
-      </div>
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-        Cupidatat quis ad sint excepteur laborum in esse qui. Et excepteur consectetur ex nisi eu do cillum ad
-        laborum. Mollit et eu officia dolore sunt Lorem culpa qui commodo velit ex amet id ex. Officia anim
-        incididunt laboris deserunt anim aute dolor incididunt veniam aute dolore do exercitation. Dolor nisi
-        culpa ex ad irure in elit eu dolore. Ad laboris ipsum reprehenderit irure non commodo enim culpa
-        commodo veniam incididunt veniam ad.
-      </div>
-    </div>
+  </div>
+  <div class="col text-center mx-auto">
+    {{answer}}
   </div>
 </div>
-</div> -->
-<div class="container">
-  <div  class="row">
-    
-    <div class="col-xs-3"> <!-- required for floating -->
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs tabs-left sideways">
-        <li class="active"><a href="/faqs#home-v" data-toggle="tab">Home</a></li>
-        <li><a href="/faqs#profile-v" data-toggle="tab">Profile</a></li>
-        <li><a href="/faqs#messages-v" data-toggle="tab">Messages</a></li>
-        <li><a href="http://localhost:4200/faqs#settings-v" data-toggle="tab">Settings</a></li>
-      </ul>
-    </div>
-
-    <div class="col-xs-9">
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div class="tab-pane active" id="home-v">Home Tab.</div>
-        <div class="tab-pane" id="profile-v">Profile Tab.</div>
-        <div class="tab-pane" id="messages-v">Messages Tab.</div>
-        <div class="tab-pane" id="settings-v">Settings Tab.</div>
-      </div>
-    </div>
-
-  </div>
 </div>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Pet } from '../model/Pet';
-import { MedicalRecord } from '../model/MedicalRecord';
-import { Contact } from '../model/Contact';
+import { Pet } from '../../model/Pet';
+import { MedicalRecord } from '../../model/MedicalRecord';
+import { Contact } from '../../model/Contact';
 import { HttpClient} from '@angular/common/http';
 
 

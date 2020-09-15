@@ -7,14 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaQuestionsComponent implements OnInit {
   listOfQuestions=new Array<Question>();
-  answer:string='sd';
+  questionActive:Question;
+  answer:string;
   constructor() { }
   view_tab='tab1';
   ngOnInit(): void {
     this.fillQuestionList();
+    this.questionActive=this.listOfQuestions[0];
+    this.answer=this.listOfQuestions[0].answer;
+    this.listOfQuestions[0].isActive=true;
+    console.log(this.answer)
   }
-  changeTab(tab:string){
-this.view_tab=tab;
+  isActive(item) {
+    return this.questionActive === item;
+};
+  openQuestion(selectedQuestion:Question){
+    this.answer=selectedQuestion.answer;
+    this.questionActive=selectedQuestion;
   }
   fillQuestionList(){
     this.listOfQuestions.push(new Question(
@@ -62,8 +71,10 @@ this.view_tab=tab;
 class Question{
   question:string;
   answer:string;
+  isActive:boolean;
   constructor(question:string,answer:string){
     this.question=question;
     this.answer=answer;
+    this.isActive=false;
   }
 }

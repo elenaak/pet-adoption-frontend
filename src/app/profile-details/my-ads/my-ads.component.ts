@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PetsService } from '../../pets.service';
+import { PetsService } from '../../z-service/pets.service';
 import { Pet } from '../../../model/Pet';
 import { faEdit,faUsers,faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';

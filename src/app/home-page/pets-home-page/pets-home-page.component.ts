@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PagerService} from '../../pager.service';
+import {PagerService} from '../../z-service/pager.service';
 import { Pet } from '../../../model/Pet';
 
 @Component({
