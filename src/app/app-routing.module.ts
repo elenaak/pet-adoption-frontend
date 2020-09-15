@@ -23,6 +23,9 @@ import { RouteGuardService } from './route-guard.service';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './forgot-password/reset-password/reset-password.component';
+import { SitemapComponent } from './sitemap/sitemap.component';
+import { PrivacyPoliceComponent } from './privacy-police/privacy-police.component';
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 
 
 const routes: Route[] = [{
@@ -96,6 +99,15 @@ const routes: Route[] = [{
 }, {
   path: 'login/forgot-password/reset',
   component: ResetPasswordComponent
+},{
+  path:'sitemap',
+  component:SitemapComponent
+},{
+  path:'privacy-police',
+  component:PrivacyPoliceComponent
+},{
+  path:'terms-of-service',
+  component:TermsOfServiceComponent
 }];
 
 @NgModule({

@@ -30,16 +30,16 @@ export class FaQuestionsComponent implements OnInit {
     'How Do I Search For a Pet?',
     'To find an adoptable pet, you can begin your search using “Find a Pet” located above. Since PetFriends is updated regularly, we recommend that you keep checking back or sign up for our newsletter to be notified when new pets matching your criteria are added to the site.'));
     this.listOfQuestions.push(new Question(
-    'Is the Pet I See on Petfinder Still Adoptable?',
+    'Is the Pet I See on PetFriends Still Adoptable?',
     'Each user is responsible for updating adoptable pet listings. To learn about a specific pet, please contact the user directly'));
     this.listOfQuestions.push(new Question(
-    'How Often is Petfinder Updated?',
+    'How Often is PetFriends Updated?',
     'Because each user is responsible for keeping its adoptable pet listings current, PetFriends is continuously updated.'));
     this.listOfQuestions.push(new Question(
-    'How Do I Adopt a Pet I See On Petfinder?',
+    'How Do I Adopt a Pet I See On PetFriends?',
     'Each user using our site has its own adoption policies and procedures and solely handles its own pet adoptions. To adopt a pet you see listed on PetFriends, please click the “Ask About” button on the pet’s profile. You will then be given the user\'s contact information and, if an email is available for that user.'));
     this.listOfQuestions.push(new Question(
-    'How Do I Meet a Pet I See on Petfinder?',
+    'How Do I Meet a Pet I See on PetFriends?',
     'Once you find a pet you’re interested in adopting, you’ll probably want to meet him or her. Go to the Pet Profile page by clicking on the pet’s picture or name on a search results page. This takes you to the pet’s detail page. Click “Ask About” to directly contact the user to inquire further.'));
     this.listOfQuestions.push(new Question(
     'How Will I Know If I’ve Been Approved to Adopt a Pet?',

@@ -1,0 +1,64 @@
+<div class="container" style="width: 75%; margin: auto;">
+    <h3 style=" text-align: center; margin: 20px;">Sitemap</h3>
+    <ul>
+        <li>
+            <a routerLink="/home">Homepage</a>
+        </li>
+        <li>
+            <a [routerLink]="['/login']">Log In/Sign Up</a>
+        </li>
+        <li>
+            <div> Pet Adoption</div>
+            <ul>
+                <li>
+                    <a [routerLink]="['/articles/cats/page/1']">Cat Adoption Articles</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/articles/dogs/page/1']">Dog Adoption Articles</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/pets']" [queryParams]="{type: 'Cat'}">Adopt a Cat</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/pets']" [queryParams]="{type: 'Dog'}">Adopt a Dog</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/pets']" [queryParams]="{type: 'Rabbit'}">Adopt a Rabbit</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/pets']" [queryParams]="{type: 'Parrot'}">Adopt a Parrot</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a [routerLink]="['/ads/new']">Publish Ad</a>
+        </li>
+        <li>
+            <a [routerLink]="['/favourite']">Favorite Pets</a>
+        </li>
+        <li>
+            <div>About PetFriends</div>
+            <ul>
+                <li>
+                    <a [routerLink]="['/about']">About PetFriends</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/faqs']">FAQs</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/terms']">Terms of Service</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/contact']">Contact Us</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a [routerLink]="['/privacy-police']">Privacy Police</a>
+        </li>
+        <li>
+            <a routerLink="['/sitemap']">Sitemap</a>
+        </li>
+    </ul>
+
+</div>

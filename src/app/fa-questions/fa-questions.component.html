@@ -1,13 +1,13 @@
 <div class="container py-5">
   <h1 class="contact-info-h1 text-muted pb-3 text-center">Pet-Friends FAQs</h1>
-  <h4 class="contact-info-content font-weight-light pb-3 text-center">Thank you for using Pet-friends! We’re here to help you every step of the way from “just looking” at adoptable pets, to bringing your pet home, to living a long and happy life with your new family member.
-    The following links will take you to some of the most frequently asked questions about adopting a pet that you see on Pet-Friends. If you can’t find the answer below, please contact us with any additional questions you have.</h4>
+  <p class="contact-info-content pb-3 text-center" style="font-size: 22px;">Thank you for using Pet-friends! We’re here to help you every step of the way from “just looking” at adoptable pets, to bringing your pet home, to living a long and happy life with your new family member.
+    The following links will take you to some of the most frequently asked questions about adopting a pet that you see on Pet-Friends. If you can’t find the answer below, please contact us with any additional questions you have.</p>
   <div class="row">
     <div class="col">
-  <div class="list-group list-question" *ngFor="let item of listOfQuestions"  (click)="openQuestion(item)" >
-    <a class="list-group-item list-group-item-action" >
+  <div class="list-group list-question" *ngFor="let item of listOfQuestions" >
+    <div id="question" class="list-group-item list-group-item-action" (click)="openQuestion(item)" tabindex="0" >
       {{item.question}}
-    </a>
+    </div>
   </div>
   </div>
   <div class="col text-center mx-auto">

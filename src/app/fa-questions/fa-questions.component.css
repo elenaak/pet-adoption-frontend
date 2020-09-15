@@ -1,4 +1,4 @@
-.list-question a:hover,.list-question a:active,.list-question a:focus {
-  background-color: #5bc0de;
+#question:hover, #question:active,#question:focus {
+  background-color: cadetblue;
   cursor: pointer;
 }

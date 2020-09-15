@@ -52,6 +52,9 @@ import { PetsHomePageComponent } from './home-page/pets-home-page/pets-home-page
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './forgot-password/reset-password/reset-password.component';
 import { MyArticlesComponent } from './profile-details/my-articles/my-articles.component';
+import { SitemapComponent } from './sitemap/sitemap.component';
+import { PrivacyPoliceComponent } from './privacy-police/privacy-police.component';
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 
 
 
@@ -100,7 +103,10 @@ import { MyArticlesComponent } from './profile-details/my-articles/my-articles.c
     PetsHomePageComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
-    MyArticlesComponent
+    MyArticlesComponent,
+    SitemapComponent,
+    PrivacyPoliceComponent,
+    TermsOfServiceComponent
   ],
   imports: [
     BrowserModule,
