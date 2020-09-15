@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { CKEditorModule } from 'ng2-ckeditor'; 
+import { CKEditorModule } from 'ng2-ckeditor';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +31,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaQuestionsComponent } from './fa-questions/fa-questions.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { AuthInterceptor} from './auth.interceptor';
+import { AuthInterceptor } from './auth.interceptor';
 import { ProfileComponent } from './profile-details/profile/profile.component';
 import { PetFormEditComponent } from './forms/edit-forms/pet-form-edit/pet-form-edit.component';
 import { MrFormEditComponent } from './forms/edit-forms/mr-form-edit/mr-form-edit.component';
@@ -51,6 +51,7 @@ import { CatDogArticlesComponent } from './cat-dog-articles/cat-dog-articles.com
 import { PetsHomePageComponent } from './home-page/pets-home-page/pets-home-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './forgot-password/reset-password/reset-password.component';
+import { MyArticlesComponent } from './profile-details/my-articles/my-articles.component';
 
 
 
@@ -98,7 +99,8 @@ import { ResetPasswordComponent } from './forgot-password/reset-password/reset-p
     CatDogArticlesComponent,
     PetsHomePageComponent,
     ForgotPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    MyArticlesComponent
   ],
   imports: [
     BrowserModule,
@@ -110,7 +112,7 @@ import { ResetPasswordComponent } from './forgot-password/reset-password/reset-p
     NgSelectModule,
     CKEditorModule
   ],
-  providers: [ { provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true }],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

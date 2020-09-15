@@ -36,7 +36,7 @@ export class AdFormComponent implements OnInit {
   }
 
   setContact(contact: any) {
-    this.contactForm = true;
+    this.contactForm = contact;
     this.loading=true;
     this.createAd();
   }

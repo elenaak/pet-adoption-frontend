@@ -21,6 +21,7 @@ export class PetFormComponent implements OnInit {
 
   onSubmitPetForm(): void {
     this.petFormSubmmited = true;
+    console.log(this.pet.name)
     this.adCreateService.setPet(this.pet);
     this.petForm.emit(true);
   }

@@ -21,6 +21,7 @@ export class ContactFormComponent implements OnInit {
 
   onSubmit(): void {
     this.adCreateService.setContact(this.contact);
+    console.log(this.contact.firstName)
     this.contactForm.emit(true)
   }
 }
