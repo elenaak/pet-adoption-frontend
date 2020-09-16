@@ -7,7 +7,7 @@ import { AdCreateService } from '../../../z-service/ad-create.service';
   templateUrl: './contact-form-edit.component.html',
   styleUrls: ['./contact-form-edit.component.css']
 })
-export class ContactFormEditComponent implements OnInit {
+export class ContactFormEditComponent {
 
 
   @Input() contact: Contact;
@@ -15,10 +15,6 @@ export class ContactFormEditComponent implements OnInit {
   @Output() contactForm = new EventEmitter<boolean>();
 
   constructor(private adCreateService: AdCreateService) { }
-
-  ngOnInit(): void {
-  }
-
 
   onSubmit(): void {
     this.adCreateService.setContact(this.contact);

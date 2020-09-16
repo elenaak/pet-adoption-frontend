@@ -21,10 +21,10 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     if (this.token.getToken()) {
       this.isLogged = true;
-      this.currentUser=this.token.getUser();
-      this.admin=this.currentUser.userRole.name=="ROLE_ADMIN";
+      this.currentUser = this.token.getUser();
+      this.admin = this.currentUser.userRole.name == "ROLE_ADMIN";
     }
-    this.token.getLoggedInName.subscribe(user => this.currentUser=user)
+    this.token.getLoggedInName.subscribe(user => this.currentUser = user)
   }
 
 }

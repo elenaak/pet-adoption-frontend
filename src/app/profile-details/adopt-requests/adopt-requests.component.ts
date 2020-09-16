@@ -3,7 +3,7 @@ import { PetsService } from '../../z-service/pets.service';
 import { User } from 'src/model/User';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
-import {faEnvelopeSquare} from '@fortawesome/free-solid-svg-icons';
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-adopt-requests',
@@ -18,20 +18,20 @@ export class AdoptRequestsComponent implements OnInit {
   users: User[];
   empty: true;
   petId: Number;
-  email=faEnvelopeSquare;
-  loading=false;
+  email = faEnvelopeSquare;
+  loading = false;
 
   ngOnInit(): void {
-    this.loading=true;
+    this.loading = true;
     this.route.paramMap.pipe(
       map(paramMap => paramMap.get('id')!),
       switchMap(id => {
         this.petId = (+id)
         return this.petsService.getAdoptRequests(this.petId);
       })
-    ).subscribe(users => { 
-      this.loading=false;
-      this.users = users; 
+    ).subscribe(users => {
+      this.loading = false;
+      this.users = users;
     });
   }
 

@@ -20,7 +20,7 @@ export class ChangePasswordComponent implements OnInit {
   newPassword: String;
   confirmPassword: String;
   match = true;
-  loading=false;
+  loading = false;
 
   ngOnInit(): void {
     if (this.token.getToken())
@@ -31,15 +31,15 @@ export class ChangePasswordComponent implements OnInit {
     if (this.newPassword != this.confirmPassword)
       this.match = false;
     else {
-      this.loading=true;
+      this.loading = true;
       this.match = true;
       this.authService.changePassword(this.oldPassword, this.newPassword).subscribe(
         succ => {
-          this.loading=false;
+          this.loading = false;
           this.token.signOut();
           this.router.navigate(['/login']);
         }, error => {
-          this.loading=false;
+          this.loading = false;
           this.error = error.error;
         });
     }

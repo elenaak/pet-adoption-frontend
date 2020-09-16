@@ -7,26 +7,24 @@
     text-align: left;
     transition: all 0.3s 0s ease-in;
     z-index: 1;
-    color: rgb(223, 28, 28)
-  }
-    img {
+ }
+  img {
       width: 255px;
       height: 200px;
-    }
+}
     
-    .card__image-holder {
+  .card__image-holder {
       background: rgba(0,0,0,0.1);
       height: 0;
       padding-bottom: 75%;
-    }
+}
   
-   .card-title{
+  .card-title{
       padding: 6px 15px;
       position: relative;
       z-index: 0;
-      
-    }
-    .caption{
+}
+  .caption{
         background: cadetblue;
         content: '';
         background: -moz-linear-gradient(90deg, cadetblue 0%, #0c6c92  100%, #85ade2 100%);
@@ -34,4 +32,4 @@
         background: linear-gradient(90deg, cadetblue 0%, #0c6c92 100%, #85ade2 100%);
         opacity: 0.8;
         z-index: -1;
-     }
+}

@@ -2,10 +2,11 @@
     <div class="form">
         <br>
         <h3 class="mb-3 forest-text text-center">Edit your add</h3>
-        <form #petForm="ngForm" enctype="multipart/form-data"  (ngSubmit)="petForm.form.valid && onSubmitPetForm()">
+        <form #petForm="ngForm" enctype="multipart/form-data" (ngSubmit)="petForm.form.valid && onSubmitPetForm()">
             <div class="form-group">
                 <label for="type">Type of animal</label>
-                <select name="type" class="form-control"  [(ngModel)] = "pet && pet.type" placeholder="type of animal" required autofocus #type="ngModel">
+                <select name="type" class="form-control" [(ngModel)]="pet && pet.type" placeholder="type of animal"
+                    required autofocus #type="ngModel">
                     <option value="Dog">Dog</option>
                     <option value="Cat">Cat</option>
                     <option value="Rabbit">Rabbit</option>
@@ -20,8 +21,8 @@
             </div>
             <div class="form-group">
                 <label for="name">Pet name</label>
-                <input class="form-control" type="text" name="name" [(ngModel)] = "pet && pet.name" placeholder="pet name" required autofocus  minlength="3"
-                 #name="ngModel">
+                <input class="form-control" type="text" name="name" [(ngModel)]="pet && pet.name" placeholder="pet name"
+                    required autofocus minlength="3" #name="ngModel">
                 <div class="alert-danger" *ngIf="petForm.submitted && name.invalid">
                     <div *ngIf="name.errors.required">
                         Name is required
@@ -34,7 +35,7 @@
             <label for="image">Image</label>
             <div class="input-group">
                 <div *ngIf="pet.image">
-                    <img src="{{pet.image}}" style="width: 250px; height: 150px;"/>
+                    <img src="{{pet.image}}" style="width: 250px; height: 150px;" />
                 </div>
                 <div class="custom-file">
                     <input type="file" id="image" name="image" accept="image/*" (change)="handleInputChange($event)">
@@ -42,7 +43,8 @@
             </div>
             <div class="form-group">
                 <label for="age">Age</label>
-                <select name="age" class="form-control"  [(ngModel)] = "pet && pet.age" placeholder="age" required autofocus #age="ngModel">
+                <select name="age" class="form-control" [(ngModel)]="pet && pet.age" placeholder="age" required
+                    autofocus #age="ngModel">
                     <option value="Baby">Baby</option>
                     <option value="Young">Young</option>
                     <option value="Adult">Adult</option>
@@ -50,13 +52,14 @@
                 </select>
                 <div class="alert-danger" *ngIf="petForm.submitted && age.invalid">
                     <div>
-                       Age is required
+                        Age is required
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="breed">Breed</label>
-                <input class="form-control" type="text" name="breed" [(ngModel)] = "pet && pet.breed" placeholder="breed" required #breed="ngModel">
+                <input class="form-control" type="text" name="breed" [(ngModel)]="pet && pet.breed" placeholder="breed"
+                    required #breed="ngModel">
                 <div class="alert-danger" *ngIf="petForm.submitted && breed.invalid">
                     <div>
                         Breed is required
@@ -65,9 +68,9 @@
             </div>
             <div class="form-group">
                 <div>Sex</div>
-                <input type="radio" id="male" name="sex" value="Male" [(ngModel)] = "pet && pet.sex" #sex="ngModel">
+                <input type="radio" id="male" name="sex" value="Male" [(ngModel)]="pet && pet.sex" #sex="ngModel">
                 <label for="male">Male</label><br>
-                <input type="radio" id="female" name="sex" value="Female" [(ngModel)] = "pet && pet.sex" #sex="ngModel">
+                <input type="radio" id="female" name="sex" value="Female" [(ngModel)]="pet && pet.sex" #sex="ngModel">
                 <label for="female">Female</label><br>
                 <div class="alert-danger" *ngIf="petForm.submitted && sex.invalid">
                     <div>
@@ -77,7 +80,8 @@
             </div>
             <div class="form-group">
                 <label for="color">Color</label>
-                <input class="form-control" type="text" name="color" [(ngModel)] = "pet && pet.color" placeholder="color" required #color="ngModel">
+                <input class="form-control" type="text" name="color" [(ngModel)]="pet && pet.color" placeholder="color"
+                    required #color="ngModel">
                 <div class="alert-danger" *ngIf="petForm.submitted && color.invalid">
                     <div>
                         Color is required
@@ -86,8 +90,8 @@
             </div>
             <div class="form-group">
                 <label for="good in home with">Good in home with</label>
-                <input class="form-control" type="text" name="good in home with" [(ngModel)] = "pet && pet.behaviour" 
-                placeholder="good in home with" required #behaviour="ngModel">
+                <input class="form-control" type="text" name="good in home with" [(ngModel)]="pet && pet.behaviour"
+                    placeholder="good in home with" required #behaviour="ngModel">
                 <div class="alert-danger" *ngIf="petForm.submitted && behaviour.invalid">
                     <div>
                         Behaviour is required
@@ -96,18 +100,18 @@
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="form-control" rows="5" type="text" name="description"[(ngModel)] = "pet && pet.description"
-                 placeholder="description"   required #description="ngModel"></textarea>
-                 <div class="alert-danger" *ngIf="petForm.submitted && description.invalid">
+                <textarea class="form-control" rows="5" type="text" name="description"
+                    [(ngModel)]="pet && pet.description" placeholder="description" required
+                    #description="ngModel"></textarea>
+                <div class="alert-danger" *ngIf="petForm.submitted && description.invalid">
                     <div>
                         Description is required
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <button class="btn btn-lg btn-light btn-block"  type="submit">Next</button>
+                <button class="btn btn-lg btn-light btn-block" type="submit">Next</button>
             </div>
         </form>
     </div>
 </div>
-

@@ -16,30 +16,31 @@ export class ArticleComponent implements OnInit {
   article: Article;
   error: String;
   loading = false;
-  back= faChevronLeft;
+  back = faChevronLeft;
 
 
   constructor(private articleService: ArticleService,
     private route: ActivatedRoute,
-    private location:Location) { }
+    private location: Location) { }
 
   ngOnInit(): void {
-    this.loading=true;
+    this.loading = true;
     this.route.paramMap.pipe(
       map(paramMap => paramMap.get('id')!),
       switchMap(id => {
         return this.articleService.getArticle(+id);
       })
     ).subscribe(article => {
-        this.loading=false;
-       this.article = article },
+      this.loading = false;
+      this.article = article
+    },
       error => {
-        this.loading=false;
+        this.loading = false;
         this.error = error.statusText;
       });
   }
 
-  onClick(){
+  onClick() {
     this.location.back();
   }
 

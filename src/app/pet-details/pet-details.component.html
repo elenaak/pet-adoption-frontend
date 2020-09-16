@@ -3,86 +3,86 @@
   </div>
 </div>
 <div class="container" *ngIf="pet">
-    <h1 class="my-4">
-        {{pet.name}}
-        <small> from {{pet.contact.city}}</small>
-    </h1>
-    <div class="row">
-        <div class="col-md-6">
-            <img class="img-fluid" src={{pet.image}} alt="pet image">
-        </div>
-        <div class="col-md-6">
-            <h4 style="padding-bottom: 0px; margin-bottom: 0px;">Details:</h4>
-            <form style="margin-top:5px;">
-                <div class="row">
-                  <div class="col">
-                    <label for="sex">Sex</label>
-                    <input  type="text" class="form-control" value="{{pet.sex}}" name="sex" readonly >
-                  </div>
-                  <div class="col">
-                    <label for="age">Age</label>
-                    <input type="text" class="form-control" name ="age" value="{{pet.age}}" readonly >
-                  </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="breed">Breed</label>
-                        <input type="text" class="form-control" name ="breed" value="{{pet.breed}}" readonly >
-                      </div>
-                    <div class="col">
-                      <label for="color">Color</label>
-                      <input type="text" class="form-control" name ="color" value="{{pet.color}}" readonly >
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                        <label for="height">Height</label>
-                        <input type="text" class="form-control" name ="height" value="{{pet.height}}" readonly >
-                      </div>
-                    <div class="col">
-                      <label for="color">Weight</label>
-                      <input type="text" class="form-control" name ="weight" value="{{pet.weight}}" readonly >
-                    </div>
-                  </div>
-              </form>
-              <button routerLink='/adopt/{{pet.id}}' *ngIf="!isOwner">Adopt {{pet.name}}</button>
-        </div>
+  <h1 class="my-4">
+    {{pet.name}}
+    <small> from {{pet.contact.city}}</small>
+  </h1>
+  <div class="row">
+    <div class="col-md-6">
+      <img class="img-fluid" src={{pet.image}} alt="pet image">
     </div>
-    <h3 class="my-3">Meet {{pet.name}}</h3>
-    <div>{{pet.description}}</div>
-    <h3>Allergies</h3>
-    <div>
-        {{pet.allergies}}
+    <div class="col-md-6">
+      <h4 style="padding-bottom: 0px; margin-bottom: 0px;">Details:</h4>
+      <form style="margin-top:5px;">
+        <div class="row">
+          <div class="col">
+            <label for="sex">Sex</label>
+            <input type="text" class="form-control" value="{{pet.sex}}" name="sex" readonly>
+          </div>
+          <div class="col">
+            <label for="age">Age</label>
+            <input type="text" class="form-control" name="age" value="{{pet.age}}" readonly>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="breed">Breed</label>
+            <input type="text" class="form-control" name="breed" value="{{pet.breed}}" readonly>
+          </div>
+          <div class="col">
+            <label for="color">Color</label>
+            <input type="text" class="form-control" name="color" value="{{pet.color}}" readonly>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="height">Height</label>
+            <input type="text" class="form-control" name="height" value="{{pet.height}}" readonly>
+          </div>
+          <div class="col">
+            <label for="color">Weight</label>
+            <input type="text" class="form-control" name="weight" value="{{pet.weight}}" readonly>
+          </div>
+        </div>
+      </form>
+      <button routerLink='/adopt/{{pet.id}}' *ngIf="!isOwner">Adopt {{pet.name}}</button>
     </div>
-    <h3>Vaccines</h3>
-    {{pet.vaccination}}
-    <h4>Ask about {{pet.name}}</h4>
-    <ul>
-        <li>
-            <span>
-                <fa-icon [icon]="phone"></fa-icon>
-            </span>
-            <span class="ml-2">{{pet.contact.telephone}}</span>
-        </li>
-        <li>
-            <span>
-                <fa-icon [icon]="email"></fa-icon>
-            </span>
-            <span class="ml-2">{{pet.contact.email}}</span>
-        </li>
-        <li>
-            <span>
-                <fa-icon [icon]="city"></fa-icon>
-            </span>
-            <span class="ml-2">{{pet.contact.city}}</span>
-        </li>
-        <li>
-            <span>
-                <fa-icon [icon]="location"></fa-icon>
-            </span>
-            <span class="ml-2">{{pet.contact.address}}</span>
-        </li>
-    </ul> 
+  </div>
+  <h3 class="my-3">Meet {{pet.name}}</h3>
+  <div>{{pet.description}}</div>
+  <h3>Allergies</h3>
+  <div>
+    {{pet.allergies}}
+  </div>
+  <h3>Vaccines</h3>
+  {{pet.vaccination}}
+  <h4>Ask about {{pet.name}}</h4>
+  <ul>
+    <li>
+      <span>
+        <fa-icon [icon]="phone"></fa-icon>
+      </span>
+      <span class="ml-2">{{pet.contact.telephone}}</span>
+    </li>
+    <li>
+      <span>
+        <fa-icon [icon]="email"></fa-icon>
+      </span>
+      <span class="ml-2">{{pet.contact.email}}</span>
+    </li>
+    <li>
+      <span>
+        <fa-icon [icon]="city"></fa-icon>
+      </span>
+      <span class="ml-2">{{pet.contact.city}}</span>
+    </li>
+    <li>
+      <span>
+        <fa-icon [icon]="location"></fa-icon>
+      </span>
+      <span class="ml-2">{{pet.contact.address}}</span>
+    </li>
+  </ul>
 
 </div>
 <div *ngIf="error">

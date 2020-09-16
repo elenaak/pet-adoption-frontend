@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Article } from '../../model/Article';
-import {ArticleService} from '../z-service/article.service';
+import { ArticleService } from '../z-service/article.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,28 +8,24 @@ import { Router } from '@angular/router';
   templateUrl: './article-create.component.html',
   styleUrls: ['./article-create.component.css']
 })
-export class ArticleCreateComponent implements OnInit {
+export class ArticleCreateComponent {
 
   constructor(private articleService: ArticleService,
-    private router:Router) { }
+    private router: Router) { }
 
   article: Article = new Article();
-  error:String;
+  error: String;
   loading = false;
-  
-
-  ngOnInit(): void {
-  }
 
   onSubmit() {
-    this.loading=true;
+    this.loading = true;
     this.articleService.createArticle(this.article).subscribe(
       succ => {
-        this.loading=false; 
+        this.loading = false;
         this.router.navigate([`/articles/${this.article.theme}/page/1`])
       },
       error => {
-        this.loading=false; 
+        this.loading = false;
         this.error = error.error;
       });
   }

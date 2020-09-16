@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PetsSearchResult } from 'src/model/PetsSearchResult';
 import { Pet } from 'src/model/Pet';
 
 @Component({
@@ -7,13 +6,8 @@ import { Pet } from 'src/model/Pet';
   templateUrl: './pet-list.component.html',
   styleUrls: ['./pet-list.component.css']
 })
-export class PetListComponent implements OnInit {
-
-  constructor() { }
+export class PetListComponent {
 
   @Input()
-  pets:Array<Pet>;
-  ngOnInit(): void {
-  }
-
+  pets: Array<Pet>;
 }

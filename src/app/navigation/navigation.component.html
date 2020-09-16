@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark  navbar-expand-sm" style="background-color:cadetblue">
-  <button class="navbar-toggler" (click)="collapse=!collapse" type="button" 
-  aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false"
+    aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse" style="margin-right: 30px;">
@@ -14,7 +14,8 @@
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
         <a class="nav-link" [routerLink]="['/ads/new']">Publish ad</a>
       </li>
-      <li class="nav-item" *ngIf = "currentUser && currentUser.userRole.name==role"[routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+      <li class="nav-item" *ngIf="currentUser && currentUser.userRole.name==role" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">
         <a class="nav-link" [routerLink]="['/article/create']">Create Article</a>
       </li>
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">

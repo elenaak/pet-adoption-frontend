@@ -1,6 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MedicalRecord } from '../../../model/MedicalRecord';
-import { AdCreateService} from '../../z-service/ad-create.service';
+import { AdCreateService } from '../../z-service/ad-create.service';
 import { Pet } from '../../../model/Pet';
 
 @Component({
@@ -8,16 +8,13 @@ import { Pet } from '../../../model/Pet';
   templateUrl: './medical-record-form.component.html',
   styleUrls: ['./medical-record-form.component.css']
 })
-export class MedicalRecordFormComponent implements OnInit {
+export class MedicalRecordFormComponent {
 
   pet: Pet;
   medicalR: MedicalRecord = new MedicalRecord();
   @Output() mrForm = new EventEmitter<boolean>();
 
   constructor(private adCreateService: AdCreateService) { }
-
-  ngOnInit(): void {
-  }
 
   onSubmit(): void {
     this.adCreateService.setMedicalR(this.medicalR);

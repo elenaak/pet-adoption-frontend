@@ -21,45 +21,43 @@ export class PetsComponent implements OnInit {
   //list items
 
   //searchFilter parametars
-  petName:string;
-  petType:string;
-  petBreed:string;
-  petAge:string;
-  petSex:string;
-  petColor:string;
+  petName: string;
+  petType: string;
+  petBreed: string;
+  petAge: string;
+  petSex: string;
+  petColor: string;
   items: Array<Pet>;
   loading = false;
 
-  constructor(private pagerService: PagerService, private route: ActivatedRoute) {}
+  constructor(private pagerService: PagerService, private route: ActivatedRoute) { }
   ngOnInit(): void {
     this.route.queryParamMap.pipe(
       switchMap(params => {
-         this.petName = params.get('name');
-         this.petType = params.get('type');
+        this.petName = params.get('name');
+        this.petType = params.get('type');
         this.petBreed = params.get('breed');
         //replace age with calendar o
         this.petAge = params.get('age');
         this.petSex = params.get('sex');
         this.petColor = params.get('color');
-        this.currentPageParams= Number(params.get('page'));
+        this.currentPageParams = Number(params.get('page'));
         if (this.currentPageParams == 0) {
           this.currentPageParams = 1;
         }
-        this.pageSize= Number(params.get('size'));
+        this.pageSize = Number(params.get('size'));
         if (this.pageSize == 0) {
           this.pageSize = 15;
         }
-        console.log(this.petName,this.petSex)
-        this.loading=true;
-        return this.pagerService.getPageList(this.petName,this.petType,this.petBreed,this.petAge,this.petSex,this.petColor,this.currentPageParams,this.pageSize);
+        this.loading = true;
+        return this.pagerService.getPageList(this.petName, this.petType, this.petBreed, this.petAge, this.petSex, this.petColor, this.currentPageParams, this.pageSize);
       }),
     ).subscribe(petSearchResult => {
-      console.log(petSearchResult)
-      this.loading=false;
+      this.loading = false;
       this.items = petSearchResult.content;
       this.totalItems = petSearchResult.totalElements;
       this.currentPage = this.currentPageParams;
-      
+
     }, error => {
       console.log('Error: ', error);
     });

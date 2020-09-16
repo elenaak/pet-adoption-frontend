@@ -7,14 +7,14 @@ import { AuthService } from '../z-service/auth.service';
   styleUrls: ['./forgot-password.component.css']
 })
 export class ForgotPasswordComponent implements OnInit {
-  emailAddress:String;
-  isSuccessful:Boolean;
-  isFailure:Boolean;
-  constructor(private authService:AuthService) { }
+  emailAddress: String;
+  isSuccessful: Boolean;
+  isFailure: Boolean;
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.isSuccessful=false;
-    this.isFailure=false;
+    this.isSuccessful = false;
+    this.isFailure = false;
   }
 
   onSubmit() {
@@ -22,20 +22,20 @@ export class ForgotPasswordComponent implements OnInit {
     this.authService.sendEmailResetPass(this.emailAddress).subscribe(
       data => {
         console.log(data)
-        if(data.toString()=="true"){
-        this.isSuccessful = true;
-        this.isFailure = false;
+        if (data.toString() == "true") {
+          this.isSuccessful = true;
+          this.isFailure = false;
         }
-        else{
+        else {
           this.isFailure = true;
           this.isSuccessful = false;
         }
       },
       err => {
         console.log("err")
-          //TODO SOMETHING WENT WRONG
+        //TODO SOMETHING WENT WRONG
       })
-    
+
 
   }
 }

@@ -31,11 +31,11 @@ export class PetsService {
     return this.http.delete(`http://localhost:8080/api/pets/${id}`)
   }
 
-  getAdoptRequests(id:Number):Observable<User[]>{
+  getAdoptRequests(id: Number): Observable<User[]> {
     return this.http.get<User[]>(`http://localhost:8080/api/adopt/requests/${id}`)
   }
 
-  createAdoptRequest(id:Number){
-    return this.http.post(`http://localhost:8080/api/adopt/${id}`,{})
+  createAdoptRequest(id: Number) {
+    return this.http.post(`http://localhost:8080/api/adopt/${id}`, {})
   }
 }

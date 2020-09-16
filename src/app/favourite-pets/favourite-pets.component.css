@@ -2,7 +2,8 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 50px;
-    color: rgb(223, 28, 28);
+    color: cadetblue;
+    font-weight: lighter;
 }
 .infinite-scroll-list{
   list-style: none;
@@ -13,11 +14,14 @@
     color: #fff;
     font-size: 14px;
     font-weight: bold;
-    background: rgb(222,84,74);
-    border: 2px solid rgb(222,84,74);
+    background: cadetblue;
     outline: none;
     padding: 16px 8px;
     margin: 32px auto 10px;
+    border: 3px solid cadetblue;
+}
+.more-btn:hover{
+  border: 3px solid #0c6c92;
 }
 .card {
   display: inline-block;
@@ -27,7 +31,6 @@
   text-align: left;
   transition: all 0.3s 0s ease-in;
   z-index: 1;
-  color: rgb(223, 28, 28)
 }
   
   .card__image-holder {
@@ -75,12 +78,11 @@
 }
 
 .message button {
-  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: cadetblue;
   width: 100%;
-  border: 0;
+  border: 3px solid cadetblue;
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
@@ -90,7 +92,7 @@
   border-radius: 15px;
 }
 .message button:hover,.form button:active,.form button:focus {
-    background-color: rgb(35, 127, 163);
+  border: 3px solid #0c6c92;
 }
 
 @media screen and (max-width: 767px) {

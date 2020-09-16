@@ -1,45 +1,39 @@
 <h1 style="color:cadetblue; text-align: center;">Create new article</h1>
-<form role="form" #myForm="ngForm" accept-charset="UTF-8" (ngSubmit)="onSubmit()" novalidate 
-style="margin: auto; margin-top:30px; width: 75%;">    
-    <div class="form-group">    
+<form role="form" #myForm="ngForm" accept-charset="UTF-8" (ngSubmit)="onSubmit()" novalidate
+    style="margin: auto; margin-top:30px; width: 75%;">
+    <div class="form-group">
         <label for="title">Title</label>
-        <input autofocus autocomplete="none" type="text" name="title" placeholder="Enter Title"    
-            [(ngModel)]=" article && article.title" class="form-control" required #ArticleTitle="ngModel"    
-            id="#ArticleTitle">    
-    </div>    
-    <div class="form-group">    
+        <input autofocus autocomplete="none" type="text" name="title" placeholder="Enter Title"
+            [(ngModel)]=" article && article.title" class="form-control" required #ArticleTitle="ngModel"
+            id="#ArticleTitle">
+    </div>
+    <div class="form-group">
         <label for="description">Description</label>
-        <input autofocus  type="text" name="description" placeholder="Description"    
-            [(ngModel)]=" article && article.description" class="form-control" required #ArticleDesc="ngModel"    
-            id="#ArticleDesc">    
-    </div>  
-    <div class="form-group">    
+        <input autofocus type="text" name="description" placeholder="Description"
+            [(ngModel)]=" article && article.description" class="form-control" required #ArticleDesc="ngModel"
+            id="#ArticleDesc">
+    </div>
+    <div class="form-group">
         <label for="theme">Theme</label>
-        <input autofocus  type="text" name="theme" placeholder="Theme"    
-            [(ngModel)]=" article && article.theme" class="form-control" required #ArticleTheme="ngModel"    
-            id="#ArticleTheme">    
-    </div> 
+        <input autofocus type="text" name="theme" placeholder="Theme" [(ngModel)]=" article && article.theme"
+            class="form-control" required #ArticleTheme="ngModel" id="#ArticleTheme">
+    </div>
     <label for="image">Image</label>
     <div class="input-group">
         <div class="custom-file">
-            <input type="file" id="image" name="image" accept="image/*"  (change)="handleInputChange($event)">
+            <input type="file" id="image" name="image" accept="image/*" (change)="handleInputChange($event)">
         </div>
     </div>
     <label for="icontent">Content</label>
-    <ckeditor [(ngModel)]="article && article.content" #PageContent="ngModel" name="Content" required    
-      debounce="500">    
-    </ckeditor>    
-    <div class="form-group mt-4">    
-        <div class="row">    
-            <div class="col-3 col-md-3 mb-3">    
-                <button type="submit" class="btn btn-info">Submit</button>    
-            </div>    
-        </div>    
+    <ckeditor [(ngModel)]="article && article.content" #PageContent="ngModel" name="Content" required debounce="500">
+    </ckeditor>
+    <div style="text-align: center;">
+        <button type="submit" class="btn btn-info" style="margin: auto;">Submit</button>
     </div>
     <div class="d-flex justify-content-center" *ngIf="loading">
         <div class="spinner-border" role="status" style=" color: cadetblue;">
         </div>
-    </div>    
+    </div>
 </form>
 <div *ngIf="error">
     {{error.error}}

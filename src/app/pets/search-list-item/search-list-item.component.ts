@@ -21,7 +21,6 @@ export class SearchListItemComponent implements OnInit {
     this.petService.getLiked().subscribe(
       liked => {
         this.red = liked.filter(p => p.id == this.pet.id).length > 0;
-        console.log(this.red);
       }
     );
   }

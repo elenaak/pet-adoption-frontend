@@ -1,8 +1,24 @@
 h4{
-    color: crimson;
+    
     text-align: center;
 }
 p{
-    color: cadetblue;
+   
     text-align: center;
+}
+.bg-cover {
+    background-attachment: static;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button{
+    background-color: cadetblue;
+    border:none;
+    color: white;
+    border: 3px solid cadetblue;
+}
+button:hover{
+     border: 3px solid #0c6c92; 
+     color: white;
 }

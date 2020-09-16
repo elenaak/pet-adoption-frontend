@@ -12,7 +12,7 @@ const USER_KEY = 'auth-user';
 export class TokenStorageService {
   @Output() getLoggedInName: EventEmitter<CurrentUser> = new EventEmitter();
 
-  constructor(private authService:AuthService) { }
+  constructor(private authService: AuthService) { }
 
   signOut(): void {
     window.localStorage.clear();
@@ -23,8 +23,9 @@ export class TokenStorageService {
     window.localStorage.removeItem(TOKEN_KEY);
     window.localStorage.setItem(TOKEN_KEY, token);
     this.authService.getCurrentUser().subscribe(
-      user => {this.saveUser(user);
-      this.getLoggedInName.emit(user);
+      user => {
+        this.saveUser(user);
+        this.getLoggedInName.emit(user);
       }
     );
   }

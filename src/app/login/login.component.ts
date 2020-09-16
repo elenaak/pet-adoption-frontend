@@ -33,18 +33,18 @@ export class LoginComponent implements OnInit {
     }
   }
   onSubmit(): void {
-    this.loading=true;
+    this.loading = true;
     this.authService.signIn(this.creds)
       .subscribe(
         data => {
-          this.loading=false;
+          this.loading = false;
           this.tokenStorage.saveToken(data);
           this.isLoginFailed = false;
           this.isLoggedIn = true;
           this.reloadPage();
         },
         err => {
-          this.loading=false;
+          this.loading = false;
           this.errorMessage = err.message.msg
           this.isLoginFailed = true;
         }

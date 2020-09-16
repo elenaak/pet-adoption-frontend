@@ -2,7 +2,7 @@ label {
     width: 100%;
     font-size: 1rem;
   }
-  
+ 
   .card-input-element+.card {
     height: calc(36px + 2*1rem);
     color: var(--primary);

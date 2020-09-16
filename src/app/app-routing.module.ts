@@ -99,15 +99,15 @@ const routes: Route[] = [{
 }, {
   path: 'login/forgot-password/reset',
   component: ResetPasswordComponent
-},{
-  path:'sitemap',
-  component:SitemapComponent
-},{
-  path:'privacy-police',
-  component:PrivacyPoliceComponent
-},{
-  path:'terms-of-service',
-  component:TermsOfServiceComponent
+}, {
+  path: 'sitemap',
+  component: SitemapComponent
+}, {
+  path: 'privacy-police',
+  component: PrivacyPoliceComponent
+}, {
+  path: 'terms-of-service',
+  component: TermsOfServiceComponent
 }];
 
 @NgModule({

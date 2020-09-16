@@ -8,7 +8,7 @@ import { finalize } from 'rxjs/operators';
   templateUrl: './search-list.component.html',
   styleUrls: ['./search-list.component.css']
 })
-export class SearchListComponent  {
+export class SearchListComponent {
 
   @Input()
   items: Array<Pet>;

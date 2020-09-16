@@ -17,7 +17,7 @@ export class ResetPasswordComponent implements OnInit {
   isFailure: Boolean;
   isTokenValid: Boolean;
   isTokenInValid: Boolean;
-  isSubmited:Boolean;
+  isSubmited: Boolean;
   constructor(private authService: AuthService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -35,7 +35,7 @@ export class ResetPasswordComponent implements OnInit {
         this.isTokenValid = false;
         this.isTokenInValid = true;
       }
-    },err => {
+    }, err => {
       this.isTokenValid = false;
       this.isTokenInValid = false;
     })
@@ -45,7 +45,7 @@ export class ResetPasswordComponent implements OnInit {
     if (this.newPassword != this.confirmPassword)
       this.match = false;
     else {
-      this.isSubmited=true;
+      this.isSubmited = true;
       this.match = true;
       this.authService.resetPass(this.newPassword, this.token).subscribe(response => {
         if (response.toString() == "true") {

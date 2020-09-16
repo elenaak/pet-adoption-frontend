@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {  Router } from '@angular/router';
-import {  faUsers } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { ArticleService } from '../../z-service/article.service';
 import { Article } from '../../../model/Article';
 
@@ -27,7 +27,7 @@ export class MyArticlesComponent implements OnInit {
     this.loading = true;
     this.articleService.getArticlesByUser().subscribe(
       articles => {
-        this.loading=false;
+        this.loading = false;
         this.all = articles;
         this.sublist = this.all.slice(0, this.limit);
         this.size = this.all.length;

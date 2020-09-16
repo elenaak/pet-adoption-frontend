@@ -8,26 +8,22 @@ import { AdCreateService } from '../../z-service/ad-create.service';
   templateUrl: './pet-form.component.html',
   styleUrls: ['./pet-form.component.css']
 })
-export class PetFormComponent implements OnInit {
+export class PetFormComponent {
 
   pet: Pet = new Pet();
   petFormSubmmited = false;
   image = false;
   @Output() petForm = new EventEmitter<boolean>();
 
-  ngOnInit(): void {
-  }
   constructor(private adCreateService: AdCreateService) { }
 
   onSubmitPetForm(): void {
     this.petFormSubmmited = true;
-    console.log(this.pet.name)
     this.adCreateService.setPet(this.pet);
     this.petForm.emit(true);
   }
 
   handleInputChange(e) {
-    console.log("input change")
     var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
 
     var pattern = /image-*/;
@@ -41,10 +37,9 @@ export class PetFormComponent implements OnInit {
     reader.onload = this._handleReaderLoaded.bind(this);
   }
   _handleReaderLoaded(e) {
-    console.log("_handleReaderLoaded")
     var reader = e.target;
     this.pet.image = reader.result;
-    this.image=true;
+    this.image = true;
   }
 
 }

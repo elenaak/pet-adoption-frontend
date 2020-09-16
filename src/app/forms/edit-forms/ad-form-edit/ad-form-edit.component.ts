@@ -20,11 +20,11 @@ export class AdFormEditComponent implements OnInit {
   error: Boolean = false;
   errorText = ""
   petId: Number;
-  loading=false;
+  loading = false;
 
 
   constructor(private petsService: PetsService,
-    private location:Location,
+    private location: Location,
     private adCreateService: AdCreateService,
     private route: ActivatedRoute) { }
 
@@ -52,17 +52,17 @@ export class AdFormEditComponent implements OnInit {
 
   setContact(contact: any) {
     this.contactForm = true;
-    this.loading=true;
+    this.loading = true;
     this.editAd();
   }
   editAd() {
     this.adCreateService.editAd(this.petId).subscribe(
       pet => {
-        this.loading=false;
+        this.loading = false;
         this.location.back();
       },
       err => {
-        this.loading=false;
+        this.loading = false;
         this.error = true;
         this.errorText = err.error;
       }

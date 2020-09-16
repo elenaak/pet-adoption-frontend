@@ -10,19 +10,20 @@
                 <li *ngFor="let p of sublist" class="item col-md-6 col-lg-4 col-sm-12">
                     <div class="card text-center">
                         <div class="card__image-holder">
-                            <a [routerLink]="['/pets',p.id]"><img class="card__image" src="{{p.image}}" alt="pet image" /></a> 
-                         </div>
+                            <a [routerLink]="['/pets',p.id]"><img class="card__image" src="{{p.image}}"
+                                    alt="pet image" /></a>
+                        </div>
                         <div class="caption" style="margin-bottom: 0px;">
                             <div class="card-title">
                                 <div class="row">
                                     <div class="col-md-7 col-12">
-                                        <h2>
-                                            <a  [routerLink]="['/pets',p.id]" style="color: crimson;"> 
-                                             {{p.name}}</a>
-                                         </h2>
+                                        <h2 style="font-weight: lighter;">
+                                            <a [routerLink]="['/pets',p.id]" style="color: white">
+                                                {{p.name}}</a>
+                                        </h2>
                                     </div>
                                     <div class="buttons" class="col-md-5 col-12">
-                                        <a  routerLink='/edit/{{p.id}}'>
+                                        <a routerLink='/edit/{{p.id}}'>
                                             <fa-icon [icon]="edit" class="icon">Edit</fa-icon>
                                         </a>
                                         <a (click)="onDelete(p.id)">

@@ -8,9 +8,8 @@
         <div class="row">
             <li *ngFor="let u of users" class="col-md-4">
                 <div class="card">
-                    <div >
-                        <img class="team-headshot"
-                            src="https://www.kindpng.com/picc/m/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png">
+                    <div>
+                        <img class="team-headshot" src="../../../assets/user  avatar.png">
                         <h2 style="color: cadetblue; text-align: center;">{{u.username}}</h2>
                         <h6>About</h6>
                         <p *ngIf="u.description" style="font-style: italic;">{{u.description}}</p>

@@ -2,11 +2,11 @@
     <div class="form">
         <br>
         <h3 class="mb-3 forest-text text-center">Edit health information about your pet</h3>
-        <form #mrForm="ngForm" enctype="multipart/form-data"  (ngSubmit)="mrForm.form.valid && onSubmit()">
+        <form #mrForm="ngForm" enctype="multipart/form-data" (ngSubmit)="mrForm.form.valid && onSubmit()">
             <div class="form-group">
                 <label for="name">Weight</label>
-                <input class="form-control" type="text" [(ngModel)] = "medicalR && medicalR.weight" name="weight" 
-                placeholder="weight" required autofocus #weight="ngModel">
+                <input class="form-control" type="text" [(ngModel)]="medicalR && medicalR.weight" name="weight"
+                    placeholder="weight" required autofocus #weight="ngModel">
                 <div class="alert-danger" *ngIf="mrForm.submitted && weight.invalid">
                     <div>
                         Weight is required
@@ -15,9 +15,9 @@
             </div>
             <div class="form-group">
                 <label for="height">Height</label>
-                <input class="form-control" type="text" name="height" [(ngModel)] = "medicalR && medicalR.height"
-                 placeholder="height" required #height="ngModel">
-                 <div class="alert-danger" *ngIf="mrForm.submitted && height.invalid">
+                <input class="form-control" type="text" name="height" [(ngModel)]="medicalR && medicalR.height"
+                    placeholder="height" required #height="ngModel">
+                <div class="alert-danger" *ngIf="mrForm.submitted && height.invalid">
                     <div>
                         Height is required
                     </div>
@@ -25,9 +25,10 @@
             </div>
             <div class="form-group">
                 <label for="allergies">Allergies</label>
-                <textarea class="form-control" rows="5" type="text" name="allergies" [(ngModel)] = "medicalR && medicalR.allergies"
-                 placeholder="allergies" required #allergies="ngModel"></textarea>
-                 <div class="alert-danger" *ngIf="mrForm.submitted && allergies.invalid">
+                <textarea class="form-control" rows="5" type="text" name="allergies"
+                    [(ngModel)]="medicalR && medicalR.allergies" placeholder="allergies" required
+                    #allergies="ngModel"></textarea>
+                <div class="alert-danger" *ngIf="mrForm.submitted && allergies.invalid">
                     <div>
                         Allergies are required
                     </div>
@@ -35,16 +36,17 @@
             </div>
             <div class="form-group">
                 <label for="vaccines">Vaccines</label>
-                <textarea class="form-control" rows="5" type="text" name="vaccines" [(ngModel)] = "medicalR && medicalR.vaccines"
-                 placeholder="vaccines" required #vaccines="ngModel"></textarea>
-                 <div class="alert-danger" *ngIf="mrForm.submitted && vaccines.invalid">
+                <textarea class="form-control" rows="5" type="text" name="vaccines"
+                    [(ngModel)]="medicalR && medicalR.vaccines" placeholder="vaccines" required
+                    #vaccines="ngModel"></textarea>
+                <div class="alert-danger" *ngIf="mrForm.submitted && vaccines.invalid">
                     <div>
-                       Vaccines is required
+                        Vaccines is required
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <button class="btn btn-lg btn-light btn-block"  type="submit">Next</button>
+                <button class="btn btn-lg btn-light btn-block" type="submit">Next</button>
             </div>
         </form>
     </div>

@@ -12,19 +12,18 @@ export class MrFormEditComponent implements OnInit {
 
   @Input() pet: Pet;
 
-  medicalR: MedicalRecord=new MedicalRecord();
-  
+  medicalR: MedicalRecord = new MedicalRecord();
+
   @Output() mrForm = new EventEmitter<boolean>();
 
   constructor(private adCreateService: AdCreateService) { }
 
   ngOnInit(): void {
-    console.log(this.pet.name);
-    this.medicalR.height=this.pet.height;
-    this.medicalR.weight=this.pet.weight;
-    this.medicalR.allergies=this.pet.allergies;
-    this.medicalR.vaccines=this.pet.vaccination;
-    this.medicalR.neutered=this.pet.neutered;
+    this.medicalR.height = this.pet.height;
+    this.medicalR.weight = this.pet.weight;
+    this.medicalR.allergies = this.pet.allergies;
+    this.medicalR.vaccines = this.pet.vaccination;
+    this.medicalR.neutered = this.pet.neutered;
   }
 
   onSubmit(): void {

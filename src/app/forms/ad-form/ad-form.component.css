@@ -7,12 +7,11 @@
 }
 
 .notlogged button {
-  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: cadetblue;
   width: 100%;
-  border: 0;
+  border: 3px solid cadetblue;
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
@@ -23,7 +22,7 @@
 }
 
 .notlogged button:hover, button:active, button:focus {
-  background-color: rgb(35, 127, 163);
+  border: 3px solid #0c6c92;
 }
 
 @media screen and (max-width: 767px) {

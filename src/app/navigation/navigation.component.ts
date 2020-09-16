@@ -12,28 +12,28 @@ import { Router } from '@angular/router';
 export class NavigationComponent implements OnInit {
 
   user = faUser;
-  heart=faHeart;
-  signOut= faSignOutAlt;
+  heart = faHeart;
+  signOut = faSignOutAlt;
   currentUser: CurrentUser;
   collapse: boolean = true;
   role = "ROLE_ADMIN";
-  
+
   constructor(private tokenService: TokenStorageService,
-    private router:Router) {
+    private router: Router) {
     tokenService.getLoggedInName.subscribe(user => this.changeUser(user))
-   }
-  
-  changeUser(user: CurrentUser){
+  }
+
+  changeUser(user: CurrentUser) {
     this.currentUser = user
   }
-  
+
   ngOnInit(): void {
     this.currentUser = this.tokenService.getUser();
   }
 
-  onLogout(){
+  onLogout() {
     this.tokenService.signOut();
-    this.currentUser= null;
+    this.currentUser = null;
     this.router.navigate(['/login']);
   }
 }

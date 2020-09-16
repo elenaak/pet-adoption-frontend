@@ -10,15 +10,16 @@
                 <li *ngFor="let p of sublist" class="col-md-6 col-lg-4 col-sm-12">
                     <div class="card">
                         <div class="card__image-holder">
-                           <a [routerLink]="['/pets',p.id]"><img class="card__image" src="{{p.image}}" alt="pet image" /></a> 
+                            <a [routerLink]="['/pets',p.id]"><img class="card__image" src="{{p.image}}"
+                                    alt="pet image" /></a>
                         </div>
                         <div class="caption" style="margin-bottom: 0px;">
                             <div class="card-title">
                                 <div class="row">
                                     <div class="md-9">
-                                        <h2>
-                                           <a  [routerLink]="['/pets',p.id]" style="color: crimson;"> 
-                                            {{p.name}}</a>
+                                        <h2 style="font-weight: lighter;">
+                                            <a [routerLink]="['/pets',p.id]" style="color: white;">
+                                                {{p.name}}</a>
                                         </h2>
                                     </div>
                                     <div class="md-3">

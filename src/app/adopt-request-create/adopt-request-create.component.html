@@ -1,14 +1,14 @@
 <div class="notlogged" *ngIf="logged">
-    <h2 style="margin-bottom: 20px;">Your  adoption request has been sent successfully</h2>
+    <h2 style="margin-bottom: 20px;">Your adoption request has been sent successfully</h2>
     <h5 style="margin-bottom: 15px;"></h5>
     <button (click)="onBack()">Back</button>
 </div>
- <div class="notlogged" *ngIf="!logged">
+<div class="notlogged" *ngIf="!logged">
     <h2 style="margin-bottom: 20px;">Join PetFriends to Favorite Pets</h2>
     <h3 style="margin-bottom: 15px;">Create an account:</h3>
     <button [routerLink]="['/sign-up']">Sign up</button>
     <p class="message">Already have an account? <a [routerLink]="['/login']">Log In</a>
 </div>
-<div *ngIf="error" class="alert-danger" >
+<div *ngIf="error" class="alert-danger">
     <p>{{errorText.error}}</p>
 </div>

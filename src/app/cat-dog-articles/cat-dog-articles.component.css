@@ -1,10 +1,7 @@
-button{
+a{
     background-color: white;
     color:cadetblue;
     border: 0px;
-}
-button:hover,button:active,button:focus {
-    border: 2px solid cadetblue;
 }
 
 img:hover{

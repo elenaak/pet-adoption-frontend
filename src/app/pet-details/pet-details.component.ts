@@ -30,26 +30,26 @@ export class PetDetailsComponent implements OnInit {
   error: String;
   isOwner = true;
   currentUser: CurrentUser;
-  loading=false;
+  loading = false;
 
   ngOnInit(): void {
     if (this.tokenService.getToken())
       this.currentUser = this.tokenService.getUser();
-    this.loading=true;
+    this.loading = true;
     this.route.paramMap.pipe(
       map(paramMap => paramMap.get('id')!),
       switchMap(id => {
         return this.petsService.getPet(+id)
       })
     ).subscribe(pet => {
-      this.loading=false;
+      this.loading = false;
       this.pet = pet;
       if (this.currentUser) {
         this.isOwner = this.currentUser.username == this.pet.owner.username;
       }
     },
       error => {
-        this.loading=false;
+        this.loading = false;
         this.error = error;
       });
   }

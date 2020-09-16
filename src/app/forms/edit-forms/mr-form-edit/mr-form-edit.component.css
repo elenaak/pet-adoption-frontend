@@ -7,9 +7,12 @@ body {
   }
   
   .btn-light{
-    background-color: #77c9d4;
+    background-color: cadetblue;
     color: #fff;
-    border: none;
+    border: 3px solid cadetblue;
+  }
+  .btn-light:hover{
+    border: 3px solid #0c6c92;
   }
   
   .form {

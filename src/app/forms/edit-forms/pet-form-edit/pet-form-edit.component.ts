@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { Pet } from 'src/model/Pet';
 import { AdCreateService } from '../../../z-service/ad-create.service';
 
@@ -7,15 +7,13 @@ import { AdCreateService } from '../../../z-service/ad-create.service';
   templateUrl: './pet-form-edit.component.html',
   styleUrls: ['./pet-form-edit.component.css']
 })
-export class PetFormEditComponent implements OnInit {
+export class PetFormEditComponent {
 
-  @Input() pet: Pet 
+  @Input() pet: Pet
   petFormSubmmited = false;
   image = false;
   @Output() petForm = new EventEmitter<boolean>();
 
-  ngOnInit(): void {
-  }
   constructor(private adCreateService: AdCreateService) { }
 
   onSubmitPetForm(): void {
@@ -40,6 +38,6 @@ export class PetFormEditComponent implements OnInit {
   _handleReaderLoaded(e) {
     var reader = e.target;
     this.pet.image = reader.result;
-    this.image=true;
+    this.image = true;
   }
 }

@@ -1,32 +1,32 @@
 <div class="container-fluid">
-<h2 style="color: cadetblue; text-align: center;">Recently Added Ads</h2>
-<div class="justify-content-center" style="width: 100%; margin-left: 0px; margin-right: 0px; margin-bottom: 30px;">
-    <ul style="list-style: none;">
-        <div class="row">
-            <li *ngFor="let p of pets" class="col-lg-3 col">
-                <pet-search-list-item [pet]=p></pet-search-list-item>
-            </li>
-            <li class="col-lg-3 col">
-                <div class="card">
-                    <div class="card__image-holder">
-                        <a [routerLink]="['/pets']">
-                            <img class="card__image" src="../../../assets/logosmall.png" alt="pet image" />
-                        </a>
-                    </div>
-                    <div class="caption" style="margin-bottom: 0px;">
-                        <div class="card-title">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <a [routerLink]="['/pets']" style="color: crimson;">
-                                        <h2> View all </h2>
-                                    </a>
+    <h2 style="color: cadetblue; text-align: center; font-weight: lighter;">Recently Added Ads</h2>
+    <div class="justify-content-center" style="width: 100%; margin-left: 0px; margin-right: 0px; margin-bottom: 30px;">
+        <ul style="list-style: none;">
+            <div class="row">
+                <li *ngFor="let p of pets" class="col-lg-3 col">
+                    <pet-search-list-item [pet]=p></pet-search-list-item>
+                </li>
+                <li class="col-lg-3 col">
+                    <div class="card">
+                        <div class="card__image-holder">
+                            <a [routerLink]="['/pets']">
+                                <img class="card__image" src="../../../assets/logosmall.png" alt="pet image" />
+                            </a>
+                        </div>
+                        <div class="caption" style="margin-bottom: 0px;">
+                            <div class="card-title">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <a [routerLink]="['/pets']" style="color:white;">
+                                            <h2 style="font-weight: lighter;"> View all </h2>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </li>
-        </div>
-    </ul>
-</div>
+                </li>
+            </div>
+        </ul>
+    </div>
 </div>

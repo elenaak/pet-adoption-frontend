@@ -2,21 +2,21 @@
   <div class="d-flex justify-content-center" *ngIf="loading" style="margin-top: 20px;">
     <div class="spinner-border" role="status" style=" color: cadetblue;">
     </div>
-</div>
+  </div>
   <div class="row">
     <div class="col-md-3">
-      <pet-search-filters
-       [petName]="petName" [petType]="petType" [petBreed]="petBreed" [petAge]="petAge" [petSex]="petSex" [petColor]="petColor">
+      <pet-search-filters [petName]="petName" [petType]="petType" [petBreed]="petBreed" [petAge]="petAge"
+        [petSex]="petSex" [petColor]="petColor">
       </pet-search-filters>
     </div>
-    <div class="col-md-9"> 
+    <div class="col-md-9">
       <div *ngIf="!loading && items && items.length>0">
         <pet-search-list [items]="items"></pet-search-list>
       </div>
       <div *ngIf="!loading && items.length==0">No items found</div>
     </div>
   </div>
-  <div *ngIf="totalItems>0" >
+  <div *ngIf="totalItems>0">
     <app-pagination [totalItems]="totalItems" [currentPage]="currentPage" [pageSize]="pageSize"></app-pagination>
   </div>
 </div>

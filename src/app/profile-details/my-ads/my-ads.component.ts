@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PetsService } from '../../z-service/pets.service';
 import { Pet } from '../../../model/Pet';
-import { faEdit,faUsers,faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faUsers, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 
 @Component({
@@ -23,14 +23,14 @@ export class MyAdsComponent implements OnInit {
   stop = false;
   empty = false;
   size = 0;
-  deleteClicked=false;
-  loading=false;
+  deleteClicked = false;
+  loading = false;
 
   ngOnInit(): void {
-    this.loading=true;
+    this.loading = true;
     this.petsService.getPetsByUser().subscribe(
       pets => {
-        this.loading=false;
+        this.loading = false;
         this.all = pets
         this.sublist = this.all.slice(0, this.limit);
         this.size = this.all.length;
@@ -47,7 +47,7 @@ export class MyAdsComponent implements OnInit {
     this.sublist = this.all.slice(0, this.limit);
   }
 
-  onDelete(id: Number){
+  onDelete(id: Number) {
     this.router.navigate(['/delete/'.concat(id.toString())])
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PagerService} from '../../z-service/pager.service';
+import { PagerService } from '../../z-service/pager.service';
 import { Pet } from '../../../model/Pet';
 
 @Component({
@@ -10,14 +10,14 @@ import { Pet } from '../../../model/Pet';
 export class PetsHomePageComponent implements OnInit {
 
   page = 0;
-  size=3;
-  pets:Pet[];
+  size = 3;
+  pets: Pet[];
 
-  constructor(private pagerService:PagerService) { }
-  
+  constructor(private pagerService: PagerService) { }
+
   ngOnInit(): void {
-    this.pagerService.getAll(this.page,this.size).subscribe(
-      result => this.pets=result.content
+    this.pagerService.getAll(this.page, this.size).subscribe(
+      result => this.pets = result.content
     );
   }
 

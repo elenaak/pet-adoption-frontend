@@ -1,30 +1,27 @@
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
-  <div class="container mt-3 mb-5 pt-5 pb-5">
-    <form class="align-self-center" #petForm="ngForm" enctype="multipart/form-data"(ngSubmit)="onSubmitQuizForm()">
-        <div class="form-group pb-5">
-          <h4 class="display-5 text-center">{{question}}</h4>
-          <div class="row mt-5  justify-content-center ">
-            <div class="col-md-2" *ngFor="let questionAnswer of arrQuestionAnswers">
-              <label>
-                <input  type="radio" name="question1" class="card-input-element d-none" id="demo1" value="{{questionAnswer.title}}" [(ngModel)] = "answer">
-                <div class="card bg-light flex-row justify-content-between align-items-center text-center" style="height: 200px;" > 
-                  <div class="card-body ">
-                  <blockquote class="blockquote">
-                    <p class="font-weight-normal text-primary">{{questionAnswer.title}}</p>
-                    <p class="font-weight-light text-secondary">{{questionAnswer.content}}</p>
-                  </blockquote>
-                </div>
+<div class="container mt-3 mb-5 pt-5 pb-5">
+  <form class="align-self-center" #petForm="ngForm" enctype="multipart/form-data" (ngSubmit)="onSubmitQuizForm()">
+    <div class="form-group pb-5">
+      <h4 class="display-5 text-center">{{question}}</h4>
+      <div class="row mt-5  justify-content-center ">
+        <div class="col-md-2" *ngFor="let questionAnswer of arrQuestionAnswers">
+          <label>
+            <input type="radio" name="question1" class="card-input-element d-none" id="demo1"
+              value="{{questionAnswer.title}}" [(ngModel)]="answer">
+            <div class="card bg-light flex-row justify-content-between align-items-center text-center"
+              style="height: 200px;">
+              <div class="card-body ">
+                <blockquote class="blockquote">
+                  <p class="font-weight-normal text-primary">{{questionAnswer.title}}</p>
+                  <p class="font-weight-light text-secondary">{{questionAnswer.content}}</p>
+                </blockquote>
               </div>
-                </label>
             </div>
-          </div>  
+          </label>
         </div>
-        <div class="form-group text-center">
-            <button class="btn btn-primary rounded" type="submit">{{buttonText}}</button>
-        </div>
-      </form>
-  </div>
-
-
+      </div>
+    </div>
+    <div class="form-group text-center">
+      <button class="btn btn-primary rounded" type="submit">{{buttonText}}</button>
+    </div>
+  </form>
+</div>

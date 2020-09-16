@@ -2,67 +2,67 @@
     <div class="form">
         <br>
         <h3 class="mb-3 forest-text text-center">Contact Information</h3>
-        <form  #contactForm="ngForm" enctype="multipart/form-data"  (ngSubmit)="contactForm.form.valid && onSubmit()">
+        <form #contactForm="ngForm" enctype="multipart/form-data" (ngSubmit)="contactForm.form.valid && onSubmit()">
             <div class="form-group">
                 <label for="firstname">First name</label>
-                <input class="form-control" type="text" [(ngModel)] = "contact && contact.firstName" 
-                name="firstname" placeholder="first name" required autofocus #firstName="ngModel" >
+                <input class="form-control" type="text" [(ngModel)]="contact && contact.firstName" name="firstname"
+                    placeholder="first name" required autofocus #firstName="ngModel">
                 <div class="alert-danger" *ngIf="contactForm.submitted && firstName.invalid">
                     <div>
-                       Name is required
+                        Name is required
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="last name">Last name</label>
-                <input class="form-control" type="text" [(ngModel)] = "contact && contact.lastName"
-                 name="last name" placeholder="last name" required #lastName="ngModel" >
-                 <div class="alert-danger" *ngIf="contactForm.submitted && lastName.invalid">
+                <input class="form-control" type="text" [(ngModel)]="contact && contact.lastName" name="last name"
+                    placeholder="last name" required #lastName="ngModel">
+                <div class="alert-danger" *ngIf="contactForm.submitted && lastName.invalid">
                     <div>
-                       Lastname is required
+                        Lastname is required
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="telephone">Telephone</label>
-                <input class="form-control" type="text" [(ngModel)] = "contact && contact.telephone" 
-                name="telephone" placeholder="telephone" #telephone="ngModel" >
+                <input class="form-control" type="text" [(ngModel)]="contact && contact.telephone" name="telephone"
+                    placeholder="telephone" #telephone="ngModel">
                 <div class="alert-danger" *ngIf="contactForm.submitted && telephone.invalid">
                     <div>
-                       Telephone is required
+                        Telephone is required
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="city">City</label>
-                <input class="form-control" type="text" name="city"
-                 [(ngModel)] = "contact && contact.city" placeholder="city" required #city="ngModel" >
-                 <div class="alert-danger" *ngIf="contactForm.submitted && city.invalid">
+                <input class="form-control" type="text" name="city" [(ngModel)]="contact && contact.city"
+                    placeholder="city" required #city="ngModel">
+                <div class="alert-danger" *ngIf="contactForm.submitted && city.invalid">
                     <div>
-                      City is required
+                        City is required
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="address">Address</label>
-                <input class="form-control" type="text" name="address" 
-                [(ngModel)] = "contact && contact.address" placeholder="address" #address="ngModel" required >
+                <input class="form-control" type="text" name="address" [(ngModel)]="contact && contact.address"
+                    placeholder="address" #address="ngModel" required>
                 <div class="alert-danger" *ngIf="contactForm.submitted && address.invalid">
                     <div>
-                       Address is required
+                        Address is required
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input class="form-control" type="email" name="email"
-                 [(ngModel)] = "contact && contact.email"  placeholder="email" #email="ngModel" required >
-                 <div class="alert-danger" *ngIf="contactForm.submitted && email.invalid">
+                <input class="form-control" type="email" name="email" [(ngModel)]="contact && contact.email"
+                    placeholder="email" #email="ngModel" required>
+                <div class="alert-danger" *ngIf="contactForm.submitted && email.invalid">
                     <div *ngIf="email.errors.required">Email is required</div>
                     <div *ngIf="email.errors.email">
-                      Email must be a valid email address
+                        Email must be a valid email address
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="form-group">
                 <button class="btn btn-lg btn-light btn-block" type="submit">Submit</button>
