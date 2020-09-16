@@ -29,7 +29,7 @@ position: relative;
 text-align: left;
 transition: all 0.3s 0s ease-in;
 z-index: 1;
-color: white;
+color:cadetblue;
 }
 
 .card__image-holder {
@@ -46,9 +46,11 @@ color: white;
 .icon{
   padding: 3px;
   font-size: 22px;
+  color:rgb(181, 220, 221);
 }
 .icon:hover{
   cursor: pointer;
+
 }
 a{
  color:white;
