@@ -55,7 +55,6 @@ import { MyArticlesComponent } from './profile-details/my-articles/my-articles.c
 import { SitemapComponent } from './sitemap/sitemap.component';
 import { PrivacyPoliceComponent } from './privacy-police/privacy-police.component';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
-import { BannerComponent } from './banner/banner.component';
 
 
 
@@ -107,8 +106,7 @@ import { BannerComponent } from './banner/banner.component';
     MyArticlesComponent,
     SitemapComponent,
     PrivacyPoliceComponent,
-    TermsOfServiceComponent,
-    BannerComponent
+    TermsOfServiceComponent
   ],
   imports: [
     BrowserModule,
