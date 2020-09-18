@@ -17,10 +17,10 @@ import { AdoptRequestsComponent } from './profile-details/adopt-requests/adopt-r
 import { EditUserComponent } from './profile-details/edit-user/edit-user.component';
 import { AdoptRequestCreateComponent } from './adopt-request-create/adopt-request-create.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-import { ArticleCreateComponent } from './article-create/article-create.component';
-import { ArticleComponent } from './article/article.component';
+import { ArticleCreateComponent } from './articles/article-create/article-create.component';
+import { ArticleComponent } from './articles/article/article.component';
 import { RouteGuardService } from './route-guard.service';
-import { ArticleListComponent } from './article-list/article-list.component';
+import { ArticleListComponent } from './articles/article-list/article-list.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './forgot-password/reset-password/reset-password.component';
 import { SitemapComponent } from './sitemap/sitemap.component';

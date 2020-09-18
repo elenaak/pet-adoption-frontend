@@ -1,7 +1,7 @@
 <div *ngIf="!petFormSubmmited" class="container">
     <div class="form">
         <br>
-        <h3 class="mb-3 forest-text text-center">Edit your add</h3>
+        <h3 class="mb-3 forest-text text-center" style="color: cadetblue; font-weight: lighter;">Edit your add</h3>
         <form #petForm="ngForm" enctype="multipart/form-data" (ngSubmit)="petForm.form.valid && onSubmitPetForm()">
             <div class="form-group">
                 <label for="type">Type of animal</label>

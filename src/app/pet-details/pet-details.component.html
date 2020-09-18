@@ -2,8 +2,8 @@
   <div class="spinner-border" role="status" style=" color: cadetblue;">
   </div>
 </div>
-<div class="container" *ngIf="pet">
-  <h1 class="my-4">
+<div class="container" *ngIf="pet" style="margin-top: 30px;">
+  <h1 style="color: cadetblue; text-align: center;">
     {{pet.name}}
     <small> from {{pet.contact.city}}</small>
   </h1>
@@ -12,8 +12,7 @@
       <img class="img-fluid" src={{pet.image}} alt="pet image">
     </div>
     <div class="col-md-6">
-      <h4 style="padding-bottom: 0px; margin-bottom: 0px;">Details:</h4>
-      <form style="margin-top:5px;">
+      <form>
         <div class="row">
           <div class="col">
             <label for="sex">Sex</label>

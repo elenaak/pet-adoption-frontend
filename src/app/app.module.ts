@@ -44,9 +44,9 @@ import { AdoptRequestsComponent } from './profile-details/adopt-requests/adopt-r
 import { EditUserComponent } from './profile-details/edit-user/edit-user.component';
 import { AdoptRequestCreateComponent } from './adopt-request-create/adopt-request-create.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-import { ArticleComponent } from './article/article.component';
-import { ArticleCreateComponent } from './article-create/article-create.component';
-import { ArticleListComponent } from './article-list/article-list.component';
+import { ArticleComponent } from './articles/article/article.component';
+import { ArticleCreateComponent } from './articles/article-create/article-create.component';
+import { ArticleListComponent } from './articles/article-list/article-list.component';
 import { CatDogArticlesComponent } from './cat-dog-articles/cat-dog-articles.component';
 import { PetsHomePageComponent } from './home-page/pets-home-page/pets-home-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
@@ -55,6 +55,7 @@ import { MyArticlesComponent } from './profile-details/my-articles/my-articles.c
 import { SitemapComponent } from './sitemap/sitemap.component';
 import { PrivacyPoliceComponent } from './privacy-police/privacy-police.component';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
+import { WhyAdoptPetComponent } from './home-page/why-adopt-pet/why-adopt-pet.component';
 
 
 
@@ -106,7 +107,8 @@ import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.com
     MyArticlesComponent,
     SitemapComponent,
     PrivacyPoliceComponent,
-    TermsOfServiceComponent
+    TermsOfServiceComponent,
+    WhyAdoptPetComponent
   ],
   imports: [
     BrowserModule,

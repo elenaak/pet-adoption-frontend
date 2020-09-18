@@ -1,24 +1,13 @@
-h4{
-    
-    text-align: center;
-}
-p{
-   
-    text-align: center;
-}
 .bg-cover {
     background-attachment: static;
-    background-position: center;
+
     background-repeat: no-repeat;
     background-size: cover;
 }
-button{
-    background-color: cadetblue;
-    border:none;
-    color: white;
-    border: 3px solid cadetblue;
+a{
+    text-decoration: underline;
 }
-button:hover{
-     border: 3px solid #0c6c92; 
+a:hover{
+     border: 3px solid white;
      color: white;
 }

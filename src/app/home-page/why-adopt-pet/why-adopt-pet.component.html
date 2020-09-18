@@ -1,0 +1,81 @@
+<div class="container">
+    <h3 class="display-4 text-center" style="color: cadetblue; margin-bottom: 20px;">Why Adopt a Pet over Buying?</h3>
+    <div class="carousel slide col-lg-10" style="margin: auto;">
+        <div class="carousel-inner">
+            <div *ngIf="active==1">
+                <div class="col-lg-7" style="margin: auto; text-align: center; height: 250px;">
+                    <h3 style="color: cadetblue;">Because you'll save a life</h3>
+                    <p style=" color: cadetblue;">
+                        An adopted pet is every bit as loving, intelligent and loyal as a purchased pet, even if you get
+                        an
+                        adult or older animal.
+                        You are giving them a new life in a loving home and you get a new best friend out of the deal.
+                        Seriously, what could be better than that?
+                        Simply
+                        put,
+                        pets aren't just good friends; they're also good medicine and can improve a person's well-being
+                        in
+                        many ways.
+                    </p>
+                </div>
+            </div>
+            <div *ngIf="active==2">
+                <div class="col-lg-7" style="margin: auto; text-align: center;height: 250px;">
+                    <h3 style="color: cadetblue;">Because you'll get a great animal</h3>
+                    <p style="color: cadetblue;">
+                        Here you can find happy, healthy pets just waiting for someone to take
+                        them home. Most of the pets wound up here because of a human problem like a move or a divorce,
+                        not
+                        because the animals did anything wrong. Many are already house-trained and used to living with
+                        families.
+                    </p>
+                </div>
+            </div>
+            <div *ngIf="active==3">
+                <div class="col-lg-7" style="margin: auto; text-align: center;height: 250px;">
+                    <h3 style="color: cadetblue;">Because your home will thank you</h3>
+                    <p style="color: cadetblue;">
+                        Many of the pets from shelters and rescues are already house-trained, which means you’re not
+                        only
+                        saving a pet’s life, you may be saving your rug. Adopting a mature pet not only gives older
+                        animals
+                        a second chance, it often means introducing them to your family will be much easier.
+                    </p>
+                </div>
+            </div>
+            <div *ngIf="active==4">
+                <div class="col-lg-7" style="margin: auto; text-align: center;height: 250px;">
+                    <h3 style="color: cadetblue;">Because it’ll cost you less</h3>
+                    <p style="color: cadetblue;">
+                        Adopting animals from our site is FREE.
+                        Usually when you adopt a pet from here , it is already spay/neuter, vaccinated (and sometimes
+                        even
+                        microchipped!), which can save you some of the up front costs of
+                        adding a new member to your family. Depending on the animal, you may also save on housebreaking
+                        and
+                        training expenses.
+                    </p>
+                </div>
+            </div>
+            <div *ngIf="active==5">
+                <div class="col-lg-7" style="margin: auto; text-align: center;height: 250px;">
+                    <h3 style="color: cadetblue;">Adopting a pet will make you feel better</h3>
+                    <p style="color: cadetblue;">
+                        Pets have a way of putting a smile on your face and a spring in your step. Not only do animals
+                        give
+                        you unconditional love, but research confirms that pets provide us humans with psychological,
+                        emotional, and physical benefits. Caring for a companion animal can provide a sense of purpose
+                        and
+                        fulfillment as well as lessen feelings of loneliness and isolation in all age groups.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" (click)="onPrev()" role="button" data-slide="prev">
+            <fa-icon [icon]="prev" style="color: cadetblue; font-size: 50px;"></fa-icon>
+        </a>
+        <a class="carousel-control-next" (click)="onNext()" role="button" data-slide="next">
+            <fa-icon [icon]="next" style="color: cadetblue; font-size: 50px;"></fa-icon>
+        </a>
+    </div>
+</div>
