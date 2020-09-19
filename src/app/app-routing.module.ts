@@ -26,6 +26,7 @@ import { ResetPasswordComponent } from './forgot-password/reset-password/reset-p
 import { SitemapComponent } from './sitemap/sitemap.component';
 import { PrivacyPoliceComponent } from './privacy-police/privacy-police.component';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 const routes: Route[] = [{
@@ -108,6 +109,9 @@ const routes: Route[] = [{
 }, {
   path: 'terms-of-service',
   component: TermsOfServiceComponent
+}, {
+  path: 'about-us',
+  component: AboutUsComponent
 }];
 
 @NgModule({

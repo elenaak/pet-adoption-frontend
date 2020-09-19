@@ -56,6 +56,7 @@ import { SitemapComponent } from './sitemap/sitemap.component';
 import { PrivacyPoliceComponent } from './privacy-police/privacy-police.component';
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 import { WhyAdoptPetComponent } from './home-page/why-adopt-pet/why-adopt-pet.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
@@ -108,7 +109,8 @@ import { WhyAdoptPetComponent } from './home-page/why-adopt-pet/why-adopt-pet.co
     SitemapComponent,
     PrivacyPoliceComponent,
     TermsOfServiceComponent,
-    WhyAdoptPetComponent
+    WhyAdoptPetComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
