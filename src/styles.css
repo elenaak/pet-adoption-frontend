@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+body { background-color: #efeef1 !important; }
+.button-bg-white-bc-blue-txt-cyan{
+    border-radius: 30px;
+    border-style: solid; 
+    text-transform: uppercase;
+    box-shadow:0 1px 3px rgba(77,71,81,.2);
+    border-color: #bcaaa4;
+    color:  #8c7b75;
+    background-color: #fff;
+    font-weight: 400;
+    font-size:20px;
+}
+.button-bg-white-bc-blue-txt-cyan:hover{
+    cursor: pointer;
+    color:white;
+    background-color: #bcaaa4;
+}
+.button-bg-white-bc-blue-txt-cyan:active, .button-bg-white-bc-blue-txt-cyan:focus{
+    outline: none;
+}
+
+.select-bg-white-bc-blue-txt-cyan{
+    width: 100%;
+    border-radius: 4px;
+    box-shadow:0 1px 3px rgba(77,71,81,.2);
+    height: 55px;
+    border-style: solid; 
+    border-color: white;
+    color:#4d4751;
+    background-color: #fff;
+    font-weight: 400;
+    font-size:20px;
+}
+.select-bg-white-bc-blue-txt-cyan:hover{
+    cursor: pointer;
+}
+.select-bg-white-bc-blue-txt-cyan:active, .select-bg-white-bc-blue-txt-cyan:focus{
+    outline: none;
+}
+.input-bg-white-bc-blue-txt-cyan{
+    width: 100%;
+    border-radius: 4px;
+    box-shadow:0 1px 3px rgba(77,71,81,.2);
+    height: 55px;
+    border-style: solid; 
+    border-color: white;
+    color:#4d4751;
+    background-color: #fff;
+    font-weight: 400;
+    font-size:20px;
+}
+.input-bg-white-bc-blue-txt-cyan:active, .input-bg-white-bc-blue-txt-cyan:focus{
+    outline: none;
+}

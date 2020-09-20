@@ -22,7 +22,7 @@
         <a [routerLink]="['/login/forgot-password']" class="text-primary" *ngIf="!loading">Forgot Your Password?</a>
       </div>
 
-      <button type="submit">Log In</button>
+      <button class="button-bg-white-bc-blue-txt-cyan" type="submit">Log In</button>
       <div class="form-group">
         <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
           Invalid username or password

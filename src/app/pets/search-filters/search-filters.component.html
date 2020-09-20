@@ -3,48 +3,47 @@
     aria-expanded="false" aria-label="Toggle Filters">
     Filters
   </button>
-  <form [hidden]="collapse" #petForm="ngForm" enctype="multipart/form-data" (ngSubmit)="onSearchFilter()">
-    <div class="form-group text-center">
-      <label for="name">Name</label>
-      <input class="form-control" type="text" name="name" placeholder="Pet Name" [(ngModel)]="petName" required
+  <div [hidden]="collapse">
+    <div class="text-center">
+      <div>Name</div>
+      <input class="input-bg-white-bc-blue-txt-cyan" type="text" name="name" placeholder="Pet Name" [(ngModel)]="petName" required
         autofocus>
     </div>
     <div class="form-group text-center">
-      <label for="type">Type</label>
-      <select name="type" class="form-control custom-select" placeholder="type of animal" [(ngModel)]="petType" required
+      <div>Type</div>
+      <select name="type" class="select-bg-white-bc-blue-txt-cyan" placeholder="type of animal" [(ngModel)]="petType" required
         autofocus>
         <option *ngFor="let petType of petTypeValues" value="{{petType}}">{{petType}}</option>
       </select>
     </div>
     <div class="form-group text-center">
-      <label for="breed">Breed</label>
-      <input class="form-control" type="text" name="breed" placeholder="Pet Breed" [(ngModel)]="petBreed" required>
+      <div>Breed</div>
+      <input class="input-bg-white-bc-blue-txt-cyan" type="text" name="breed" placeholder="Pet Breed" [(ngModel)]="petBreed" required>
     </div>
     <div class="form-group text-center">
-      <label for="age">Age</label>
-      <select name="age" class="form-control custom-select" placeholder="age of animal" [(ngModel)]="petAge" required
+      <div>Age</div>
+      <select name="age" class="select-bg-white-bc-blue-txt-cyan" placeholder="age of animal" [(ngModel)]="petAge" required
         autofocus>
         <option *ngFor="let petAge of petAgeValues" value="{{petAge}}">{{petAge}}</option>
       </select>
     </div>
 
     <div class="form-group text-center">
-      <label for="sex">Sex</label>
-      <select name="sex" class="form-control custom-select" placeholder="sex of animal" [(ngModel)]="petSex" required
+      <div>Sex</div>
+      <select name="sex" class="select-bg-white-bc-blue-txt-cyan" placeholder="sex of animal" [(ngModel)]="petSex" required
         autofocus>
         <option *ngFor="let petSex of petSexValues" value="{{petSex}}">{{petSex}}</option>
       </select>
     </div>
     <div class="form-group text-center">
-      <label for="color">Color</label>
-      <select name="color" class="form-control custom-select" placeholder="color of animal" [(ngModel)]="petColor"
+      <div>Color</div>
+      <select name="color" class="select-bg-white-bc-blue-txt-cyan" placeholder="color of animal" [(ngModel)]="petColor"
         required autofocus>
         <option *ngFor="let petColor of petColorValues" value="{{petColor}}">{{petColor}}</option>
       </select>
     </div>
-    <div class="form-group">
-      <button class="btn btn-lg btn-light btn-block" type="submit">Search</button>
+    <div>
+      <button class="button-bg-white-bc-blue-txt-cyan btn-block" (click)="onSearchFilter()">Search</button>
     </div>
-
-  </form>
+  </div>
 </div>
