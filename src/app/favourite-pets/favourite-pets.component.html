@@ -17,15 +17,17 @@
                             <div class="card-title">
                                 <div class="row">
                                     <div class="md-9">
-                                        <h2 style="font-weight: lighter;">
-                                            <a [routerLink]="['/pets',p.id]" style="color: white;">
+                                        <h2 style="font-weight: lighter; margin-left: 15px;">
+                                            <a [routerLink]="['/pets',p.id]" style="color: white">
                                                 {{p.name}}</a>
                                         </h2>
                                     </div>
                                     <div class="md-3">
-                                        <button (click)="onLike(p.id)" class="heart"><span>
+                                        <button (click)="onLike(p.id)" class="heart"style="background-color: #88BBD6;">
+                                            <span>
                                                 <fa-icon [icon]="heart"></fa-icon>
-                                            </span></button>
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
