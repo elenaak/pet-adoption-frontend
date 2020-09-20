@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/model/User';
+import { TokenStorageService } from '../token-storage.service';
 import { AuthService } from '../z-service/auth.service';
 
 @Component({
@@ -7,7 +9,7 @@ import { AuthService } from '../z-service/auth.service';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent {
+export class SignUpComponent implements OnInit {
 
   user = new User();
   isSuccessful = false;
@@ -16,7 +18,14 @@ export class SignUpComponent {
   loading = false;
 
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,
+    private tokenService: TokenStorageService,
+    private router: Router) { }
+
+  ngOnInit(): void {
+    if (this.tokenService.getToken())
+      this.router.navigate(['/profile'])
+  }
 
   onSubmit() {
     this.loading = true;
