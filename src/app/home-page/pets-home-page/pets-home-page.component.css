@@ -1,10 +1,10 @@
 .card {
   display: inline-block;
-  margin: 5px;
-  width: 210px;
+  margin: 15px;
+  width: 220px;
   height: 250px;
-  max-width: 201px;
-  max-height: 251px;
+  max-width: 220px;
+  max-height: 250px;
   perspective: 1000;
   position: relative;
   text-align: left;
@@ -14,7 +14,7 @@
 }
   img {
     width: 100%;
-    height: 201px;
+    height: 200px;
     border-radius: -250px 0px 0px -250px; 
   }
   
@@ -27,6 +27,10 @@
     position: relative;
     z-index: 0;
     
+  }
+  ul{
+    margin: 0px;
+    padding: 0px;
   }
 .caption{
   background: #88BBD6;
