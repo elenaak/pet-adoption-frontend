@@ -34,12 +34,12 @@
                     </div>
                 </div>
             </div>
-            <button type="submit">create</button>
+            <button class="button-style-2" type="submit">create</button>
             <div style="margin-top: 10px; color: cadetblue;" *ngIf="loading" class="spinner-border text-primary"></div>
             <div class="alert alert-warning" *ngIf="signupForm.submitted && isSignUpFailed">
                 Signup failed!<br />{{ errorMessage }}
             </div>
-            <p class="message">Already registered? <a [routerLink]="['/login']">Log In</a></p>
+            <p class="message">Already registered? <a [routerLink]="['/login']" style="color:#dcc7aa">Log In</a></p>
         </form>
     </div>
 

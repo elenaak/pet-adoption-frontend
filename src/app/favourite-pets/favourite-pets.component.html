@@ -37,7 +37,7 @@
             </div>
         </ul>
         <div *ngIf="!stop">
-            <button id="more-btn" class="more-btn" (click)="onClick()">SHOW MORE</button>
+            <button id="more-btn" class="more-btn button-style-2" (click)="onClick()">SHOW MORE</button>
         </div>
     </div>
 </div>
@@ -47,13 +47,13 @@
         <p>When you find a pet you love add it to your favorites list by tapping
             <fa-icon [icon]="heart" style="color: crimson;"></fa-icon>
         </p>
-        <button [routerLink]="['/pets']">Find a pet</button>
+        <button class="button-style-2" [routerLink]="['/pets']">Find a pet</button>
     </div>
 
     <div class="notlogged" *ngIf="!logged">
         <h2 style="margin-bottom: 20px;">Join PetFriends to Favorite Pets</h2>
         <h3 style="margin-bottom: 15px;">Create an account:</h3>
-        <button [routerLink]="['/sign-up']">Sign up</button>
-        <p class="message">Already have an account? <a [routerLink]="['/login']">Log In</a>
+        <button [routerLink]="['/sign-up']" class="button-style-2">Sign up</button>
+        <p class="message">Already have an account? <a [routerLink]="['/login']" style="color:#dcc7aa">Log In</a>
     </div>
 </div>
