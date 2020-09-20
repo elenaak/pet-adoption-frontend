@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card my-3 mx-3">
     <div class="card__image-holder">
         <a [routerLink]="['/pets',pet.id]">
             <img class="card__image" src="{{pet.image}}" alt="pet image" />
@@ -7,19 +7,23 @@
     <div class="caption" style="margin-bottom: 0px;">
         <div class="card-title">
             <div class="row">
-                <div class="col-md-9">
-                    <a [routerLink]="['/pets',pet.id]" style="color: white;">
-                        <h2 style="font-weight: lighter;"> {{pet.name}}</h2>
-                    </a>
-                </div>
+                <div class="col-md-9"></div>
                 <div class="col-md-3">
                     <button (click)="onLike(pet.id)" class="heart" style="background-color: #88BBD6;">
                         <span>
-                            <fa-icon *ngIf="red" [icon]="heart" style="color: crimson;"></fa-icon>
+                            <fa-icon *ngIf="red" [icon]="heart" style="color: #aa967b;"></fa-icon>
                             <fa-icon *ngIf="!red" [icon]="heart" style="color:white"></fa-icon>
                         </span>
                     </button>
                 </div>
+            </div>
+            
+            <div class="row">
+               
+                    <a [routerLink]="['/pets',pet.id]" style="color: white;">
+                        <h2 style="font-weight: lighter;"> {{pet.name}}</h2>
+                    </a>
+            
             </div>
         </div>
     </div>
