@@ -38,8 +38,6 @@ export class MyAdsComponent implements OnInit {
           this.empty = true;
         if (this.limit >= this.all.length)
           this.stop = true;
-
-
       }
     );
   }
