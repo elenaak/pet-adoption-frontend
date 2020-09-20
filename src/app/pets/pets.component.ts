@@ -11,16 +11,12 @@ import { switchMap, map } from 'rxjs/operators';
 })
 export class PetsComponent implements OnInit {
 
-  //params for pagination on Click event
   currentPageParams: number;
 
-  //pagination parametars
   currentPage: number = 1;
   pageSize: number = 15;
   totalItems: number = 15;
-  //list items
 
-  //searchFilter parametars
   petName: string;
   petType: string;
   petBreed: string;

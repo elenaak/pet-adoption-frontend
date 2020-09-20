@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Pet } from '../../model/Pet';
-import { Contact } from '../../model/Contact';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { PetsSearchResult } from '../../model/PetsSearchResult';

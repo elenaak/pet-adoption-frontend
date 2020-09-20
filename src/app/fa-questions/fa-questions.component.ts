@@ -66,7 +66,6 @@ export class FaQuestionsComponent implements OnInit {
       'How Do I Make a Complaint About a Shelter or Rescue Group?',
       'All of the users on our site undergo an application and screening process prior to being able to post their group’s adoptable pets. If you have concerns about a particular user posting on our site, you are welcome to contact us.'));
   }
-
 }
 class Question {
   question: string;
