@@ -1,6 +1,10 @@
 li{
     width: 33%;
 }
+ul{
+  padding: 0px;
+  margin:0px;
+}
 @media screen and (max-width: 992px) {
    li {
       width: 50%;

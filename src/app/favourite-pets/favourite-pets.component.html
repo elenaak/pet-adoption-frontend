@@ -7,8 +7,10 @@
     <div class="infinite-scroll-area">
         <ul id="infinite-scroll-list" class="infinite-scroll-list">
             <div class="row">
-                <li *ngFor="let p of sublist" class="col-md-6 col-lg-4 col-sm-12">
-                    <div class="card">
+                <li *ngFor="let p of sublist"class="col-lg-3 col-md-6 col-12">
+                        <pet-search-list-item [pet]=p></pet-search-list-item>
+                 
+                    <!-- <div class="card">
                         <div class="card__image-holder">
                             <a [routerLink]="['/pets',p.id]"><img class="card__image" src="{{p.image}}"
                                     alt="pet image" /></a>
@@ -32,7 +34,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </li>
             </div>
         </ul>
