@@ -2,7 +2,7 @@
   text-align: center;
   margin-top: 30px;
   margin-bottom: 50px;
-  color: cadetblue;
+  color: #88BBD6;
   font-weight: lighter;
 }
 .infinite-scroll-list{
@@ -22,7 +22,7 @@ position: relative;
 text-align: left;
 transition: all 0.3s 0s ease-in;
 z-index: 1;
-color:cadetblue;
+color:#88BBD6;
 }
 
 .card__image-holder {

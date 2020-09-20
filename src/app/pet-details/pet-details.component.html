@@ -1,9 +1,9 @@
 <div class="d-flex justify-content-center" *ngIf="loading" style="margin-top: 20px;">
-  <div class="spinner-border" role="status" style=" color: cadetblue;">
+  <div class="spinner-border" role="status" style=" color:#88BBD6;">
   </div>
 </div>
 <div class="container" *ngIf="pet" style="margin-top: 30px;">
-  <h1 style="color: cadetblue; text-align: center;">
+  <h1 style="color: #88BBD6; text-align: center;">
     {{pet.name}}
     <small> from {{pet.contact.city}}</small>
   </h1>
@@ -44,7 +44,8 @@
           </div>
         </div>
       </form>
-      <button routerLink='/adopt/{{pet.id}}' *ngIf="!isOwner">Adopt {{pet.name}}</button>
+      <button routerLink='/adopt/{{pet.id}}' *ngIf="!isOwner" class="button-style-2 btn-block"
+      style="margin-top: 15px;">Adopt {{pet.name}}</button>
     </div>
   </div>
   <h3 class="my-3">Meet {{pet.name}}</h3>

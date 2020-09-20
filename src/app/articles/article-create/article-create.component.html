@@ -1,4 +1,4 @@
-<h1 style="color:cadetblue; text-align: center; font-weight: lighter; margin-top: 30px;">Create new article</h1>
+<h1 style="color:#88BBD6; text-align: center; font-weight: lighter; margin-top: 30px;">Create new article</h1>
 <form role="form" #myForm="ngForm" accept-charset="UTF-8" (ngSubmit)="onSubmit()" novalidate
     style="margin: auto; margin-top:30px; width: 75%;">
     <div class="form-group">
@@ -27,11 +27,11 @@
     <label for="icontent">Content</label>
     <ckeditor [(ngModel)]="article && article.content" #PageContent="ngModel" name="Content" required debounce="500">
     </ckeditor>
-    <div style="text-align: center;">
-        <button type="submit" class="btn btn-info" style="margin: auto;">Submit</button>
+    <div style="text-align: center; margin: 10px;">
+        <button type="submit" class="button-style-2" style="margin: auto;">Submit</button>
     </div>
     <div class="d-flex justify-content-center" *ngIf="loading">
-        <div class="spinner-border" role="status" style=" color: cadetblue;">
+        <div class="spinner-border" role="status" style=" color:#88BBD6;">
         </div>
     </div>
 </form>

@@ -1,9 +1,0 @@
-button{
-    border: 3px solid cadetblue;
-    background-color: cadetblue;
-}
-
-button:hover{
-    border: 3px solid #0c6c92;
-    background-color: cadetblue;
-}

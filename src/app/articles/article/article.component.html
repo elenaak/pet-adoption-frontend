@@ -1,16 +1,16 @@
 <div class="d-flex justify-content-center" *ngIf="loading" style="margin-top: 20px;">
-    <div class="spinner-border" role="status" style=" color: cadetblue;">
+    <div class="spinner-border" role="status" style=" color: #88BBD6;">
     </div>
 </div>
 <div *ngIf="article">
     <div style="width:75%; margin:auto">
         <div class="row" style="margin-top: 30px;">
             <div class="col-md-3">
-                <button (click)="onClick()">
-                    <fa-icon [icon]="back" style="color: cadetblue;"></fa-icon> Back to list
+                <button (click)="onClick()" class="button-style-1">
+                    <fa-icon [icon]="back" style="color: #DCC7AA;"></fa-icon> Back to list
                 </button>
             </div>
-            <h2 class="col-md-8" style="color:cadetblue; margin-left: 10px;">{{article.title}}</h2>
+            <h2 class="col-md-8" style="color:#88BBD6; margin-left: 10px;">{{article.title}}</h2>
         </div>
         <hr style="color: blue;">
         <span>

@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center" *ngIf="loading" style="margin-top: 20px;">
-    <div class="spinner-border" role="status" style=" color: cadetblue;">
+    <div class="spinner-border" role="status" style=" color: #88BBD6;">
     </div>
 </div>
 <div *ngIf="articles" style="width: 75%; margin: auto;">
@@ -15,7 +15,7 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <a [routerLink]="['/article',a.id]">
-                                <h3 class="card-title" style="color: cadetblue;">{{ a.title}}
+                                <h3 class="card-title" style="color: #88BBD6;">{{ a.title}}
                                 </h3>
                             </a>
                             <p class="card-text" [innerHtml]="a.description"></p>
@@ -27,12 +27,12 @@
         <div class="row">
             <div class="col-md-6">
                 <button *ngIf="prev" (click)="onPrev()">
-                    <fa-icon [icon]="prevIcon" style="color: cadetblue;"></fa-icon> PREV
+                    <fa-icon [icon]="prevIcon" style="color: #88BBD6;"></fa-icon> PREV
                 </button>
             </div>
             <div class="col-md-6" style="text-align: right;">
                 <button *ngIf="next" (click)="onNext()">
-                    NEXT <fa-icon [icon]="nextIcon" style="color: cadetblue;"></fa-icon>
+                    NEXT <fa-icon [icon]="nextIcon" style="color: #88BBD6;"></fa-icon>
                 </button>
             </div>
         </div>
