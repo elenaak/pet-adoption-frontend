@@ -8,3 +8,31 @@
   padding:10px;
   font-size: 16x;
 }
+.p-custom{
+  background-color: white; 
+  padding: 8px; 
+  color: #aa967b; 
+  border-radius: 6px; 
+}
+
+@media screen and (max-width: 767px) {
+  .button-faq-custom{
+    font-size: 8px;
+  }
+  .p-custom{
+    font-size: 12px;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .button-faq-custom{
+    font-size: 16px;
+  }
+  .p-custom{
+    font-size: 20px;
+  }
+  
+  
+}
+

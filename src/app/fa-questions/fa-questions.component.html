@@ -8,13 +8,13 @@
   <div class="row">
     <div class="col">
       <div class="list-group list-question" *ngFor="let item of listOfQuestions">
-        <div id="question" class="button-style-1 button-question-custom text-center" (click)="openQuestion(item)" tabindex="0">
+        <div id="question" class="button-style-1 button-faq-custom my-1 button-question-custom text-center" (click)="openQuestion(item)" tabindex="0">
           {{item.question}}
         </div>
       </div>
     </div>
     <div class="col text-center mx-auto">
-      {{answer}}
+      <p class="p-custom" >{{answer}}</p> 
     </div>
   </div>
 </div>
