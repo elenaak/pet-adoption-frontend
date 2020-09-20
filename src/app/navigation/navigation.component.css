@@ -1,3 +1,20 @@
 #logout:hover{
     cursor: pointer;
 }
+.navbar-brand {
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  @media screen and (max-width: 767px) {
+    .navbar-brand  {
+      width: 100px;
+      max-width: 100px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .navbar-brand{
+        position: absolute;
+        
+    }
+  }

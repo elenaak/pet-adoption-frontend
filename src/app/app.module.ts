@@ -9,9 +9,7 @@ import { CKEditorModule } from 'ng2-ckeditor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { LayoutComponent } from './layout/layout.component';
 import { FooterComponent } from './footer/footer/footer.component';
 import { PetFormComponent } from './forms/pet-form/pet-form.component';
 import { MedicalRecordFormComponent } from './forms/medical-record-form/medical-record-form.component';
@@ -64,9 +62,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     NavigationComponent,
-    LayoutComponent,
     FooterComponent,
     PetFormComponent,
     MedicalRecordFormComponent,
