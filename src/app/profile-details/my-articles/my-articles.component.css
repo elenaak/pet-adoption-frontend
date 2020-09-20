@@ -1,16 +1,8 @@
 .more-btn{
     display: block;
-    color: #fff;
     font-size: 14px;
     font-weight: bold;
-    background:cadetblue;
-    outline: none;
     padding: 16px 8px;
     margin: 32px auto 10px;
-    border: 3px solid cadetblue;
   }
 
-  .more-btn:hover{
-    border: 3px solid #0c6c92;
-}
-  

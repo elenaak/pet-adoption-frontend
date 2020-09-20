@@ -44,21 +44,11 @@ span.info {
 
 .notlogged button {
 text-transform: uppercase;
-outline: 0;
-background: cadetblue;
 width: 100%;
-border: 3px solid cadetblue;
 padding: 15px;
-color: #FFFFFF;
 font-size: 14px;
 -webkit-transition: all 0.3 ease;
 transition: all 0.3 ease;
-cursor: pointer;
-border-radius: 15px;
-}
-
-.notlogged button:hover,.notlogged button:active,.notlogged button:focus {
-  border: 3px solid #0c6c92;
 }
 .edit:hover{
   cursor: pointer;

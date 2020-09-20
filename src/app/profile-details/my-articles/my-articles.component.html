@@ -28,7 +28,7 @@
         </li>
     </ul>
     <div *ngIf="!stop">
-        <button id="more-btn" class="more-btn" (click)="onClick()">SHOW MORE</button>
+        <button id="more-btn" class="more-btn button-style-2" (click)="onClick()">SHOW MORE</button>
     </div>
 </div>
 
@@ -37,5 +37,5 @@
     <p>
         Publish your first ad
     </p>
-    <button [routerLink]="['/ads/new']">Publish ad</button>
+    <button class="more-btn button-style-2" [routerLink]="['/ads/new']">Publish ad</button>
 </div>

@@ -19,22 +19,22 @@
         </div>
       </div>
       <div>
-        <a [routerLink]="['/login/forgot-password']" class="text-primary" *ngIf="!loading">Forgot Your Password?</a>
+        <a [routerLink]="['/login/forgot-password']" class="text-dark" *ngIf="!loading">Forgot Your Password?</a>
       </div>
 
-      <button class="button-bg-white-bc-blue-txt-cyan" type="submit">Log In</button>
+      <button class="button-style-2 button-login-custom" type="submit">Log In</button>
       <div class="form-group">
         <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
           Invalid username or password
         </div>
       </div>
-      <div style="margin-top: 10px; color: cadetblue;" *ngIf="loading" class="spinner-border text-primary"></div>
-      <p class="message">Not registered? <a [routerLink]="['/sign-up']">Create an account</a></p>
+      <div style="margin-top: 10px; color: #dcc7aa;" *ngIf="loading" class="spinner-border text-primary"></div>
+      <p class="message">Not registered? <a [routerLink]="['/sign-up']" style="color:#dcc7aa">Create an account</a></p>
     </form>
   </div>
   <div class="alert alert-success" *ngIf="isLoggedIn">
     <p>You are logged in as {{username}}</p>
-    <button [routerLink]="['/']">Home</button>
-    <button (click)="onLogout()">Log Out</button>
+    <button class="button-style-2" [routerLink]="['/']">Home</button>
+    <button class="button-style-2" (click)="onLogout()">Log Out</button>
   </div>
 </div>

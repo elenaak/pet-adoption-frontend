@@ -36,6 +36,7 @@ export class MyAdsComponent implements OnInit {
         this.size = this.all.length;
         if (this.size == 0)
           this.empty = true;
+          this.stop=true;
       }
     );
   }

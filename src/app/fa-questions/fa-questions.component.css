@@ -1,4 +1,10 @@
 #question:hover, #question:active,#question:focus {
-  background-color: cadetblue;
+  background-color: #dcc7aa;
   cursor: pointer;
+  color: white;
+}
+#question{
+  width: 100%;
+  padding:10px;
+  font-size: 16x;
 }

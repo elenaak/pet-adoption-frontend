@@ -24,19 +24,11 @@
 }
 button {
   text-transform: uppercase;
-  outline: 0;
-  background: cadetblue;
   width: 100%;
-  border: 3px solid cadetblue;
   padding: 15px;
-  color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
-  cursor: pointer;
-}
-button:hover,.form button:active,.form button:focus {
-  border: 3px solid #0c6c92;
 }
 .form .message {
   margin: 15px 0 0;

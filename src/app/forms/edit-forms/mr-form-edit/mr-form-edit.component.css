@@ -5,16 +5,6 @@ body {
   .forest-text{
       color: #015249;
   }
-  
-  .btn-light{
-    background-color: cadetblue;
-    color: #fff;
-    border: 3px solid cadetblue;
-  }
-  .btn-light:hover{
-    border: 3px solid #0c6c92;
-  }
-  
   .form {
     width: 100%;
     max-width: 600px;
