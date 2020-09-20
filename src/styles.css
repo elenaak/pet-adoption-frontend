@@ -1,22 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 body { background-color: #efeef1 !important; }
-.button-bg-white-bc-blue-txt-cyan{
+.button-style-1{
     border-radius: 30px;
     border-style: solid; 
     text-transform: uppercase;
     box-shadow:0 1px 3px rgba(77,71,81,.2);
-    border-color: #bcaaa4;
-    color:  #8c7b75;
+    border-color: #a0caf9;
+    color:  #6f99c6;
     background-color: #fff;
     font-weight: 400;
     font-size:20px;
 }
-.button-bg-white-bc-blue-txt-cyan:hover{
+.button-style-1:hover{
     cursor: pointer;
     color:white;
-    background-color: #bcaaa4;
+    background-color:#a0caf9;
 }
-.button-bg-white-bc-blue-txt-cyan:active, .button-bg-white-bc-blue-txt-cyan:focus{
+.button-style-1:active, .button-style-1:focus{
+    outline: none;
+}
+
+.button-style-2{
+    border-radius: 30px;
+    border-style: solid; 
+    text-transform: uppercase;
+    box-shadow:0 1px 3px rgba(77,71,81,.2);
+    border-color: #a0caf9;
+    color:  white;
+    background-color: #a0caf9;
+    font-weight: 400;
+    font-size:20px;
+}
+.button-style-2:hover{
+    cursor: pointer;
+    color:#6f99c6;
+    background-color:#fff;
+}
+.button-style-2:active, .button-style-2:focus{
     outline: none;
 }
 
