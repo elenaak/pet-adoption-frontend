@@ -35,7 +35,10 @@ label {
     -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+  .finder-button-custom{
+    width: 250px;
+    height: 50px;
+  }
   @-webkit-keyframes fadeInCheckbox {
     from {
       opacity: 0;
