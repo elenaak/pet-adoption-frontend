@@ -15,24 +15,28 @@
                         </div>
                         <div class="caption" style="margin-bottom: 0px;">
                             <div class="card-title">
-                                <div class="row">
-                                    <div class="col-md-7 col-12">
-                                        <h2 style="font-weight: lighter; margin-left: 10px; text-align: left;">
+                                <div class="text-center">
+                                        <h2 style="font-weight: lighter;">
                                             <a [routerLink]="['/pets',p.id]" style="color: white">
                                                 {{p.name}}</a>
                                         </h2>
-                                    </div>
-                                    <div class="buttons" class="col-md-5 col-12">
-                                        <a routerLink='/edit/{{p.id}}'>
-                                            <fa-icon [icon]="edit" class="icon">Edit</fa-icon>
-                                        </a>
-                                        <a (click)="onDelete(p.id)">
-                                            <fa-icon [icon]="trash" class="icon"></fa-icon>
-                                        </a>
-                                        <a routerLink="/requests/{{p.id}}">
-                                            <fa-icon [icon]="users" class="icon">Edit</fa-icon>
-                                        </a>
-                                    </div>
+                                </div>
+                                <div class="buttons row">
+                                    <div class="col-4">
+                                    <a routerLink='/edit/{{p.id}}'>
+                                        <fa-icon [icon]="edit" class="icon">Edit</fa-icon>
+                                    </a>
+                                </div>
+                                    <div class="col-4">
+                                    <a (click)="onDelete(p.id)">
+                                        <fa-icon [icon]="trash" class="icon"></fa-icon>
+                                    </a>
+                                </div>
+                                    <div class="col-4">
+                                    <a routerLink="/requests/{{p.id}}">
+                                        <fa-icon [icon]="users" class="icon">Edit</fa-icon>
+                                    </a>
+                                </div>
                                 </div>
                             </div>
                         </div>
