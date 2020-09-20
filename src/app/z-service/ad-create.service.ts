@@ -4,8 +4,6 @@ import { MedicalRecord } from '../../model/MedicalRecord';
 import { Contact } from '../../model/Contact';
 import { HttpClient } from '@angular/common/http';
 
-
-
 @Injectable({
   providedIn: 'root'
 })

@@ -86,7 +86,8 @@ export class SearchFiltersComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: { target: { innerWidth: number; }; }) {
-    if (event.target.innerWidth < 768) { // 768px portrait
+    // 768px portrait
+    if (event.target.innerWidth < 768) { 
       this.collapse = true;
     }
     else {

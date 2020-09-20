@@ -31,10 +31,7 @@ export class ForgotPasswordComponent implements OnInit {
           this.isSuccessful = false;
         }
       },
-      err => {
-        console.log("err")
-        //TODO SOMETHING WENT WRONG
-      })
+      err => {})
 
 
   }
